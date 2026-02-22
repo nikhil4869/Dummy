@@ -28,6 +28,13 @@ public class Song {
     @ManyToOne
     @JoinColumn(name = "artist_id", nullable = false)
     private User artist;
+    
+    @ManyToOne
+    @JoinColumn(name = "album_id")
+    private Album album;
+
+    private Integer trackNumber;
+
 
     public Song() {}
 
@@ -90,4 +97,22 @@ public class Song {
     public void setArtist(User artist) {
         this.artist = artist;
     }
+    
+    public Album getAlbum() {
+        return album;
+    }
+
+    public void setAlbum(Album album) {
+        this.album = album;
+    }
+    
+    public Integer getTrackNumber() {
+        return trackNumber;
+    }
+
+    public void setTrackNumber(Integer trackNumber) {
+        this.trackNumber = trackNumber;
+    }
+
+
 }
