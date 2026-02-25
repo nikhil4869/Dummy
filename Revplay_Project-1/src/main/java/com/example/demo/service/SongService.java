@@ -1,6 +1,8 @@
 package com.example.demo.service;
 
 import org.springframework.web.multipart.MultipartFile;
+
+import com.example.demo.dto.analytics.SongFavoriteStatsDTO;
 import com.example.demo.dto.music.SongDTO;
 import java.util.List;
 
@@ -11,7 +13,8 @@ public interface SongService {
             String duration,
             MultipartFile audioFile,
             Long albumId,
-            Integer trackNumber);
+            Integer trackNumber,
+            Integer releaseYear);
 
     
 	SongDTO uploadCover(Long songId, MultipartFile image);
@@ -28,5 +31,13 @@ public interface SongService {
 	void reorderTrack(Long songId, Integer newTrackNumber);
 
 	void deleteSong(Long songId);
+	
+	List<SongDTO> getAllSongs();
+
+	SongDTO getSongDetails(Long songId);
+	
+	List<SongDTO> getPublicSongs();
+
+	List<SongFavoriteStatsDTO> getFavoriteStatsForMySongs();
 
 }

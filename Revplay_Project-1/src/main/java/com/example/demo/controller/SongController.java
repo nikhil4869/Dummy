@@ -25,10 +25,11 @@ public class SongController {
             @RequestParam String duration,
             @RequestParam MultipartFile file,
             @RequestParam(required = false) Long albumId,
-            @RequestParam(required = false) Integer trackNumber) {
+            @RequestParam(required = false) Integer trackNumber,
+            @RequestParam Integer releaseYear){
 
         return ResponseEntity.ok(
-                songService.uploadSong(title, genre, duration, file, albumId, trackNumber));
+                songService.uploadSong(title, genre, duration, file, albumId, trackNumber,releaseYear));
     }
 
     // get songs uploaded by artist
@@ -83,6 +84,24 @@ public class SongController {
         songService.deleteSong(songId);
         return "Song deleted permanently";
     }
+
+    //  browse all songs
+    @GetMapping("/all")
+    public List<SongDTO> getAllSongs() {
+        return songService.getAllSongs();
+    }
+
+    //  song details
+    @GetMapping("/public/{id}")
+    public SongDTO getSongDetails(@PathVariable Long id) {
+        return songService.getSongDetails(id);
+    }
+
+    @GetMapping("/public")
+    public List<SongDTO> getPublicSongs() {
+        return songService.getPublicSongs();
+    }
+
 
 
 }

@@ -14,4 +14,10 @@ public interface AlbumService {
     AlbumDTO uploadCover(Long albumId, MultipartFile image);
 
     List<AlbumDTO> getMyAlbums();
+    
+    AlbumDTO getAlbumDetails(Long albumId);
+    
+    List<AlbumDTO> getAllAlbums();
+
+
 }

@@ -3,6 +3,7 @@ package com.example.demo.service.impl;
 import com.example.demo.entity.Album;
 import com.example.demo.entity.User;
 import com.example.demo.exception.BadRequestException;
+import com.example.demo.exception.DuplicateResourceException;
 import com.example.demo.exception.ResourceNotFoundException;
 import com.example.demo.repository.AlbumRepository;
 import com.example.demo.repository.UserRepository;
@@ -45,13 +46,18 @@ public class AlbumServiceImpl implements AlbumService {
 
     @Override
     public AlbumDTO createAlbum(String name,
-                             String description,
-                             LocalDate releaseDate) {
+                                String description,
+                                LocalDate releaseDate) {
 
         String email = SecurityUtil.getCurrentUserEmail();
 
         User artist = userRepository.findByEmail(email)
                 .orElseThrow(() -> new ResourceNotFoundException("User not found"));
+
+        // 🚫 prevent duplicate albums
+        if (albumRepository.existsByNameIgnoreCaseAndArtist(name, artist)) {
+            throw new DuplicateResourceException("Album with this name already exists");
+        }
 
         Album album = new Album();
         album.setName(name);
@@ -96,5 +102,23 @@ public class AlbumServiceImpl implements AlbumService {
                 .map(this::mapToDTO)
                 .collect(Collectors.toList());
     }
+    
+    @Override
+    public AlbumDTO getAlbumDetails(Long albumId) {
+
+        Album album = albumRepository.findById(albumId)
+                .orElseThrow(() -> new ResourceNotFoundException("Album not found"));
+
+        return mapToDTO(album);
+    }
+
+    @Override
+    public List<AlbumDTO> getAllAlbums() {
+        return albumRepository.findAll()
+                .stream()
+                .map(this::mapToDTO)
+                .collect(Collectors.toList());
+    }
+
 
 }

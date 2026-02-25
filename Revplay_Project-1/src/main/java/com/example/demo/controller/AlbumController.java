@@ -45,4 +45,16 @@ public class AlbumController {
     public ResponseEntity<List<AlbumDTO>> getMyAlbums() {
         return ResponseEntity.ok(albumService.getMyAlbums());
     }
+    
+    //  album details
+    @GetMapping("/{id}")
+    public AlbumDTO getAlbumDetails(@PathVariable Long id) {
+        return albumService.getAlbumDetails(id);
+    }
+
+    @GetMapping("/public")
+    public List<AlbumDTO> getAllAlbums() {
+        return albumService.getAllAlbums();
+    }
+
 }

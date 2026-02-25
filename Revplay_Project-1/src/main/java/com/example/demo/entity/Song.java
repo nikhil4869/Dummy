@@ -14,6 +14,8 @@ public class Song {
     private String title;
 
     private String genre;
+    
+    private Integer releaseYear;
 
     private String duration;
 
@@ -35,6 +37,8 @@ public class Song {
 
     private Integer trackNumber;
 
+    @Column(nullable = false)
+    private Long playCount = 0L;
 
     public Song() {}
 
@@ -114,5 +118,15 @@ public class Song {
         this.trackNumber = trackNumber;
     }
 
+    public long getPlayCount() { return playCount; }
+    public void setPlayCount(long playCount) { this.playCount = playCount; }
+
+	public Integer getReleaseYear() {
+		return releaseYear;
+	}
+
+	public void setReleaseYear(Integer releaseYear) {
+		this.releaseYear = releaseYear;
+	}
 
 }

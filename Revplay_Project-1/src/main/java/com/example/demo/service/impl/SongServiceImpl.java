@@ -3,6 +3,7 @@ package com.example.demo.service.impl;
 import com.example.demo.entity.Song;
 import com.example.demo.entity.User;
 import com.example.demo.exception.BadRequestException;
+import com.example.demo.exception.DuplicateResourceException;
 import com.example.demo.exception.ResourceNotFoundException;
 import com.example.demo.repository.SongRepository;
 import com.example.demo.repository.UserRepository;
@@ -16,7 +17,8 @@ import java.util.List;
 import com.example.demo.entity.Album;
 import com.example.demo.repository.AlbumRepository;
 import java.util.stream.Collectors;
-
+import com.example.demo.repository.FavoriteRepository;
+import com.example.demo.dto.analytics.SongFavoriteStatsDTO;
 
 
 @Service
@@ -26,16 +28,22 @@ public class SongServiceImpl implements SongService {
     private final UserRepository userRepository;
     private final FileStorageService fileStorageService;
     private final AlbumRepository albumRepository;
+    private final FavoriteRepository favoriteRepository;
+
 
 
     public SongServiceImpl(SongRepository songRepository,
-                           UserRepository userRepository,
-                           FileStorageService fileStorageService, AlbumRepository albumRepository) {
-        this.songRepository = songRepository;
-        this.userRepository = userRepository;
-        this.fileStorageService = fileStorageService;
-        this.albumRepository = albumRepository;
-    }
+            UserRepository userRepository,
+            FileStorageService fileStorageService,
+            AlbumRepository albumRepository,
+            FavoriteRepository favoriteRepository) {
+         this.songRepository = songRepository;
+         this.userRepository = userRepository;
+         this.fileStorageService = fileStorageService;
+         this.albumRepository = albumRepository;
+         this.favoriteRepository = favoriteRepository;
+}
+
 
     @Override
     public SongDTO uploadSong(String title,
@@ -43,21 +51,27 @@ public class SongServiceImpl implements SongService {
             String duration,
             MultipartFile audioFile,
             Long albumId,
-            Integer trackNumber) {
+            Integer trackNumber,
+            Integer releaseYear) {
 
         String email = SecurityUtil.getCurrentUserEmail();
 
         User artist = userRepository.findByEmail(email)
                 .orElseThrow(() -> new ResourceNotFoundException("User not found"));
+        
+        if (songRepository.existsByTitleIgnoreCaseAndArtist(title, artist)) {
+        	throw new DuplicateResourceException("Song already exists");
+        }
 
         String filePath = fileStorageService.storeAudio(audioFile);
 
         Song song = new Song();
         song.setTitle(title);
-        song.setGenre(genre);
+        song.setGenre(genre.trim().toLowerCase());
         song.setDuration(duration);
         song.setAudioPath(filePath);
         song.setArtist(artist);
+        song.setReleaseYear(releaseYear);
         
      //  if album provided, attach song to album
         if (albumId != null) {
@@ -115,6 +129,7 @@ public class SongServiceImpl implements SongService {
 
         Song song = songRepository.findById(songId)
                 .orElseThrow(() -> new ResourceNotFoundException("Song not found"));
+
         String email = SecurityUtil.getCurrentUserEmail();
         User currentUser = userRepository.findByEmail(email)
                 .orElseThrow(() -> new ResourceNotFoundException("User not found"));
@@ -123,13 +138,22 @@ public class SongServiceImpl implements SongService {
             throw new BadRequestException("Unauthorized access");
         }
 
-
         Album album = albumRepository.findById(albumId)
                 .orElseThrow(() -> new ResourceNotFoundException("Album not found"));
+
         if (!album.getArtist().getId().equals(currentUser.getId())) {
             throw new BadRequestException("Unauthorized access");
         }
 
+        // 🚫 prevent same song added twice
+        if (songRepository.existsByAlbumAndId(album, songId)) {
+            throw new DuplicateResourceException("Song already exists in this album");
+        }
+
+        // 🚫 prevent duplicate track numbers
+        if (songRepository.existsByAlbumAndTrackNumber(album, trackNumber)) {
+            throw new DuplicateResourceException("Track number already used in this album");
+        }
 
         song.setAlbum(album);
         song.setTrackNumber(trackNumber);
@@ -254,6 +278,52 @@ public class SongServiceImpl implements SongService {
                 song.getArtist().getName()
         );
     }
+    
+    @Override
+    public List<SongDTO> getAllSongs() {
 
+        return songRepository.findAll()
+                .stream()
+                .map(this::mapToDTO)
+                .toList();
+    }
+
+    
+    @Override
+    public SongDTO getSongDetails(Long songId) {
+
+        Song song = songRepository.findById(songId)
+                .orElseThrow(() -> new ResourceNotFoundException("Song not found"));
+
+        return mapToDTO(song);
+    }
+    
+    @Override
+    public List<SongDTO> getPublicSongs() {
+
+        return songRepository.findByIsPublicTrue()
+                .stream()
+                .map(this::mapToDTO)
+                .collect(Collectors.toList());
+    }
+
+
+    @Override
+    public List<SongFavoriteStatsDTO> getFavoriteStatsForMySongs() {
+
+        String email = SecurityUtil.getCurrentUserEmail();
+
+        User artist = userRepository.findByEmail(email)
+                .orElseThrow(() -> new ResourceNotFoundException("User not found"));
+
+        return songRepository.findByArtist(artist)
+                .stream()
+                .map(song -> new SongFavoriteStatsDTO(
+                        song.getId(),
+                        song.getTitle(),
+                        favoriteRepository.countBySong(song)
+                ))
+                .toList();
+    }
 
 }

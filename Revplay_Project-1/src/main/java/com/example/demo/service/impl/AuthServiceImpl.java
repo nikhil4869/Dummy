@@ -103,13 +103,16 @@ public class AuthServiceImpl implements AuthService {
             throw new BadRequestException("Invalid date of birth");
         }
 
-        user.setPassword(passwordEncoder.encode(request.getNewPassword()));
+        if (!PasswordValidator.isStrong(request.getNewPassword())) {
+            throw new BadRequestException("Password not strong enough");
+        }
 
-        // 🔥 Reactivate account if disabled
+        user.setPassword(passwordEncoder.encode(request.getNewPassword()));
         user.setEnabled(true);
 
         userRepository.save(user);
     }
+
 
 
 }
