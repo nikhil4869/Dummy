@@ -39,5 +39,7 @@ public interface SongRepository extends JpaRepository<Song, Long> {
     boolean existsByAlbumAndId(Album album, Long songId);
 
     boolean existsByAlbumAndTrackNumber(Album album, Integer trackNumber);
+    
+    List<Song> findByAlbum(Album album);
 
 }

@@ -18,6 +18,13 @@ public interface AlbumService {
     AlbumDTO getAlbumDetails(Long albumId);
     
     List<AlbumDTO> getAllAlbums();
+    
+    void deleteAlbum(Long id);
+
+    AlbumDTO updateAlbum(Long id,
+                         String name,
+                         String description,
+                         LocalDate releaseDate);
 
 
 }

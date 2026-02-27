@@ -63,7 +63,10 @@ public class SecurityConfig {
 	                .requestMatchers(HttpMethod.GET, "/playlists/public/**").permitAll()
 	                // USER playlist features
 	                .requestMatchers("/playlists/**").hasRole("USER")
+	                .requestMatchers("/images/**").permitAll()
+	                .requestMatchers("/audio/**").permitAll()
 	                .anyRequest().authenticated()
+
 	        );
 
 

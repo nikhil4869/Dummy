@@ -14,6 +14,7 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import com.example.demo.config.JwtUtil;
 import com.example.demo.exception.UnauthorizedException;
+import com.example.demo.dto.auth.AuthResponse;
 import com.example.demo.dto.auth.ForgotPasswordRequest;
 
 
@@ -74,7 +75,7 @@ public class AuthServiceImpl implements AuthService {
     }
     
     @Override
-    public String login(String email, String password) {
+    public AuthResponse  login(String email, String password) {
 
         User user = userRepository.findByEmail(email)
                 .orElseThrow(() ->
@@ -89,7 +90,12 @@ public class AuthServiceImpl implements AuthService {
         }
 
 
-        return jwtUtil.generateToken(user.getEmail());
+        String token = jwtUtil.generateToken(
+                user.getEmail(),
+                user.getRole().getName()
+        );
+
+        return new AuthResponse(token, user.getRole().getName());
     }
     
     @Override

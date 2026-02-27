@@ -12,8 +12,9 @@ import java.util.UUID;
 @Service
 public class FileStorageServiceImpl implements FileStorageService {
 
-	private final String uploadDir = System.getProperty("user.dir") + "/src/main/resources/static/audio/";
-
+    private final String baseDir = System.getProperty("user.dir");
+    private final String audioUploadDir = baseDir + File.separator + "uploads" + File.separator + "audio";
+    private final String imageUploadDir = baseDir + File.separator + "uploads" + File.separator + "images";
 
     @Override
     public String storeAudio(MultipartFile file) {
@@ -23,23 +24,25 @@ public class FileStorageServiceImpl implements FileStorageService {
         }
 
         try {
-            File directory = new File(uploadDir);
+
+            File directory = new File(audioUploadDir);
             if (!directory.exists()) {
                 directory.mkdirs();
             }
 
             String fileName = UUID.randomUUID() + "_" + file.getOriginalFilename();
+            File dest = new File(directory, fileName);
 
-            File dest = new File(uploadDir + fileName);
             file.transferTo(dest);
 
             return "/audio/" + fileName;
 
         } catch (IOException e) {
+            e.printStackTrace();   // IMPORTANT for debugging
             throw new FileStorageException("Failed to store file");
         }
     }
-    
+
     @Override
     public String storeImage(MultipartFile file) {
 
@@ -48,46 +51,44 @@ public class FileStorageServiceImpl implements FileStorageService {
         }
 
         try {
-            String uploadDir = System.getProperty("user.dir")
-                    + "/src/main/resources/static/images/";
 
-            File directory = new File(uploadDir);
+            File directory = new File(imageUploadDir);
             if (!directory.exists()) {
                 directory.mkdirs();
             }
 
             String fileName = UUID.randomUUID() + "_" + file.getOriginalFilename();
+            File dest = new File(directory, fileName);
 
-            File dest = new File(uploadDir + fileName);
             file.transferTo(dest);
 
             return "/images/" + fileName;
 
         } catch (IOException e) {
+            e.printStackTrace();   // IMPORTANT
             throw new FileStorageException("Failed to store image");
         }
     }
-    
+
     @Override
     public void deleteFile(String filePath) {
 
-        if (filePath == null) return;
+        if (filePath == null || filePath.isBlank()) return;
 
         try {
-            String fullPath = System.getProperty("user.dir")
-                    + "/src/main/resources/static"
-                    + filePath;
 
-            File file = new File(fullPath);
+            String cleanedPath = filePath.startsWith("/")
+                    ? filePath.substring(1)
+                    : filePath;
+
+            File file = new File(baseDir + File.separator + "uploads" + File.separator + cleanedPath);
 
             if (file.exists()) {
                 file.delete();
             }
 
         } catch (Exception e) {
-            throw new FileStorageException("Failed to delete file");
+            e.printStackTrace();
         }
     }
-
-
 }
