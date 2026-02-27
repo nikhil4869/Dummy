@@ -161,6 +161,7 @@ public class ArtistServiceImpl implements ArtistService {
         dto.setYoutube(profile.getYoutube());
         dto.setWebsite(profile.getWebsite());
 
+        dto.setId(profile.getId());
         dto.setProfileImage(profile.getProfileImage());
         dto.setBannerImage(profile.getBannerImage());
 

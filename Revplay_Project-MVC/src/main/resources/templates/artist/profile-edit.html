@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Edit Profile</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', sans-serif;
+            background: #0d0d0d;
+            color: white;
+        }
+
+        .layout {
+            display: flex;
+            min-height: 100vh;
+        }
+
+        .content {
+            flex: 1;
+            padding: 40px;
+        }
+
+        .card {
+            background: #161616;
+            padding: 40px;
+            border-radius: 20px;
+            max-width: 700px;
+        }
+
+        h2 {
+            color: gold;
+            margin-bottom: 30px;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 18px;
+            border-radius: 10px;
+            border: none;
+            background: #222;
+            color: white;
+        }
+
+        textarea {
+            resize: none;
+        }
+
+        .btn {
+            padding: 10px 25px;
+            border-radius: 25px;
+            border: none;
+            background: linear-gradient(45deg, gold, #ffcc00);
+            color: black;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            transform: scale(1.05);
+        }
+
+        .section-title {
+            margin-top: 30px;
+            margin-bottom: 10px;
+            color: #ccc;
+            font-size: 14px;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="layout">
+
+    <!-- Sidebar -->
+    <div th:replace="fragments/sidebar :: artistSidebar('profile')"></div>
+
+    <div class="content">
+
+        <div class="card">
+
+            <h2>Edit Artist Profile</h2>
+
+            <!-- SINGLE COMBINED FORM -->
+            <form th:action="@{/artist/profile/update}"
+                  method="post"
+                  enctype="multipart/form-data"
+                  th:object="${profile}">
+
+                <!-- Hidden ID -->
+                <input type="hidden" th:field="*{id}" />
+
+                <!-- TEXT FIELDS -->
+                <input type="text" th:field="*{artistName}" placeholder="Artist Name" required/>
+                <input type="text" th:field="*{genre}" placeholder="Genre" required/>
+                <textarea rows="4" th:field="*{bio}" placeholder="Bio"></textarea>
+
+                <input type="text" th:field="*{instagram}" placeholder="Instagram"/>
+                <input type="text" th:field="*{twitter}" placeholder="Twitter"/>
+                <input type="text" th:field="*{youtube}" placeholder="YouTube"/>
+                <input type="text" th:field="*{website}" placeholder="Website"/>
+
+                <!-- OPTIONAL PROFILE IMAGE -->
+                <div class="section-title">Profile Image (optional)</div>
+                <input type="file" name="profileImageFile"/>
+
+                <!-- OPTIONAL BANNER IMAGE -->
+                <div class="section-title">Banner Image (optional)</div>
+                <input type="file" name="bannerImageFile"/>
+
+                <button type="submit" class="btn">Update Profile</button>
+            </form>
+
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>

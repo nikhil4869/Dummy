@@ -2,19 +2,29 @@ package com.example.demo.dto.music;
 
 public class ArtistDTO {
 
+    private Long id;   // IMPORTANT for image upload
+
     private String artistName;
     private String bio;
     private String genre;
-    private Long id;
+
     private String instagram;
     private String twitter;
     private String youtube;
     private String website;
+
     private String profileImage;
     private String bannerImage;
 
-
     public ArtistDTO() {}
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
 
     public String getArtistName() {
         return artistName;
@@ -71,19 +81,20 @@ public class ArtistDTO {
     public void setWebsite(String website) {
         this.website = website;
     }
-    
-    public String getProfileImage() { return profileImage; }
-    public void setProfileImage(String profileImage) { this.profileImage = profileImage; }
 
-    public String getBannerImage() { return bannerImage; }
-    public void setBannerImage(String bannerImage) { this.bannerImage = bannerImage; }
-    
-    public Long getId() {
-        return id;
+    public String getProfileImage() {
+        return profileImage;
     }
 
-    public void setId(Long id) {
-        this.id = id;
+    public void setProfileImage(String profileImage) {
+        this.profileImage = profileImage;
     }
 
+    public String getBannerImage() {
+        return bannerImage;
+    }
+
+    public void setBannerImage(String bannerImage) {
+        this.bannerImage = bannerImage;
+    }
 }
