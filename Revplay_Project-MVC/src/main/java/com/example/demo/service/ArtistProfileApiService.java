@@ -106,4 +106,18 @@ public class ArtistProfileApiService {
                 String.class
         );
     }
+    
+    public void deactivateAccount(String token) {
+
+        HttpHeaders headers = getHeaders(token);
+
+        HttpEntity<Void> entity = new HttpEntity<>(headers);
+
+        restTemplate.exchange(
+                BASE_URL + "/user/deactivate",
+                HttpMethod.PUT,
+                entity,
+                String.class
+        );
+    }
 }

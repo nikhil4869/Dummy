@@ -96,6 +96,33 @@
             background: #222;
             color: white;
         }
+		
+		.profile-actions {
+		    display: flex;
+		    justify-content: space-between; /* pushes left & right */
+		    align-items: center;
+		    margin-top: 30px;
+		}
+
+		.profile-actions form {
+		    margin: 0; /* remove default form spacing */
+		}
+
+		.danger-btn {
+		    padding: 10px 25px;
+		    border-radius: 25px;
+		    border: none;
+		    background: #ff4d4d; /* red */
+		    color: white;
+		    font-weight: bold;
+		    cursor: pointer;
+		    transition: 0.3s;
+		}
+
+		.danger-btn:hover {
+		    background: #ff1a1a;
+		    transform: scale(1.05);
+		}
 
         textarea {
             resize: none;
@@ -144,9 +171,22 @@
                     <a th:if="${profile.website}" th:href="${profile.website}" target="_blank">Website</a>
                 </div>
 
-                <a th:href="@{/artist/profile/edit}">
-                    <button class="btn">Edit Profile</button>
-                </a>
+				<div class="profile-actions">
+
+				    <a th:href="@{/artist/profile/edit}">
+				        <button type="button" class="btn">Edit Profile</button>
+				    </a>
+
+				    <form th:action="@{/artist/profile/deactivate}"
+				          method="post"
+				          onsubmit="return confirm('Are you sure you want to deactivate your account?');">
+
+				        <button type="submit" class="danger-btn">
+				            Deactivate
+				        </button>
+				    </form>
+
+				</div>
 
             </div>
         </div>

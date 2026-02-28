@@ -111,4 +111,16 @@ public class ArtistProfileController {
 
         return "redirect:/artist/profile";
     }
+    
+    @PostMapping("/profile/deactivate")
+    public String deactivateAccount(HttpSession session) {
+
+        String token = (String) session.getAttribute("JWT_TOKEN");
+
+        profileService.deactivateAccount(token);
+
+        session.invalidate(); // logout immediately
+
+        return "redirect:/login";
+    }
 }

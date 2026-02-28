@@ -75,21 +75,25 @@ public class AuthServiceImpl implements AuthService {
     }
     
     @Override
-    public AuthResponse  login(String email, String password) {
+    public AuthResponse login(String email, String password) {
 
         User user = userRepository.findByEmail(email)
                 .orElseThrow(() ->
                         new UnauthorizedException("Invalid credentials"));
 
+        // 🔴 FIRST check if account is disabled
+        if (!user.isEnabled()) {
+            throw new UnauthorizedException(
+                    "Account is deactivated. Use forgot password to reactivate."
+            );
+        }
+
+        // 🔐 THEN check password
         if (!passwordEncoder.matches(password, user.getPassword())) {
             throw new UnauthorizedException("Invalid credentials");
         }
-        
-        if (!user.isEnabled()) {
-            throw new UnauthorizedException("Account is deactivated. Use forgot password to reactivate.");
-        }
 
-
+        // 🎟 Generate JWT token
         String token = jwtUtil.generateToken(
                 user.getEmail(),
                 user.getRole().getName()

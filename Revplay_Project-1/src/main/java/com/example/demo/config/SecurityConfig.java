@@ -53,6 +53,7 @@ public class SecurityConfig {
 	                .requestMatchers(org.springframework.http.HttpMethod.DELETE, "/songs/**").hasRole("ARTIST")
 
 	                .requestMatchers("/artist/**").hasRole("ARTIST")
+	                .requestMatchers("/user/deactivate").hasAnyRole("USER", "ARTIST")
 	                .requestMatchers("/user/**").hasRole("USER")
 	                .requestMatchers("/favorites/**").hasRole("USER")
 	                .requestMatchers("/history/**").hasRole("USER")
