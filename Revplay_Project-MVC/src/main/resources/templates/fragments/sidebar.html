@@ -81,7 +81,7 @@
 
             <div class="nav-section">
 
-                <a th:href="@{/artist/home}"
+                <a th:href="@{/artist/main}"
                    th:class="${activePage == 'dashboard'} ? 'nav-link active' : 'nav-link inactive'">
                     Dashboard
                 </a>
@@ -100,6 +100,11 @@
                    th:class="${activePage == 'profile'} ? 'nav-link active' : 'nav-link inactive'">
                     Profile
                 </a>
+				
+				<a th:href="@{/artist/analytics}"
+				   th:class="${activePage == 'analytics'} ? 'nav-link active' : 'nav-link inactive'">
+				    Analytics
+				</a>
 
             </div>
         </div>

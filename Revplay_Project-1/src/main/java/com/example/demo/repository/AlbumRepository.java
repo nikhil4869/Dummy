@@ -16,6 +16,6 @@ public interface AlbumRepository extends JpaRepository<Album, Long> {
     
     boolean existsByNameIgnoreCaseAndArtist(String name, User artist);
 
-
+    long countByArtist(User artist);
 
 }

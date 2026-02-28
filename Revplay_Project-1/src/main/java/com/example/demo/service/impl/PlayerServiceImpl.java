@@ -41,23 +41,27 @@ public class PlayerServiceImpl implements PlayerService {
         Song song = songRepository.findById(songId)
                 .orElseThrow(() -> new ResourceNotFoundException("Song not found"));
 
-        // increment play count
-        song.setPlayCount(song.getPlayCount() + 1);
-        songRepository.save(song);
+        // ✅ Only count plays from USERS (not artists)
+        if (user.getRole() != null &&
+            user.getRole().getName().equalsIgnoreCase("user")) {
 
-        // save history
+            song.setPlayCount(song.getPlayCount() + 1);
+            songRepository.save(song);
+        }
+
+        // Save history for both user and artist
         PlayHistory history = new PlayHistory();
         history.setUser(user);
         history.setSong(song);
         history.setPlayedAt(LocalDateTime.now());
 
-        // convert duration "4:30" → seconds
         String duration = song.getDuration();
         int seconds = 0;
 
         if (duration != null && duration.contains(":")) {
             String[] parts = duration.split(":");
-            seconds = Integer.parseInt(parts[0]) * 60 + Integer.parseInt(parts[1]);
+            seconds = Integer.parseInt(parts[0]) * 60
+                    + Integer.parseInt(parts[1]);
         }
 
         history.setDurationPlayed(seconds);

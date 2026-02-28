@@ -6,6 +6,7 @@ import com.example.demo.entity.User;
 import com.example.demo.entity.Song;
 import com.example.demo.repository.UserRepository;
 import com.example.demo.repository.SongRepository;
+import com.example.demo.repository.AlbumRepository;
 import com.example.demo.repository.FavoriteRepository;
 import com.example.demo.service.AnalyticsService;
 import com.example.demo.util.SecurityUtil;
@@ -16,97 +17,80 @@ import com.example.demo.dto.analytics.ListenerInsightsDTO;
 import com.example.demo.repository.PlayHistoryRepository;
 import com.example.demo.dto.analytics.DailyTrendDTO;
 
-
 @Service
 public class AnalyticsServiceImpl implements AnalyticsService {
 
-    private final UserRepository userRepository;
-    private final SongRepository songRepository;
-    private final FavoriteRepository favoriteRepository;
-    private final PlayHistoryRepository playHistoryRepository;
+	private final UserRepository userRepository;
+	private final SongRepository songRepository;
+	private final FavoriteRepository favoriteRepository;
+	private final PlayHistoryRepository playHistoryRepository;
+	private final AlbumRepository albumRepository;
 
+	public AnalyticsServiceImpl(UserRepository userRepository, SongRepository songRepository,
+			FavoriteRepository favoriteRepository, PlayHistoryRepository playHistoryRepository,
+			AlbumRepository albumRepository) {
 
-
-    public AnalyticsServiceImpl(UserRepository userRepository, SongRepository songRepository,
-			FavoriteRepository favoriteRepository, PlayHistoryRepository playHistoryRepository) {
 		this.userRepository = userRepository;
 		this.songRepository = songRepository;
 		this.favoriteRepository = favoriteRepository;
 		this.playHistoryRepository = playHistoryRepository;
+		this.albumRepository = albumRepository;
 	}
 
 	@Override
-    public ArtistAnalyticsDTO getArtistAnalytics() {
+	public ArtistAnalyticsDTO getArtistAnalytics() {
 
-        String email = SecurityUtil.getCurrentUserEmail();
+		String email = SecurityUtil.getCurrentUserEmail();
 
-        User artist = userRepository.findByEmail(email)
-                .orElseThrow(() -> new RuntimeException("Artist not found"));
+		User artist = userRepository.findByEmail(email).orElseThrow(() -> new RuntimeException("Artist not found"));
 
-        long totalSongs = songRepository.countByArtist(artist);
+		long totalSongs = songRepository.countByArtist(artist);
+		
+		long totalAlbums = albumRepository.countByArtist(artist);
 
-        long totalPlays = songRepository.sumPlayCountByArtist(artist);
+		long totalPlays = songRepository.sumPlayCountByArtist(artist);
 
-        long totalFavorites = favoriteRepository.countBySongArtist(artist);
+		long totalFavorites = favoriteRepository.countBySongArtist(artist);
 
-        var topSongs = songRepository
-                .findTop5ByArtistOrderByPlayCountDesc(artist)
-                .stream()
-                .map(Song::getTitle)
-                .collect(Collectors.toList());
+		var topSongs = songRepository.findTop5ByArtistOrderByPlayCountDesc(artist).stream().map(Song::getTitle)
+				.collect(Collectors.toList());
 
-        return new ArtistAnalyticsDTO(
-                totalSongs,
-                totalPlays,
-                totalFavorites,
-                topSongs
-        );
-    }
-    
-    @Override
-    public List<SongPlayChartDTO> getPlayChart() {
+		return new ArtistAnalyticsDTO(totalSongs, totalAlbums, totalPlays, totalFavorites, topSongs);
+	}
 
-        String email = SecurityUtil.getCurrentUserEmail();
+	@Override
+	public List<SongPlayChartDTO> getPlayChart() {
 
-        User artist = userRepository.findByEmail(email)
-                .orElseThrow(() -> new RuntimeException("Artist not found"));
+		String email = SecurityUtil.getCurrentUserEmail();
 
-        return songRepository.findByArtist(artist)
-                .stream()
-                .map(song -> new SongPlayChartDTO(
-                        song.getTitle(),
-                        song.getPlayCount()
-                ))
-                .toList();
-    }
-    
-    @Override
-    public ListenerInsightsDTO getListenerInsights() {
+		User artist = userRepository.findByEmail(email).orElseThrow(() -> new RuntimeException("Artist not found"));
 
-        String email = SecurityUtil.getCurrentUserEmail();
+		return songRepository.findByArtist(artist).stream()
+				.map(song -> new SongPlayChartDTO(song.getTitle(), song.getPlayCount())).toList();
+	}
 
-        User artist = userRepository.findByEmail(email)
-                .orElseThrow(() -> new RuntimeException("Artist not found"));
+	@Override
+	public ListenerInsightsDTO getListenerInsights() {
 
-        long listeners = playHistoryRepository.countUniqueListeners(artist);
+		String email = SecurityUtil.getCurrentUserEmail();
 
-        return new ListenerInsightsDTO(listeners);
-    }
-    
-    @Override
-    public List<DailyTrendDTO> getDailyTrends() {
+		User artist = userRepository.findByEmail(email).orElseThrow(() -> new RuntimeException("Artist not found"));
 
-        String email = SecurityUtil.getCurrentUserEmail();
+		long listeners = playHistoryRepository.countUniqueListeners(artist);
 
-        User artist = userRepository.findByEmail(email)
-                .orElseThrow(() -> new RuntimeException("Artist not found"));
+		return new ListenerInsightsDTO(listeners);
+	}
 
-        return playHistoryRepository.getDailyPlayCounts(artist.getId())
-                .stream()
-                .map(row -> new DailyTrendDTO(
-                        ((java.time.LocalDateTime) row[0]).toLocalDate(),
-                        ((Number) row[1]).longValue()
-                ))
-                .toList();
-    }
+	@Override
+	public List<DailyTrendDTO> getDailyTrends() {
+
+		String email = SecurityUtil.getCurrentUserEmail();
+
+		User artist = userRepository.findByEmail(email).orElseThrow(() -> new RuntimeException("Artist not found"));
+
+		return playHistoryRepository.getDailyPlayCounts(artist.getId()).stream()
+				.map(row -> new DailyTrendDTO(((java.time.LocalDateTime) row[0]).toLocalDate(),
+						((Number) row[1]).longValue()))
+				.toList();
+	}
 }

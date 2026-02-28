@@ -5,117 +5,144 @@
 
     <style>
         body {
-            margin: 0;
-            font-family: 'Segoe UI', sans-serif;
-            background: #0d0d0d;
+            background: linear-gradient(to bottom right, #0f0f0f, #1a1a1a);
             color: white;
-        }
+            font-family: 'Segoe UI', sans-serif;
+            margin: 0;
+            padding: 0;
 
-        .layout {
-            display: flex;
             min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
-        .content {
-            flex: 1;
+        .container {
+            max-width: 450px;
+            width: 100%;
+            background: #181818;
             padding: 40px;
-        }
-
-        .card {
-            background: #161616;
-            padding: 40px;
-            border-radius: 20px;
-            max-width: 700px;
+            border-radius: 16px;
+            box-shadow: 0 0 40px rgba(255, 215, 0, 0.08);
         }
 
         h2 {
-            color: gold;
+            text-align: center;
             margin-bottom: 30px;
+            color: gold;
         }
 
-        input, textarea {
+        label {
+            display: block;
+            margin-bottom: 6px;
+            font-size: 14px;
+            color: #ccc;
+        }
+
+        input[type="text"],
+        textarea,
+        input[type="file"] {
             width: 100%;
             padding: 12px;
             margin-bottom: 18px;
-            border-radius: 10px;
+            border-radius: 8px;
             border: none;
-            background: #222;
+            background: #2a2a2a;
             color: white;
+            font-size: 14px;
         }
 
         textarea {
             resize: none;
         }
 
-        .btn {
-            padding: 10px 25px;
-            border-radius: 25px;
-            border: none;
-            background: linear-gradient(45deg, gold, #ffcc00);
+        input:focus,
+        textarea:focus {
+            outline: 2px solid gold;
+        }
+
+        .update-btn {
+            width: 100%;
+            padding: 12px;
+            background: gold;
             color: black;
+            border: none;
+            border-radius: 25px;
             font-weight: bold;
             cursor: pointer;
+            transition: 0.3s;
         }
 
-        .btn:hover {
-            transform: scale(1.05);
+        .update-btn:hover {
+            background: #ffcc00;
+            transform: scale(1.03);
         }
 
-        .section-title {
-            margin-top: 30px;
-            margin-bottom: 10px;
-            color: #ccc;
+        .back-link {
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+            color: gray;
+            text-decoration: none;
             font-size: 14px;
+        }
+
+        .back-link:hover {
+            color: white;
         }
     </style>
 </head>
 
 <body>
 
-<div class="layout">
+<div class="container">
 
-    <!-- Sidebar -->
-    <div th:replace="fragments/sidebar :: artistSidebar('profile')"></div>
+    <h2>🎤 Edit Artist Profile</h2>
 
-    <div class="content">
+    <form th:action="@{/artist/profile/update}"
+          method="post"
+          enctype="multipart/form-data"
+          th:object="${profile}">
 
-        <div class="card">
+        <!-- Hidden ID -->
+        <input type="hidden" th:field="*{id}" />
 
-            <h2>Edit Artist Profile</h2>
+        <label>Artist Name</label>
+        <input type="text" th:field="*{artistName}" required>
 
-            <!-- SINGLE COMBINED FORM -->
-            <form th:action="@{/artist/profile/update}"
-                  method="post"
-                  enctype="multipart/form-data"
-                  th:object="${profile}">
+        <label>Genre</label>
+        <input type="text" th:field="*{genre}" required>
 
-                <!-- Hidden ID -->
-                <input type="hidden" th:field="*{id}" />
+        <label>Bio</label>
+        <textarea rows="4" th:field="*{bio}"></textarea>
 
-                <!-- TEXT FIELDS -->
-                <input type="text" th:field="*{artistName}" placeholder="Artist Name" required/>
-                <input type="text" th:field="*{genre}" placeholder="Genre" required/>
-                <textarea rows="4" th:field="*{bio}" placeholder="Bio"></textarea>
+        <label>Instagram</label>
+        <input type="text" th:field="*{instagram}">
 
-                <input type="text" th:field="*{instagram}" placeholder="Instagram"/>
-                <input type="text" th:field="*{twitter}" placeholder="Twitter"/>
-                <input type="text" th:field="*{youtube}" placeholder="YouTube"/>
-                <input type="text" th:field="*{website}" placeholder="Website"/>
+        <label>Twitter</label>
+        <input type="text" th:field="*{twitter}">
 
-                <!-- OPTIONAL PROFILE IMAGE -->
-                <div class="section-title">Profile Image (optional)</div>
-                <input type="file" name="profileImageFile"/>
+        <label>YouTube</label>
+        <input type="text" th:field="*{youtube}">
 
-                <!-- OPTIONAL BANNER IMAGE -->
-                <div class="section-title">Banner Image (optional)</div>
-                <input type="file" name="bannerImageFile"/>
+        <label>Website</label>
+        <input type="text" th:field="*{website}">
 
-                <button type="submit" class="btn">Update Profile</button>
-            </form>
+        <label>Profile Image (optional)</label>
+        <input type="file" name="profileImageFile">
 
-        </div>
+        <label>Banner Image (optional)</label>
+        <input type="file" name="bannerImageFile">
 
-    </div>
+        <button type="submit" class="update-btn">
+            Update Profile
+        </button>
+
+    </form>
+
+    <a th:href="@{/artist/profile}" class="back-link">
+        ← Back To Profile
+    </a>
 
 </div>
 

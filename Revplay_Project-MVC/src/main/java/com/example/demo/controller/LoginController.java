@@ -38,7 +38,7 @@ public class LoginController {
         session.setAttribute("ROLE", role);
 
         if ("ARTIST".equalsIgnoreCase(role)) {
-            return "redirect:/artist/home";
+            return "redirect:/artist/main";
         } else {
             return "redirect:/user/home";
         }
