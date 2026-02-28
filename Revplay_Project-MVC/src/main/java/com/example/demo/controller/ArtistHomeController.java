@@ -37,10 +37,12 @@ public class ArtistHomeController {
 	    ArtistDTO profile =
 	            profileService.getMyProfile(token);
 
-	    String name = profile.getArtistName();
+	    String name = "Artist";   // default fallback
 
-	    if (name == null || name.isBlank()) {
-	        name = "Artist";
+	    if (profile != null && profile.getArtistName() != null 
+	            && !profile.getArtistName().isBlank()) {
+
+	        name = profile.getArtistName();
 	    }
 
 	    model.addAttribute("analytics", analytics);

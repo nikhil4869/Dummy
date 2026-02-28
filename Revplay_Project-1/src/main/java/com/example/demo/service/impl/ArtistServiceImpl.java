@@ -90,10 +90,9 @@ public class ArtistServiceImpl implements ArtistService {
         User user = userRepository.findByEmail(email)
                 .orElseThrow(() -> new ResourceNotFoundException("User not found"));
 
-        ArtistProfile profile = artistRepository.findByUser(user)
-                .orElseThrow(() -> new ResourceNotFoundException("Profile not found"));
-
-        return mapToDTO(profile);
+        return artistRepository.findByUser(user)
+                .map(this::mapToDTO)
+                .orElse(null);   // ✅ No exception
     }
 
     @Override

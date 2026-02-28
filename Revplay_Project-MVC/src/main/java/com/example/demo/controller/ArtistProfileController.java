@@ -24,14 +24,20 @@ public class ArtistProfileController {
 
         String token = (String) session.getAttribute("JWT_TOKEN");
 
+        ArtistDTO profile = null;
+
         try {
-            ArtistDTO profile = profileService.getMyProfile(token);
-            model.addAttribute("profile", profile);
-            model.addAttribute("exists", true);
-        } catch (Exception e) {
-            model.addAttribute("profile", new ArtistDTO());
+            profile = profileService.getMyProfile(token);
+        } catch (Exception ignored) {}
+
+        if (profile == null) {
+            profile = new ArtistDTO();   // VERY IMPORTANT
             model.addAttribute("exists", false);
+        } else {
+            model.addAttribute("exists", true);
         }
+
+        model.addAttribute("profile", profile);
 
         return "artist/profile";
     }
