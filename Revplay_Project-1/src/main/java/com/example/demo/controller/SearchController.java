@@ -42,12 +42,35 @@ public class SearchController {
     public List<String> getGenres() {
         return searchService.getAllGenres();
     }
+
+    @GetMapping("/years")
+    public List<Integer> getYears() {
+        return searchService.getAllYears();
+    }
+
+    @GetMapping("/artists/all")
+    public List<ArtistDTO> getAllArtists() {
+        return searchService.getAllArtists();
+    }
+
+    @GetMapping("/albums/all")
+    public List<AlbumDTO> getAllAlbums() {
+        return searchService.getAllAlbums();
+    }
     
     @GetMapping("/songs/by-genre")
     public List<SongDTO> getSongsByGenre(@RequestParam String genre) {
         return searchService.searchSongsByGenre(genre);
     }
 
+    @GetMapping("/songs/by-artist/{artistId}")
+    public List<SongDTO> getSongsByArtist(@PathVariable Long artistId) {
+        return searchService.searchSongsByArtist(artistId);
+    }
 
+    @GetMapping("/songs/by-album/{albumId}")
+    public List<SongDTO> getSongsByAlbum(@PathVariable Long albumId) {
+        return searchService.searchSongsByAlbum(albumId);
+    }
 }
 

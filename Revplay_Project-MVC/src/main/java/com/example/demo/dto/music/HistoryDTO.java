@@ -11,21 +11,18 @@ public class HistoryDTO {
     private String songCover;
     private LocalDateTime playedAt;
 
-    public HistoryDTO(Long songId, String title,
-                      String artistName, String audioUrl, String songCover,
-                      LocalDateTime playedAt) {
-        this.songId = songId;
-        this.title = title;
-        this.artistName = artistName;
-        this.audioUrl = audioUrl;
-        this.songCover = songCover;
-        this.playedAt = playedAt;
-    }
+    public HistoryDTO() {}
 
     public Long getSongId() { return songId; }
+    public void setSongId(Long songId) { this.songId = songId; }
     public String getTitle() { return title; }
+    public void setTitle(String title) { this.title = title; }
     public String getArtistName() { return artistName; }
+    public void setArtistName(String artistName) { this.artistName = artistName; }
     public String getAudioUrl() { return audioUrl; }
+    public void setAudioUrl(String audioUrl) { this.audioUrl = audioUrl; }
     public String getSongCover() { return songCover; }
+    public void setSongCover(String songCover) { this.songCover = songCover; }
     public LocalDateTime getPlayedAt() { return playedAt; }
+    public void setPlayedAt(LocalDateTime playedAt) { this.playedAt = playedAt; }
 }

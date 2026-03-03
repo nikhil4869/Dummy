@@ -40,7 +40,7 @@ public class LoginController {
         if ("ARTIST".equalsIgnoreCase(role)) {
             return "redirect:/artist/main";
         } else {
-            return "redirect:/user/home";
+            return "redirect:/user/dashboard";
         }
     }
     

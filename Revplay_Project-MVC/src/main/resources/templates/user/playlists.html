@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RevPlay - Playlists</title>
+    <link rel="stylesheet" th:href="@{/css/user-style.css}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body class="dark-theme">
+    <div class="layout-container">
+        <div th:replace="~{fragments/user-sidebar :: userSidebar('playlist')}"></div>
+        <main class="main-content">
+            <div class="content-scroll">
+                <h1 class="page-title">My Playlists</h1>
+                <div class="albums-grid">
+                    <div th:each="playlist : ${playlists}" class="song-card">
+                        <div class="song-cover-wrapper">
+                            <img th:src="@{/images/default-cover.png}" class="song-cover" alt="Playlist Cover">
+                            <a th:href="@{/user/playlists/{id}/songs(id=${playlist.id})}" class="play-overlay-btn">
+                                <i class="fa-solid fa-eye"></i>
+                            </a>
+                        </div>
+                        <div class="song-details">
+                            <h3 class="song-title" th:text="${playlist.name}">Playlist Name</h3>
+                            <p class="song-artist" th:text="${playlist.description}">Description</p>
+                            <div class="song-meta">
+                                <span class="song-duration" th:text="${playlist.ownerName}">Owner</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div th:if="${#lists.isEmpty(playlists)}" class="empty-state">
+                        <i class="fa-solid fa-list"></i>
+                        <p>No playlists found.</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <div th:replace="~{fragments/global-player :: globalPlayer}"></div>
+</body>
+
+</html>

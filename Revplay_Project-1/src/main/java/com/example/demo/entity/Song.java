@@ -1,6 +1,8 @@
 package com.example.demo.entity;
 
 import jakarta.persistence.*;
+import java.time.LocalDateTime;
+import org.hibernate.annotations.CreationTimestamp;
 
 @Entity
 @Table(name = "SONG")
@@ -39,6 +41,10 @@ public class Song {
 
     @Column(nullable = false)
     private Long playCount = 0L;
+    
+    @CreationTimestamp
+    @Column(name = "created_at", nullable = false, updatable = false)
+    private LocalDateTime createdAt;
 
     public Song() {}
 

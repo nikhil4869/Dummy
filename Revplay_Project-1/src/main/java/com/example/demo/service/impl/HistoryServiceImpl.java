@@ -33,21 +33,26 @@ public class HistoryServiceImpl implements HistoryService {
                 history.getSong().getTitle(),
                 history.getSong().getArtist().getName(),
                 history.getSong().getAudioPath(),
+                history.getSong().getCoverImage(),
                 history.getPlayedAt()
         );
     }
 
     @Override
     public List<HistoryDTO> getRecentHistory() {
-
         String email = SecurityUtil.getCurrentUserEmail();
-
         User user = userRepository.findByEmail(email)
                 .orElseThrow(() -> new ResourceNotFoundException("User not found"));
 
-        return historyRepository
-                .findTop50ByUserOrderByPlayedAtDesc(user)
-                .stream()
+        List<PlayHistory> allHistory = historyRepository.findTop50ByUserOrderByPlayedAtDesc(user);
+        
+        // Filter unique songs while maintaining the latest play order
+        java.util.Map<Long, PlayHistory> uniqueSongs = new java.util.LinkedHashMap<>();
+        for (PlayHistory ph : allHistory) {
+            uniqueSongs.putIfAbsent(ph.getSong().getId(), ph);
+        }
+
+        return uniqueSongs.values().stream()
                 .map(this::mapToDTO)
                 .collect(Collectors.toList());
     }

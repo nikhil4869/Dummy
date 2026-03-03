@@ -32,9 +32,8 @@ public class SearchServiceImpl implements SearchService {
 
 	@Override
 	public List<SongDTO> searchSongs(String keyword) {
-
 	    return songRepository
-	            .findByTitleContainingIgnoreCaseAndIsPublicTrue(keyword)
+	            .searchPublicSongs(keyword)
 	            .stream()
 	            .map(song -> new SongDTO(
 	                    song.getId(),
@@ -44,7 +43,6 @@ public class SearchServiceImpl implements SearchService {
 	                    song.getAudioPath(),
 	                    song.getCoverImage(),
 	                    song.getArtist().getName()
-	                
 	            ))
 	            .collect(Collectors.toList());
 	}
@@ -58,6 +56,7 @@ public class SearchServiceImpl implements SearchService {
 	            .stream()
 	            .map(artist -> {
 	                ArtistDTO dto = new ArtistDTO();
+	                dto.setId(artist.getId());
 	                dto.setArtistName(artist.getArtistName());
 	                dto.setProfileImage(artist.getProfileImage());
 	                return dto;
@@ -84,14 +83,7 @@ public class SearchServiceImpl implements SearchService {
 	
 	@Override
     public List<SongDTO> searchByYear(Integer year) {
-
-        List<Song> songs = songRepository.findByReleaseYear(year);
-
-        if (songs.isEmpty()) {
-            throw new ResourceNotFoundException("No songs found for year " + year);
-        }
-
-        return songs.stream()
+        return songRepository.findByReleaseYearAndIsPublicTrue(year).stream()
 	            .map(song -> new SongDTO(
 	                    song.getId(),
 	                    song.getTitle(),
@@ -109,11 +101,42 @@ public class SearchServiceImpl implements SearchService {
 	    return songRepository.findAllGenres();
 	}
 
+    @Override
+    public List<Integer> getAllYears() {
+        return songRepository.findAllReleaseYears();
+    }
+
+    @Override
+    public List<ArtistDTO> getAllArtists() {
+        return artistRepository.findAll().stream()
+                .map(artist -> {
+                    ArtistDTO dto = new ArtistDTO();
+                    dto.setId(artist.getId());
+                    dto.setArtistName(artist.getArtistName());
+                    dto.setProfileImage(artist.getProfileImage());
+                    return dto;
+                })
+                .collect(Collectors.toList());
+    }
+
+    @Override
+    public List<AlbumDTO> getAllAlbums() {
+        return albumRepository.findAll().stream()
+                .map(album -> new AlbumDTO(
+                        album.getId(),
+                        album.getName(),
+                        album.getDescription(),
+                        album.getReleaseDate(),
+                        album.getCoverImage(),
+                        album.getArtist().getName()
+                ))
+                .collect(Collectors.toList());
+    }
+
 	@Override
 	public List<SongDTO> searchSongsByGenre(String genre) {
-
 	    return songRepository
-	            .findByGenreIgnoreCaseContaining(genre)
+	            .findByGenreIgnoreCaseContainingAndIsPublicTrue(genre)
 	            .stream()
 	            .map(song -> new SongDTO(
 	                    song.getId(),
@@ -126,6 +149,34 @@ public class SearchServiceImpl implements SearchService {
 	            ))
 	            .toList();
 	}
-	
 
+    @Override
+    public List<SongDTO> searchSongsByArtist(Long artistId) {
+        return songRepository.findByArtist_IdAndIsPublicTrue(artistId).stream()
+                .map(song -> new SongDTO(
+                        song.getId(),
+                        song.getTitle(),
+                        song.getGenre(),
+                        song.getDuration(),
+                        song.getAudioPath(),
+                        song.getCoverImage(),
+                        song.getArtist().getName()
+                ))
+                .toList();
+    }
+
+    @Override
+    public List<SongDTO> searchSongsByAlbum(Long albumId) {
+        return songRepository.findByAlbum_IdAndIsPublicTrue(albumId).stream()
+                .map(song -> new SongDTO(
+                        song.getId(),
+                        song.getTitle(),
+                        song.getGenre(),
+                        song.getDuration(),
+                        song.getAudioPath(),
+                        song.getCoverImage(),
+                        song.getArtist().getName()
+                ))
+                .toList();
+    }
 }

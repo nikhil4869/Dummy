@@ -7,6 +7,7 @@ import org.springframework.web.multipart.MultipartFile;
 import com.example.demo.dto.music.SongDTO;
 import java.util.List;
 
+@CrossOrigin(origins = "http://localhost:8082")
 @RestController
 @RequestMapping("/songs")
 public class SongController {

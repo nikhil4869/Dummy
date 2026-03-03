@@ -9,6 +9,7 @@ import com.example.demo.dto.music.AlbumDTO;
 import java.time.LocalDate;
 import java.util.List;
 
+@CrossOrigin(origins = "http://localhost:8082")
 @RestController
 @RequestMapping("/albums")
 public class AlbumController {

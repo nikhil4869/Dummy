@@ -49,6 +49,7 @@ public class SecurityConfig {
 	                
 	             // ARTIST ONLY actions
 	                .requestMatchers(org.springframework.http.HttpMethod.POST, "/songs/upload").hasRole("ARTIST")
+	                .requestMatchers(HttpMethod.POST, "/songs/*/album/*").hasRole("ARTIST")
 	                .requestMatchers(org.springframework.http.HttpMethod.PUT, "/songs/**").hasRole("ARTIST")
 	                .requestMatchers(org.springframework.http.HttpMethod.DELETE, "/songs/**").hasRole("ARTIST")
 

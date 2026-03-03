@@ -18,7 +18,15 @@ public interface SearchService {
     
     List<String> getAllGenres();
 
+    List<Integer> getAllYears();
+
+    List<ArtistDTO> getAllArtists();
+
+    List<AlbumDTO> getAllAlbums();
+
     List<SongDTO> searchSongsByGenre(String genre);
 
+    List<SongDTO> searchSongsByArtist(Long artistId);
 
+    List<SongDTO> searchSongsByAlbum(Long albumId);
 }
