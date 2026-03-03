@@ -92,6 +92,12 @@
             <div class="content-scroll">
                 <h1 class="page-title">Songs</h1>
 
+                <!-- Error Message Display -->
+                <div th:if="${errorMessage}" class="alert alert-danger"
+                    style="background: rgba(255, 0, 0, 0.1); color: #ff4d4d; padding: 15px; border-radius: 8px; margin-bottom: 20px; border: 1px solid #ff4d4d;">
+                    <i class="fa-solid fa-circle-exclamation"></i> <span th:text="${errorMessage}">Error Message</span>
+                </div>
+
                 <div class="songs-grid">
 
                     <!-- Iterating over ${songs} list -->
@@ -113,7 +119,7 @@
                             <div class="song-card-header">
                                 <h3 class="song-title" th:text="${song.title}">Song Title</h3>
                                 <div class="song-options">
-                                    <button class="options-btn" onclick="toggleOptions(this, event)">
+                                    <button class="options-btn">
                                         <i class="fa-solid fa-ellipsis"></i>
                                     </button>
                                     <div class="options-dropdown">
@@ -155,6 +161,10 @@
                 </div>
             </div>
 
+            <script>
+                // Any page-specific song logic can go here
+                console.log("Songs page scripts re-initialized");
+            </script>
         </main>
 
     </div>
@@ -162,6 +172,10 @@
     <!-- Global Player Fragment Integration -->
     <div th:replace="~{fragments/global-player :: globalPlayer}"></div>
 
+    <script>
+        // Inline scripts for play/pause or specific features can stay, 
+        // but dropdown logic is now in navigation.js
+    </script>
 </body>
 
 </html>

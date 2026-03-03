@@ -3,6 +3,70 @@ const NavigationController = (() => {
     function init() {
         document.body.addEventListener("click", handleLinkClick);
         window.addEventListener("popstate", handlePopState);
+
+        // --- Add Global Dropdown Toggle Logic ---
+        document.addEventListener('click', function (e) {
+            // Check for filter-btn or anything inside it
+            const filterBtn = e.target.closest('.filter-btn');
+            if (filterBtn) {
+                e.stopPropagation();
+                const menu = filterBtn.nextElementSibling;
+                if (!menu) return;
+
+                // Close other menus of same type
+                document.querySelectorAll('.filter-menu').forEach(m => {
+                    if (m !== menu) m.classList.remove('show');
+                });
+                menu.classList.toggle('show');
+                return;
+            }
+
+            // Check for options-btn or anything inside it
+            const optionsBtn = e.target.closest('.options-btn');
+            if (optionsBtn) {
+                e.stopPropagation();
+                const dropdown = optionsBtn.nextElementSibling;
+                if (!dropdown) return;
+
+                // Close other dropdowns
+                document.querySelectorAll('.options-dropdown').forEach(d => {
+                    if (d !== dropdown) d.classList.remove('show');
+                });
+                dropdown.classList.toggle('show');
+                return;
+            }
+
+            // Global modal triggers
+            const createTrigger = e.target.closest('.create-playlist-trigger');
+            if (createTrigger) {
+                const modal = document.getElementById('createPlaylistModal');
+                if (modal) modal.classList.add('show');
+                return;
+            }
+
+            const closeBtn = e.target.closest('.close-modal');
+            if (closeBtn) {
+                const modal = closeBtn.closest('.modal');
+                if (modal) modal.classList.remove('show');
+                return;
+            }
+
+            // Clickable Playlist Card
+            const playlistCard = e.target.closest('.clickable-playlist');
+            if (playlistCard && !e.target.closest('.song-options')) {
+                const url = playlistCard.getAttribute('data-url');
+                if (url) NavigationController.navigate(url);
+                return;
+            }
+
+            // Close everything on document click (outside of menus/modals)
+            if (!e.target.closest('.modal-content') && !e.target.closest('.filter-dropdown') && !e.target.closest('.song-options')) {
+                document.querySelectorAll('.filter-menu, .options-dropdown, .modal').forEach(m => {
+                    m.classList.remove('show');
+                });
+            }
+        });
+
         interceptForms();
     }
 
@@ -55,6 +119,23 @@ const NavigationController = (() => {
             if (window.reinitPlayerContent) {
                 window.reinitPlayerContent();
             }
+
+            // --- Execute Scripts in new content ---
+            const scripts = currentContent.querySelectorAll("script");
+            scripts.forEach(oldScript => {
+                try {
+                    const newScript = document.createElement("script");
+                    if (oldScript.src) {
+                        newScript.src = oldScript.src;
+                    } else {
+                        newScript.textContent = oldScript.textContent;
+                    }
+                    document.body.appendChild(newScript);
+                    newScript.remove(); // Keep DOM clean
+                } catch (scriptErr) {
+                    console.error("Error executing injected script:", scriptErr);
+                }
+            });
 
             // 6. Re-bind forms in new content
             interceptForms();

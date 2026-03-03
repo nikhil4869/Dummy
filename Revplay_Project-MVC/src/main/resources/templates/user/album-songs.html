@@ -27,6 +27,13 @@
 
             <div class="content-scroll">
 
+                <!-- Navigation -->
+                <div class="nav-back-container">
+                    <a th:href="@{/user/albums}" class="back-btn">
+                        <i class="fa-solid fa-arrow-left"></i> Back to Albums
+                    </a>
+                </div>
+
                 <!-- Album Detail Header -->
                 <div class="album-detail-header" th:if="${album != null}">
                     <div class="album-detail-cover">

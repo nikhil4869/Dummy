@@ -60,6 +60,7 @@ public class SecurityConfig {
 	                .requestMatchers("/history/**").hasRole("USER")
 	                .requestMatchers("/player/**").hasRole("USER")
 	                .requestMatchers("/audio/**").permitAll()
+	                .requestMatchers("/analytics/user").hasAnyRole("USER", "ARTIST")
 	                .requestMatchers("/analytics/**").hasRole("ARTIST")
 	                // PUBLIC playlist viewing
 	                .requestMatchers(HttpMethod.GET, "/playlists/public/**").permitAll()

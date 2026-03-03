@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
+
 <head>
     <title>Artist Profile</title>
 
     <style>
-      /*  html, body {
+        /*  html, body {
             margin: 0;
             padding: 0;
             font-family: 'Segoe UI', sans-serif;
@@ -87,7 +88,8 @@
             transform: scale(1.05);
         }
 
-        input, textarea {
+        input,
+        textarea {
             width: 100%;
             padding: 12px;
             margin-bottom: 15px;
@@ -96,33 +98,36 @@
             background: #222;
             color: white;
         }
-		
-		.profile-actions {
-		    display: flex;
-		    justify-content: space-between; /* pushes left & right */
-		    align-items: center;
-		    margin-top: 30px;
-		}
 
-		.profile-actions form {
-		    margin: 0; /* remove default form spacing */
-		}
+        .profile-actions {
+            display: flex;
+            justify-content: space-between;
+            /* pushes left & right */
+            align-items: center;
+            margin-top: 30px;
+        }
 
-		.danger-btn {
-		    padding: 10px 25px;
-		    border-radius: 25px;
-		    border: none;
-		    background: #ff4d4d; /* red */
-		    color: white;
-		    font-weight: bold;
-		    cursor: pointer;
-		    transition: 0.3s;
-		}
+        .profile-actions form {
+            margin: 0;
+            /* remove default form spacing */
+        }
 
-		.danger-btn:hover {
-		    background: #ff1a1a;
-		    transform: scale(1.05);
-		}
+        .danger-btn {
+            padding: 10px 25px;
+            border-radius: 25px;
+            border: none;
+            background: #ff4d4d;
+            /* red */
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .danger-btn:hover {
+            background: #ff1a1a;
+            transform: scale(1.05);
+        }
 
         textarea {
             resize: none;
@@ -131,92 +136,89 @@
 </head>
 
 <!-- ✅ Background applied correctly to real body -->
-<body
-    style="margin:0;"
+
+<body style="margin:0;"
     th:style="${profile.bannerImage} != null ?
     'background: linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.85)), url(http://localhost:8080' + ${profile.bannerImage} + ') center/cover no-repeat fixed;'
     :
     'background: linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.85)), url(https://images.unsplash.com/photo-1511379938547-c1f69419868d?auto=format&fit=crop&w=1920&q=80) center/cover no-repeat fixed;'">
 
-<div class="layout">
+    <div class="layout">
 
-    <!-- SIDEBAR -->
-    <div th:replace="fragments/sidebar :: artistSidebar('profile')"></div>
+        <!-- SIDEBAR -->
+        <div th:replace="fragments/sidebar :: artistSidebar('profile')"></div>
 
-    <!-- MAIN CONTENT -->
-    <div class="content">
+        <!-- MAIN CONTENT -->
+        <div class="content">
 
-        <!-- PROFILE EXISTS -->
-        <div th:if="${exists}">
+            <!-- PROFILE EXISTS -->
+            <div th:if="${exists}">
 
-            <div class="profile-container">
+                <div class="profile-container">
 
-                <div style="text-align:center;">
-                    <img th:if="${profile.profileImage}"
-                         th:src="@{'http://localhost:8080' + ${profile.profileImage}}"
-                         class="profile-image"/>
+                    <div style="text-align:center;">
+                        <img th:if="${profile.profileImage}"
+                            th:src="@{'http://localhost:8080' + ${profile.profileImage}}" class="profile-image" />
 
-                    <h2 th:text="${profile.artistName}"></h2>
-                    <div class="genre" th:text="${profile.genre}"></div>
+                        <h2 th:text="${profile.artistName}"></h2>
+                        <div class="genre" th:text="${profile.genre}"></div>
+                    </div>
+
+                    <div class="bio">
+                        <p th:text="${profile.bio}"></p>
+                    </div>
+
+                    <div class="social-links">
+                        <a th:if="${profile.instagram}" th:href="${profile.instagram}" target="_blank">Instagram</a>
+                        <a th:if="${profile.twitter}" th:href="${profile.twitter}" target="_blank">Twitter</a>
+                        <a th:if="${profile.youtube}" th:href="${profile.youtube}" target="_blank">YouTube</a>
+                        <a th:if="${profile.website}" th:href="${profile.website}" target="_blank">Website</a>
+                    </div>
+
+                    <div class="profile-actions">
+
+                        <a th:href="@{/artist/profile/edit}">
+                            <button type="button" class="btn">Edit Profile</button>
+                        </a>
+
+                        <form th:action="@{/artist/profile/deactivate}" method="post"
+                            onsubmit="return confirm('Are you sure you want to deactivate your account?');">
+
+                            <button type="submit" class="danger-btn">
+                                Deactivate
+                            </button>
+                        </form>
+
+                    </div>
+
                 </div>
+            </div>
 
-                <div class="bio">
-                    <p th:text="${profile.bio}"></p>
-                </div>
+            <!-- CREATE PROFILE -->
+            <div th:if="${!exists}" class="profile-container">
 
-                <div class="social-links">
-                    <a th:if="${profile.instagram}" th:href="${profile.instagram}" target="_blank">Instagram</a>
-                    <a th:if="${profile.twitter}" th:href="${profile.twitter}" target="_blank">Twitter</a>
-                    <a th:if="${profile.youtube}" th:href="${profile.youtube}" target="_blank">YouTube</a>
-                    <a th:if="${profile.website}" th:href="${profile.website}" target="_blank">Website</a>
-                </div>
+                <h2>Create Your Artist Profile</h2>
 
-				<div class="profile-actions">
+                <form th:action="@{/artist/profile/save}" method="post" th:object="${profile}">
 
-				    <a th:href="@{/artist/profile/edit}">
-				        <button type="button" class="btn">Edit Profile</button>
-				    </a>
+                    <input type="text" th:field="*{artistName}" placeholder="Artist Name" required />
+                    <input type="text" th:field="*{genre}" placeholder="Genre" required />
+                    <textarea rows="4" th:field="*{bio}" placeholder="Bio"></textarea>
 
-				    <form th:action="@{/artist/profile/deactivate}"
-				          method="post"
-				          onsubmit="return confirm('Are you sure you want to deactivate your account?');">
+                    <input type="text" th:field="*{instagram}" placeholder="Instagram" />
+                    <input type="text" th:field="*{twitter}" placeholder="Twitter" />
+                    <input type="text" th:field="*{youtube}" placeholder="YouTube" />
+                    <input type="text" th:field="*{website}" placeholder="Website" />
 
-				        <button type="submit" class="danger-btn">
-				            Deactivate
-				        </button>
-				    </form>
-
-				</div>
+                    <button type="submit" class="btn">Create Profile</button>
+                </form>
 
             </div>
-        </div>
-
-        <!-- CREATE PROFILE -->
-        <div th:if="${!exists}" class="profile-container">
-
-            <h2>Create Your Artist Profile</h2>
-
-            <form th:action="@{/artist/profile/save}"
-                  method="post"
-                  th:object="${profile}">
-
-                <input type="text" th:field="*{artistName}" placeholder="Artist Name" required />
-                <input type="text" th:field="*{genre}" placeholder="Genre" required />
-                <textarea rows="4" th:field="*{bio}" placeholder="Bio"></textarea>
-
-                <input type="text" th:field="*{instagram}" placeholder="Instagram" />
-                <input type="text" th:field="*{twitter}" placeholder="Twitter" />
-                <input type="text" th:field="*{youtube}" placeholder="YouTube" />
-                <input type="text" th:field="*{website}" placeholder="Website" />
-
-                <button type="submit" class="btn">Create Profile</button>
-            </form>
 
         </div>
 
     </div>
 
-</div>
-
 </body>
+
 </html>

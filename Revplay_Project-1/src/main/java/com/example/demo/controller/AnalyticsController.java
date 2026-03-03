@@ -35,7 +35,11 @@ public class AnalyticsController {
     }
     
 
-
+    @GetMapping("/user")
+    public com.example.demo.dto.analytics.UserAnalyticsDTO userAnalytics() {
+        return analyticsService.getUserAnalytics();
+    }
+    
     @GetMapping("/trends")
     public List<DailyTrendDTO> getDailyTrends() {
         return analyticsService.getDailyTrends();

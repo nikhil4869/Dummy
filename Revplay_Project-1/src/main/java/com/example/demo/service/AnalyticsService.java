@@ -16,5 +16,7 @@ public interface AnalyticsService {
     ListenerInsightsDTO getListenerInsights();
     
 
+    com.example.demo.dto.analytics.UserAnalyticsDTO getUserAnalytics();
+
     List<DailyTrendDTO> getDailyTrends();
 }

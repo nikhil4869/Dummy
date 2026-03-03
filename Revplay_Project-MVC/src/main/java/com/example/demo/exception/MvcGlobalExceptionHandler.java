@@ -14,15 +14,15 @@ public class MvcGlobalExceptionHandler {
 
         String errorMessage = extractMessage(ex.getResponseBodyAsString());
 
-        // If login error → redirect login
-        if (ex.getStatusCode().value() == 401) {
-            redirectAttributes.addFlashAttribute("error", errorMessage);
+        // If 403 → redirect login
+        if (ex.getStatusCode().value() == 403) {
+            redirectAttributes.addFlashAttribute("error", "Access denied. Please login.");
             return "redirect:/login";
         }
 
-        // If register error → redirect register
+        // For other errors, we might want to go to a general error page or just back
         redirectAttributes.addFlashAttribute("error", errorMessage);
-        return "redirect:/register";
+        return "redirect:/login"; // Defaulting to login is safer than register if unauthorized
     }
 
     private String extractMessage(String responseBody) {

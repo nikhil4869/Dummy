@@ -11,6 +11,8 @@ import com.example.demo.repository.UserRepository;
 import com.example.demo.service.PlaylistService;
 import com.example.demo.util.SecurityUtil;
 import org.springframework.stereotype.Service;
+import java.net.URLDecoder;
+import java.nio.charset.StandardCharsets;
 import java.util.List;
 import java.util.stream.Collectors;
 import com.example.demo.entity.PlaylistSong;
@@ -42,14 +44,37 @@ public class PlaylistServiceImpl implements PlaylistService {
 		this.followedPlaylistRepository = followedPlaylistRepository;
 	}
 
-	private PlaylistDTO map(Playlist p) {
+    private PlaylistDTO convertToDTO(Playlist p, Boolean followedStatus) {
+        if (p == null) return null;
+        
+        String name = p.getName();
+        String description = p.getDescription();
+        
+        try {
+            // Fix legacy data that might have been stored as URL-encoded
+            if (name != null && name.contains("%")) {
+                name = URLDecoder.decode(name, StandardCharsets.UTF_8);
+            }
+            if (description != null && description.contains("%")) {
+                description = URLDecoder.decode(description, StandardCharsets.UTF_8);
+            }
+        } catch (Exception e) {
+            // Keep original if decoding fails
+        }
+
+        String ownerName = (p.getUser() != null) ? p.getUser().getName() : "Unknown";
         return new PlaylistDTO(
                 p.getId(),
-                p.getName(),
-                p.getDescription(),
+                name,
+                description,
                 p.isPublic(),
-                p.getUser().getName()
+                ownerName,
+                followedStatus
         );
+    }
+
+    private PlaylistDTO convertToDTO(Playlist p) {
+        return convertToDTO(p, null);
     }
 
     @Override
@@ -66,7 +91,7 @@ public class PlaylistServiceImpl implements PlaylistService {
         p.setPublic(isPublic);
         p.setUser(user);
 
-        return map(playlistRepository.save(p));
+        return convertToDTO(playlistRepository.save(p));
     }
 
     @Override
@@ -78,13 +103,28 @@ public class PlaylistServiceImpl implements PlaylistService {
                 .orElseThrow(() -> new ResourceNotFoundException("User not found"));
 
         return playlistRepository.findByUser(user)
-                .stream().map(this::map).collect(Collectors.toList());
+                .stream().map(p -> convertToDTO(p, false)).collect(Collectors.toList());
     }
 
     @Override
     public List<PlaylistDTO> getPublicPlaylists() {
+        String email = SecurityUtil.getCurrentUserEmail();
+        User currentUser = userRepository.findByEmail(email).orElse(null);
+        
+        List<Long> followedPlaylistIds = new java.util.ArrayList<>();
+        if (currentUser != null) {
+            followedPlaylistIds = followedPlaylistRepository.findByUser(currentUser)
+                    .stream()
+                    .map(f -> f.getPlaylist().getId())
+                    .collect(Collectors.toList());
+        }
+
+        final List<Long> finalFollowedIds = followedPlaylistIds;
         return playlistRepository.findByIsPublicTrue()
-                .stream().map(this::map).collect(Collectors.toList());
+                .stream()
+                .filter(p -> currentUser == null || !p.getUser().getId().equals(currentUser.getId()))
+                .map(p -> convertToDTO(p, finalFollowedIds.contains(p.getId())))
+                .collect(Collectors.toList());
     }
 
     @Override
@@ -228,17 +268,7 @@ public class PlaylistServiceImpl implements PlaylistService {
         List<FollowedPlaylist> follows = followedPlaylistRepository.findByUser(user);
 
         return follows.stream()
-                .map(f -> mapToDTO(f.getPlaylist()))
+                .map(f -> convertToDTO(f.getPlaylist(), true))
                 .collect(Collectors.toList());
-    }
-    
-    private PlaylistDTO mapToDTO(Playlist playlist) {
-        return new PlaylistDTO(
-                playlist.getId(),
-                playlist.getName(),
-                playlist.getDescription(),
-                playlist.isPublic(),
-                playlist.getUser().getName()
-        );
     }
 }

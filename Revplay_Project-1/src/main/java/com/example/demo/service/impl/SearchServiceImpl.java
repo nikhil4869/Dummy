@@ -152,7 +152,11 @@ public class SearchServiceImpl implements SearchService {
 
     @Override
     public List<SongDTO> searchSongsByArtist(Long artistId) {
-        return songRepository.findByArtist_IdAndIsPublicTrue(artistId).stream()
+        com.example.demo.entity.ArtistProfile profile = artistRepository.findById(artistId).orElse(null);
+        if (profile == null) return java.util.Collections.emptyList();
+        
+        Long userId = profile.getUser().getId();
+        return songRepository.findByArtist_IdAndIsPublicTrue(userId).stream()
                 .map(song -> new SongDTO(
                         song.getId(),
                         song.getTitle(),

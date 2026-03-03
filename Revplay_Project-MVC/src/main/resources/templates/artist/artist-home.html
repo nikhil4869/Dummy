@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
+
 <head>
     <title>Artist Dashboard</title>
 
@@ -31,7 +32,7 @@
             justify-content: space-between;
             align-items: center;
             margin-bottom: 40px;
-            box-shadow: 0 0 30px rgba(255,215,0,0.05);
+            box-shadow: 0 0 30px rgba(255, 215, 0, 0.05);
         }
 
         .welcome h2 {
@@ -87,7 +88,7 @@
 
         .stat-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 0 25px rgba(255,215,0,0.1);
+            box-shadow: 0 0 25px rgba(255, 215, 0, 0.1);
         }
 
         .stat-card h3 {
@@ -109,7 +110,7 @@
             background: #161616;
             padding: 30px;
             border-radius: 20px;
-            box-shadow: 0 0 25px rgba(255,215,0,0.05);
+            box-shadow: 0 0 25px rgba(255, 215, 0, 0.05);
         }
 
         .top-song h3 {
@@ -126,101 +127,100 @@
             color: #aaa;
             margin-top: 5px;
         }
-
     </style>
 </head>
+
 <body>
 
-<div class="layout">
+    <div class="layout">
 
-    <!-- Sidebar -->
-    <div th:replace="~{fragments/sidebar :: artistSidebar('main')}"></div>
+        <!-- Sidebar -->
+        <div th:replace="~{fragments/sidebar :: artistSidebar('main')}"></div>
 
-    <div class="content">
+        <div class="content">
 
-        <!-- Welcome Section -->
-        <div class="welcome">
-            <div>
-				<h2>
-				    Welcome Back,
-				    <span th:text="${artistName}">Artist</span>
-				    🎵
-				</h2>
-                <p>Your music performance at a glance</p>
-            </div>
-
-            <div class="actions">
-                <a th:href="@{/artist/songs/upload}">
-                    <button class="btn btn-gold">➕ Add Song</button>
-                </a>
-
-                <a th:href="@{/artist/albums/create}">
-                    <button class="btn btn-gold">💿 Add Album</button>
-                </a>
-
-                <a th:href="@{/artist/profile/edit}">
-                    <button class="btn btn-gold">✏ Edit Profile</button>
-                </a>
-            </div>
-        </div>
-
-        <!-- Stats -->
-        <div class="stats">
-
-            <div class="stat-card">
-                <h3>Total Plays</h3>
-                <p th:text="${analytics.totalPlays}">0</p>
-            </div>
-
-            <div class="stat-card">
-                <h3>Total Songs</h3>
-                <p th:text="${analytics.totalSongs}">0</p>
-            </div>
-
-            <div class="stat-card">
-                <h3>Total Albums</h3>
-                <p th:text="${analytics.totalAlbums}">0</p>
-            </div>
-
-            <div class="stat-card">
-                <h3>Total Favorites</h3>
-                <p th:text="${analytics.totalFavorites}">0</p>
-            </div>
-
-            <div class="stat-card">
-                <h3>Unique Listeners</h3>
-                <p th:text="${listeners.uniqueListeners}">0</p>
-            </div>
-
-        </div>
-
-        <!-- Top Song -->
-        <div class="top-song">
-
-            <h3>🏆 Top Performing Song</h3>
-
-            <div th:if="${analytics.topSongs != null and !analytics.topSongs.isEmpty()}">
-
-                <div class="top-song-name"
-                     th:text="${analytics.topSongs.get(0)}">
-                    Song Name
+            <!-- Welcome Section -->
+            <div class="welcome">
+                <div>
+                    <h2>
+                        Welcome Back,
+                        <span th:text="${artistName}">Artist</span>
+                        🎵
+                    </h2>
+                    <p>Your music performance at a glance</p>
                 </div>
 
-                <div class="top-song-plays"
-                     th:text="${analytics.totalPlays} + ' total plays across songs'">
-                    0 plays
+                <div class="actions">
+                    <a th:href="@{/artist/songs/upload}">
+                        <button class="btn btn-gold">➕ Add Song</button>
+                    </a>
+
+                    <a th:href="@{/artist/albums/create}">
+                        <button class="btn btn-gold">💿 Add Album</button>
+                    </a>
+
+                    <a th:href="@{/artist/profile/edit}">
+                        <button class="btn btn-gold">✏ Edit Profile</button>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Stats -->
+            <div class="stats">
+
+                <div class="stat-card">
+                    <h3>Total Plays</h3>
+                    <p th:text="${analytics.totalPlays}">0</p>
+                </div>
+
+                <div class="stat-card">
+                    <h3>Total Songs</h3>
+                    <p th:text="${analytics.totalSongs}">0</p>
+                </div>
+
+                <div class="stat-card">
+                    <h3>Total Albums</h3>
+                    <p th:text="${analytics.totalAlbums}">0</p>
+                </div>
+
+                <div class="stat-card">
+                    <h3>Total Favorites</h3>
+                    <p th:text="${analytics.totalFavorites}">0</p>
+                </div>
+
+                <div class="stat-card">
+                    <h3>Unique Listeners</h3>
+                    <p th:text="${listeners.uniqueListeners}">0</p>
                 </div>
 
             </div>
 
-            <div th:if="${analytics.topSongs == null or analytics.topSongs.isEmpty()}">
-                No songs available yet.
+            <!-- Top Song -->
+            <div class="top-song">
+
+                <h3>🏆 Top Performing Song</h3>
+
+                <div th:if="${analytics.topSongs != null and !analytics.topSongs.isEmpty()}">
+
+                    <div class="top-song-name" th:text="${analytics.topSongs.get(0)}">
+                        Song Name
+                    </div>
+
+                    <div class="top-song-plays" th:text="${analytics.totalPlays} + ' total plays across songs'">
+                        0 plays
+                    </div>
+
+                </div>
+
+                <div th:if="${analytics.topSongs == null or analytics.topSongs.isEmpty()}">
+                    No songs available yet.
+                </div>
+
             </div>
 
         </div>
-
     </div>
-</div>
 
 </body>
+
 </html>

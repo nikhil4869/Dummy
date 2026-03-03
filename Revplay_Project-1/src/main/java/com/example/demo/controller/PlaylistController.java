@@ -18,12 +18,12 @@ public class PlaylistController {
     }
 
     @PostMapping
-    public PlaylistDTO create(
-            @RequestParam String name,
-            @RequestParam String description,
-            @RequestParam boolean isPublic) {
-
-        return service.createPlaylist(name, description, isPublic);
+    public PlaylistDTO create(@RequestBody PlaylistDTO playlistDto) {
+        return service.createPlaylist(
+                playlistDto.getName(),
+                playlistDto.getDescription(),
+                playlistDto.getIsPublic() != null && playlistDto.getIsPublic()
+        );
     }
 
     @GetMapping("/my")

@@ -8,14 +8,16 @@ import com.example.demo.repository.UserRepository;
 import com.example.demo.repository.SongRepository;
 import com.example.demo.repository.AlbumRepository;
 import com.example.demo.repository.FavoriteRepository;
+import com.example.demo.repository.PlayHistoryRepository;
 import com.example.demo.service.AnalyticsService;
 import com.example.demo.util.SecurityUtil;
 import org.springframework.stereotype.Service;
 import java.util.*;
 import java.util.stream.Collectors;
 import com.example.demo.dto.analytics.ListenerInsightsDTO;
-import com.example.demo.repository.PlayHistoryRepository;
 import com.example.demo.dto.analytics.DailyTrendDTO;
+import com.example.demo.dto.analytics.UserAnalyticsDTO;
+import com.example.demo.repository.PlaylistRepository;
 
 @Service
 public class AnalyticsServiceImpl implements AnalyticsService {
@@ -25,16 +27,18 @@ public class AnalyticsServiceImpl implements AnalyticsService {
 	private final FavoriteRepository favoriteRepository;
 	private final PlayHistoryRepository playHistoryRepository;
 	private final AlbumRepository albumRepository;
+	private final PlaylistRepository playlistRepository;
 
 	public AnalyticsServiceImpl(UserRepository userRepository, SongRepository songRepository,
 			FavoriteRepository favoriteRepository, PlayHistoryRepository playHistoryRepository,
-			AlbumRepository albumRepository) {
+			AlbumRepository albumRepository, PlaylistRepository playlistRepository) {
 
 		this.userRepository = userRepository;
 		this.songRepository = songRepository;
 		this.favoriteRepository = favoriteRepository;
 		this.playHistoryRepository = playHistoryRepository;
 		this.albumRepository = albumRepository;
+		this.playlistRepository = playlistRepository;
 	}
 
 	@Override
@@ -79,6 +83,87 @@ public class AnalyticsServiceImpl implements AnalyticsService {
 		long listeners = playHistoryRepository.countUniqueListeners(artist);
 
 		return new ListenerInsightsDTO(listeners);
+	}
+
+	@Override
+	public UserAnalyticsDTO getUserAnalytics() {
+		String email = SecurityUtil.getCurrentUserEmail();
+		User user = userRepository.findByEmail(email).orElseThrow(() -> new RuntimeException("User not found"));
+
+		long favorites = favoriteRepository.countByUser(user);
+		long playlists = playlistRepository.countByUser(user);
+		
+		long totalSeconds = 0;
+		try {
+			totalSeconds = playHistoryRepository.getTotalListeningTime(user);
+		} catch (Exception e) {
+			// Fallback if query fails
+		}
+		
+		long hours = totalSeconds / 3600;
+		long minutes = (totalSeconds % 3600) / 60;
+		String listeningTime = hours + " hr " + minutes + " min";
+
+		// Top 5 Songs
+		List<Map<String, Object>> topSongs = new ArrayList<>();
+		try {
+			topSongs = playHistoryRepository.findMostPlayedSongs(user).stream()
+					.limit(5)
+					.filter(row -> row != null && row.length >= 3)
+					.map(row -> {
+						Map<String, Object> map = new HashMap<>();
+						map.put("title", row[1] != null ? row[1] : "Unknown");
+						map.put("count", row[2] != null ? row[2] : 0L);
+						return map;
+					})
+					.collect(Collectors.toList());
+		} catch (Exception e) {}
+
+		// Basic Genre Analytics - Limit history to 200 items for safety
+		List<Object[]> history = new ArrayList<>();
+		try {
+			history = playHistoryRepository.findByUserOrderByPlayedAtDesc(user).stream()
+					.limit(200)
+					.filter(ph -> ph != null && ph.getSong() != null)
+					.map(ph -> {
+						String artistName = (ph.getSong().getArtist() != null) ? ph.getSong().getArtist().getName() : "Unknown";
+						String genreName = ph.getSong().getGenre();
+						return new Object[]{artistName, genreName};
+					})
+					.collect(Collectors.toList());
+		} catch (Exception e) {}
+
+		Map<String, Long> artistCounts = history.stream()
+				.filter(row -> row[0] != null)
+				.collect(Collectors.groupingBy(row -> (String)row[0], Collectors.counting()));
+		
+		List<Map<String, Object>> topArtists = artistCounts.entrySet().stream()
+				.sorted((a, b) -> b.getValue().compareTo(a.getValue()))
+				.limit(5)
+				.map(e -> {
+					Map<String, Object> map = new HashMap<>();
+					map.put("name", e.getKey());
+					map.put("count", e.getValue());
+					return map;
+				})
+				.collect(Collectors.toList());
+
+		Map<String, Long> genreCounts = history.stream()
+				.filter(row -> row[1] != null)
+				.collect(Collectors.groupingBy(row -> (String)row[1], Collectors.counting()));
+
+		List<Map<String, Object>> topGenres = genreCounts.entrySet().stream()
+				.sorted((a, b) -> b.getValue().compareTo(a.getValue()))
+				.limit(5)
+				.map(e -> {
+					Map<String, Object> map = new HashMap<>();
+					map.put("genre", e.getKey());
+					map.put("count", e.getValue());
+					return map;
+				})
+				.collect(Collectors.toList());
+
+		return new UserAnalyticsDTO(favorites, playlists, listeningTime, topSongs, topArtists, topGenres);
 	}
 
 	@Override
