@@ -91,6 +91,7 @@ public class LoginController {
             formData.put("name", registerRequest.getName());
             formData.put("email", registerRequest.getEmail());
             formData.put("password", registerRequest.getPassword());
+            formData.put("confirmPassword", registerRequest.getConfirmPassword());
             formData.put("role", registerRequest.getRole());
             formData.put("dateOfBirth", registerRequest.getDateOfBirth().toString());
 
@@ -103,7 +104,7 @@ public class LoginController {
 
             return "redirect:/login";
         } catch (Exception e) {
-            redirectAttributes.addFlashAttribute("error", "Registration failed. Email might already be in use.");
+            redirectAttributes.addFlashAttribute("error", "Registration failed: " + e.getMessage());
             return "redirect:/register";
         }
     }
@@ -140,7 +141,7 @@ public class LoginController {
 
             return "redirect:/login";
         } catch (Exception e) {
-            redirectAttributes.addFlashAttribute("error", "Password reset failed. Please check your details.");
+            redirectAttributes.addFlashAttribute("error", "Password reset failed: " + e.getMessage());
             return "redirect:/forgot-password";
         }
     }

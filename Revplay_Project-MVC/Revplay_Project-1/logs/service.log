@@ -1666,3 +1666,115 @@ java.io.IOException
 2026-03-04 10:45:58 [restartedMain] INFO  com.example.demo.service.impl.PlaylistServiceImpl - PlaylistServiceImpl initialized
 2026-03-04 10:45:58 [restartedMain] INFO  com.example.demo.service.impl.SearchServiceImpl - SearchServiceImpl initialized
 2026-03-04 10:45:58 [restartedMain] INFO  com.example.demo.service.impl.UserServiceImpl - UserServiceImpl initialized
+2026-03-04 11:12:37 [restartedMain] INFO  com.example.demo.service.impl.AlbumServiceImpl - AlbumServiceImpl initialized
+2026-03-04 11:12:38 [restartedMain] INFO  com.example.demo.service.impl.AnalyticsServiceImpl - AnalyticsServiceImpl initialized
+2026-03-04 11:12:38 [restartedMain] INFO  com.example.demo.service.impl.ArtistServiceImpl - ArtistServiceImpl initialized
+2026-03-04 11:12:38 [restartedMain] INFO  com.example.demo.service.impl.SongServiceImpl - SongServiceImpl initialized
+2026-03-04 11:12:38 [restartedMain] INFO  com.example.demo.service.impl.AuthServiceImpl - AuthServiceImpl initialized
+2026-03-04 11:12:38 [restartedMain] INFO  com.example.demo.service.impl.FavoriteServiceImpl - FavoriteServiceImpl initialized
+2026-03-04 11:12:38 [restartedMain] INFO  com.example.demo.service.impl.HistoryServiceImpl - HistoryServiceImpl initialized
+2026-03-04 11:12:38 [restartedMain] INFO  com.example.demo.service.impl.PlayerServiceImpl - PlayerServiceImpl initialized
+2026-03-04 11:12:38 [restartedMain] INFO  com.example.demo.service.impl.PlaylistServiceImpl - PlaylistServiceImpl initialized
+2026-03-04 11:12:38 [restartedMain] INFO  com.example.demo.service.impl.SearchServiceImpl - SearchServiceImpl initialized
+2026-03-04 11:12:38 [restartedMain] INFO  com.example.demo.service.impl.UserServiceImpl - UserServiceImpl initialized
+2026-03-04 11:21:59 [http-nio-8080-exec-2] INFO  com.example.demo.service.impl.AuthServiceImpl - Register request received for email=niki@gmail.com
+2026-03-04 11:22:00 [http-nio-8080-exec-2] WARN  com.example.demo.service.impl.AuthServiceImpl - Password mismatch during registration for email=niki@gmail.com
+2026-03-04 11:23:27 [http-nio-8080-exec-4] INFO  com.example.demo.service.impl.AuthServiceImpl - Login attempt for email=niki@gmail.com
+2026-03-04 11:23:27 [http-nio-8080-exec-4] WARN  com.example.demo.service.impl.AuthServiceImpl - Login failed - user not found email=niki@gmail.com
+2026-03-04 11:23:41 [http-nio-8080-exec-1] INFO  com.example.demo.service.impl.AuthServiceImpl - Login attempt for email=niki@gmail.com
+2026-03-04 11:23:41 [http-nio-8080-exec-1] WARN  com.example.demo.service.impl.AuthServiceImpl - Login failed - user not found email=niki@gmail.com
+2026-03-04 11:24:07 [http-nio-8080-exec-5] INFO  com.example.demo.service.impl.AuthServiceImpl - Login attempt for email=harish@gmail.com
+2026-03-04 11:24:08 [http-nio-8080-exec-5] INFO  com.example.demo.service.impl.AuthServiceImpl - Login successful email=harish@gmail.com role=ARTIST
+2026-03-04 11:24:08 [http-nio-8080-exec-3] INFO  com.example.demo.service.impl.AnalyticsServiceImpl - Fetching artist analytics
+2026-03-04 11:24:08 [http-nio-8080-exec-3] DEBUG com.example.demo.service.impl.AnalyticsServiceImpl - Current artist email=harish@gmail.com
+2026-03-04 11:24:08 [http-nio-8080-exec-3] DEBUG com.example.demo.service.impl.AnalyticsServiceImpl - Artist stats calculated songs=21, albums=5, plays=15, favorites=2
+2026-03-04 11:24:08 [http-nio-8080-exec-3] INFO  com.example.demo.service.impl.AnalyticsServiceImpl - Artist analytics generated successfully
+2026-03-04 11:24:08 [http-nio-8080-exec-7] INFO  com.example.demo.service.impl.AnalyticsServiceImpl - Fetching listener insights
+2026-03-04 11:24:08 [http-nio-8080-exec-7] INFO  com.example.demo.service.impl.AnalyticsServiceImpl - Total unique listeners=1
+2026-03-04 11:24:08 [http-nio-8080-exec-6] INFO  com.example.demo.service.impl.ArtistServiceImpl - Fetching current user's artist profile
+2026-03-04 11:24:08 [http-nio-8080-exec-6] DEBUG com.example.demo.service.impl.ArtistServiceImpl - Mapping ArtistProfile to DTO profileId=1
+2026-03-04 11:26:47 [http-nio-8080-exec-10] INFO  com.example.demo.service.impl.AuthServiceImpl - Register request received for email=nandu@gmail.com
+2026-03-04 11:26:47 [http-nio-8080-exec-10] WARN  com.example.demo.service.impl.AuthServiceImpl - Password mismatch during registration for email=nandu@gmail.com
+2026-03-04 11:27:21 [http-nio-8080-exec-9] INFO  com.example.demo.service.impl.AuthServiceImpl - Login attempt for email=nandu@gmail.com
+2026-03-04 11:27:21 [http-nio-8080-exec-9] WARN  com.example.demo.service.impl.AuthServiceImpl - Login failed - user not found email=nandu@gmail.com
+2026-03-04 11:27:53 [http-nio-8080-exec-2] INFO  com.example.demo.service.impl.AuthServiceImpl - Password reset requested for email=nikhil@gmail.com
+2026-03-04 11:27:53 [http-nio-8080-exec-2] INFO  com.example.demo.service.impl.AuthServiceImpl - Password reset successful and account activated email=nikhil@gmail.com
+2026-03-04 11:28:04 [http-nio-8080-exec-4] INFO  com.example.demo.service.impl.AuthServiceImpl - Login attempt for email=nikhil@gmaail.com
+2026-03-04 11:28:04 [http-nio-8080-exec-4] WARN  com.example.demo.service.impl.AuthServiceImpl - Login failed - user not found email=nikhil@gmaail.com
+2026-03-04 11:28:17 [http-nio-8080-exec-1] INFO  com.example.demo.service.impl.AuthServiceImpl - Login attempt for email=nikhil@gmail.com
+2026-03-04 11:28:18 [http-nio-8080-exec-1] INFO  com.example.demo.service.impl.AuthServiceImpl - Login successful email=nikhil@gmail.com role=USER
+2026-03-04 11:28:18 [http-nio-8080-exec-5] INFO  com.example.demo.service.impl.UserServiceImpl - Fetching dashboard stats for user
+2026-03-04 11:28:18 [http-nio-8080-exec-5] DEBUG com.example.demo.service.impl.UserServiceImpl - Current user email=nikhil@gmail.com
+2026-03-04 11:28:18 [http-nio-8080-exec-5] DEBUG com.example.demo.service.impl.UserServiceImpl - Dashboard stats favorites=5 playlists=2 recent=50 listeningTime=3 hr 21 min
+2026-03-04 11:28:18 [http-nio-8080-exec-3] INFO  com.example.demo.service.impl.UserServiceImpl - Fetching user profile
+2026-03-04 11:28:18 [http-nio-8080-exec-3] DEBUG com.example.demo.service.impl.UserServiceImpl - Current user email=nikhil@gmail.com
+2026-03-04 11:28:18 [http-nio-8080-exec-3] DEBUG com.example.demo.service.impl.UserServiceImpl - Mapping User to UserProfileDTO userId=41
+2026-03-04 11:28:18 [http-nio-8080-exec-7] INFO  com.example.demo.service.impl.HistoryServiceImpl - Fetching recent listening history
+2026-03-04 11:28:18 [http-nio-8080-exec-7] DEBUG com.example.demo.service.impl.HistoryServiceImpl - Current user email=nikhil@gmail.com
+2026-03-04 11:28:18 [http-nio-8080-exec-7] DEBUG com.example.demo.service.impl.HistoryServiceImpl - Fetched 50 play history records
+2026-03-04 11:28:18 [http-nio-8080-exec-7] DEBUG com.example.demo.service.impl.HistoryServiceImpl - Unique songs after filtering=19
+2026-03-04 11:28:18 [http-nio-8080-exec-7] DEBUG com.example.demo.service.impl.HistoryServiceImpl - Mapping PlayHistory to DTO songId=21
+2026-03-04 11:28:18 [http-nio-8080-exec-7] DEBUG com.example.demo.service.impl.HistoryServiceImpl - Mapping PlayHistory to DTO songId=45
+2026-03-04 11:28:18 [http-nio-8080-exec-7] DEBUG com.example.demo.service.impl.HistoryServiceImpl - Mapping PlayHistory to DTO songId=26
+2026-03-04 11:28:18 [http-nio-8080-exec-7] DEBUG com.example.demo.service.impl.HistoryServiceImpl - Mapping PlayHistory to DTO songId=55
+2026-03-04 11:28:18 [http-nio-8080-exec-7] DEBUG com.example.demo.service.impl.HistoryServiceImpl - Mapping PlayHistory to DTO songId=52
+2026-03-04 11:28:18 [http-nio-8080-exec-7] DEBUG com.example.demo.service.impl.HistoryServiceImpl - Mapping PlayHistory to DTO songId=51
+2026-03-04 11:28:18 [http-nio-8080-exec-7] DEBUG com.example.demo.service.impl.HistoryServiceImpl - Mapping PlayHistory to DTO songId=3
+2026-03-04 11:28:18 [http-nio-8080-exec-7] DEBUG com.example.demo.service.impl.HistoryServiceImpl - Mapping PlayHistory to DTO songId=1
+2026-03-04 11:28:18 [http-nio-8080-exec-7] DEBUG com.example.demo.service.impl.HistoryServiceImpl - Mapping PlayHistory to DTO songId=44
+2026-03-04 11:28:18 [http-nio-8080-exec-7] DEBUG com.example.demo.service.impl.HistoryServiceImpl - Mapping PlayHistory to DTO songId=43
+2026-03-04 11:28:18 [http-nio-8080-exec-7] DEBUG com.example.demo.service.impl.HistoryServiceImpl - Mapping PlayHistory to DTO songId=23
+2026-03-04 11:28:18 [http-nio-8080-exec-7] DEBUG com.example.demo.service.impl.HistoryServiceImpl - Mapping PlayHistory to DTO songId=48
+2026-03-04 11:28:18 [http-nio-8080-exec-7] DEBUG com.example.demo.service.impl.HistoryServiceImpl - Mapping PlayHistory to DTO songId=47
+2026-03-04 11:28:18 [http-nio-8080-exec-7] DEBUG com.example.demo.service.impl.HistoryServiceImpl - Mapping PlayHistory to DTO songId=46
+2026-03-04 11:28:18 [http-nio-8080-exec-7] DEBUG com.example.demo.service.impl.HistoryServiceImpl - Mapping PlayHistory to DTO songId=22
+2026-03-04 11:28:18 [http-nio-8080-exec-7] DEBUG com.example.demo.service.impl.HistoryServiceImpl - Mapping PlayHistory to DTO songId=54
+2026-03-04 11:28:18 [http-nio-8080-exec-7] DEBUG com.example.demo.service.impl.HistoryServiceImpl - Mapping PlayHistory to DTO songId=60
+2026-03-04 11:28:18 [http-nio-8080-exec-7] DEBUG com.example.demo.service.impl.HistoryServiceImpl - Mapping PlayHistory to DTO songId=59
+2026-03-04 11:28:18 [http-nio-8080-exec-7] DEBUG com.example.demo.service.impl.HistoryServiceImpl - Mapping PlayHistory to DTO songId=50
+2026-03-04 11:43:29 [restartedMain] INFO  com.example.demo.service.impl.AlbumServiceImpl - AlbumServiceImpl initialized
+2026-03-04 11:43:30 [restartedMain] INFO  com.example.demo.service.impl.AnalyticsServiceImpl - AnalyticsServiceImpl initialized
+2026-03-04 11:43:30 [restartedMain] INFO  com.example.demo.service.impl.ArtistServiceImpl - ArtistServiceImpl initialized
+2026-03-04 11:43:30 [restartedMain] INFO  com.example.demo.service.impl.SongServiceImpl - SongServiceImpl initialized
+2026-03-04 11:43:30 [restartedMain] INFO  com.example.demo.service.impl.AuthServiceImpl - AuthServiceImpl initialized
+2026-03-04 11:43:30 [restartedMain] INFO  com.example.demo.service.impl.FavoriteServiceImpl - FavoriteServiceImpl initialized
+2026-03-04 11:43:30 [restartedMain] INFO  com.example.demo.service.impl.HistoryServiceImpl - HistoryServiceImpl initialized
+2026-03-04 11:43:30 [restartedMain] INFO  com.example.demo.service.impl.PlayerServiceImpl - PlayerServiceImpl initialized
+2026-03-04 11:43:30 [restartedMain] INFO  com.example.demo.service.impl.PlaylistServiceImpl - PlaylistServiceImpl initialized
+2026-03-04 11:43:30 [restartedMain] INFO  com.example.demo.service.impl.SearchServiceImpl - SearchServiceImpl initialized
+2026-03-04 11:43:30 [restartedMain] INFO  com.example.demo.service.impl.UserServiceImpl - UserServiceImpl initialized
+2026-03-04 11:44:16 [http-nio-8080-exec-1] INFO  com.example.demo.service.impl.AuthServiceImpl - Register request received for email=nandu@gmail.com
+2026-03-04 11:44:16 [http-nio-8080-exec-1] DEBUG com.example.demo.service.impl.AuthServiceImpl - Role found for registration role=USER
+2026-03-04 11:44:16 [http-nio-8080-exec-1] INFO  com.example.demo.service.impl.AuthServiceImpl - User registered successfully email=nandu@gmail.com
+2026-03-04 11:44:43 [http-nio-8080-exec-3] INFO  com.example.demo.service.impl.AuthServiceImpl - Login attempt for email=nandu@gmail.com
+2026-03-04 11:44:43 [http-nio-8080-exec-3] INFO  com.example.demo.service.impl.AuthServiceImpl - Login successful email=nandu@gmail.com role=USER
+2026-03-04 11:44:44 [http-nio-8080-exec-6] INFO  com.example.demo.service.impl.UserServiceImpl - Fetching dashboard stats for user
+2026-03-04 11:44:44 [http-nio-8080-exec-6] DEBUG com.example.demo.service.impl.UserServiceImpl - Current user email=nandu@gmail.com
+2026-03-04 11:44:44 [http-nio-8080-exec-6] DEBUG com.example.demo.service.impl.UserServiceImpl - Dashboard stats favorites=0 playlists=0 recent=0 listeningTime=0 hr 0 min
+2026-03-04 11:44:44 [http-nio-8080-exec-5] INFO  com.example.demo.service.impl.UserServiceImpl - Fetching user profile
+2026-03-04 11:44:44 [http-nio-8080-exec-5] DEBUG com.example.demo.service.impl.UserServiceImpl - Current user email=nandu@gmail.com
+2026-03-04 11:44:44 [http-nio-8080-exec-5] DEBUG com.example.demo.service.impl.UserServiceImpl - Mapping User to UserProfileDTO userId=81
+2026-03-04 11:44:44 [http-nio-8080-exec-8] INFO  com.example.demo.service.impl.HistoryServiceImpl - Fetching recent listening history
+2026-03-04 11:44:44 [http-nio-8080-exec-8] DEBUG com.example.demo.service.impl.HistoryServiceImpl - Current user email=nandu@gmail.com
+2026-03-04 11:44:44 [http-nio-8080-exec-8] DEBUG com.example.demo.service.impl.HistoryServiceImpl - Fetched 0 play history records
+2026-03-04 11:44:44 [http-nio-8080-exec-8] DEBUG com.example.demo.service.impl.HistoryServiceImpl - Unique songs after filtering=0
+2026-03-04 11:44:48 [http-nio-8080-exec-10] INFO  com.example.demo.service.impl.SearchServiceImpl - Fetching all albums
+2026-03-04 11:44:48 [http-nio-8080-exec-10] INFO  com.example.demo.service.impl.SearchServiceImpl - Albums fetched count=9
+2026-03-04 11:44:50 [http-nio-8080-exec-8] INFO  com.example.demo.service.impl.AnalyticsServiceImpl - Fetching user analytics
+2026-03-04 11:44:50 [http-nio-8080-exec-8] DEBUG com.example.demo.service.impl.AnalyticsServiceImpl - Current user email=nandu@gmail.com
+2026-03-04 11:44:50 [http-nio-8080-exec-8] DEBUG com.example.demo.service.impl.AnalyticsServiceImpl - User stats favorites=0 playlists=0
+2026-03-04 11:44:50 [http-nio-8080-exec-8] DEBUG com.example.demo.service.impl.AnalyticsServiceImpl - Top songs calculated count=0
+2026-03-04 11:44:50 [http-nio-8080-exec-8] DEBUG com.example.demo.service.impl.AnalyticsServiceImpl - History records processed=0
+2026-03-04 11:44:50 [http-nio-8080-exec-8] INFO  com.example.demo.service.impl.AnalyticsServiceImpl - User analytics generated successfully
+2026-03-04 11:44:50 [http-nio-8080-exec-10] INFO  com.example.demo.service.impl.UserServiceImpl - Fetching user profile
+2026-03-04 11:44:50 [http-nio-8080-exec-10] DEBUG com.example.demo.service.impl.UserServiceImpl - Current user email=nandu@gmail.com
+2026-03-04 11:44:50 [http-nio-8080-exec-10] DEBUG com.example.demo.service.impl.UserServiceImpl - Mapping User to UserProfileDTO userId=81
+2026-03-04 11:44:53 [http-nio-8080-exec-4] INFO  com.example.demo.service.impl.AnalyticsServiceImpl - Fetching user analytics
+2026-03-04 11:44:53 [http-nio-8080-exec-4] DEBUG com.example.demo.service.impl.AnalyticsServiceImpl - Current user email=nandu@gmail.com
+2026-03-04 11:44:53 [http-nio-8080-exec-4] DEBUG com.example.demo.service.impl.AnalyticsServiceImpl - User stats favorites=0 playlists=0
+2026-03-04 11:44:53 [http-nio-8080-exec-4] DEBUG com.example.demo.service.impl.AnalyticsServiceImpl - Top songs calculated count=0
+2026-03-04 11:44:53 [http-nio-8080-exec-4] DEBUG com.example.demo.service.impl.AnalyticsServiceImpl - History records processed=0
+2026-03-04 11:44:53 [http-nio-8080-exec-4] INFO  com.example.demo.service.impl.AnalyticsServiceImpl - User analytics generated successfully
+2026-03-04 11:44:53 [http-nio-8080-exec-9] INFO  com.example.demo.service.impl.UserServiceImpl - Fetching user profile
+2026-03-04 11:44:53 [http-nio-8080-exec-9] DEBUG com.example.demo.service.impl.UserServiceImpl - Current user email=nandu@gmail.com
+2026-03-04 11:44:53 [http-nio-8080-exec-9] DEBUG com.example.demo.service.impl.UserServiceImpl - Mapping User to UserProfileDTO userId=81

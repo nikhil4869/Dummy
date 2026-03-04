@@ -3,6 +3,7 @@ package com.example.demo.service;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.client.HttpStatusCodeException;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -37,17 +38,33 @@ public class ApiService {
     }
     
     public String register(Map<String, String> requestData) {
-
         String url = BASE_URL + "/auth/register";
-
-        return restTemplate.postForObject(url, requestData, String.class);
+        try {
+            return restTemplate.postForObject(url, requestData, String.class);
+        } catch (HttpStatusCodeException e) {
+            throw new RuntimeException(extractErrorMessage(e));
+        }
     }
     
     public String resetPassword(Map<String, String> requestData) {
-
         String url = BASE_URL + "/auth/forgot-password";
+        try {
+            return restTemplate.postForObject(url, requestData, String.class);
+        } catch (HttpStatusCodeException e) {
+            throw new RuntimeException(extractErrorMessage(e));
+        }
+    }
 
-        return restTemplate.postForObject(url, requestData, String.class);
+    private String extractErrorMessage(HttpStatusCodeException e) {
+        String responseBody = e.getResponseBodyAsString();
+        if (responseBody != null && responseBody.contains("\"message\":\"")) {
+            int start = responseBody.indexOf("\"message\":\"") + 11;
+            int end = responseBody.indexOf("\"", start);
+            if (start > 10 && end > start) {
+                return responseBody.substring(start, end);
+            }
+        }
+        return "An error occurred: " + e.getStatusText();
     }
     
 
