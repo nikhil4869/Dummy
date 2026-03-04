@@ -52,7 +52,28 @@
                Logout
             </button>
          </form>
+
+         <!-- Close Button for Mobile -->
+         <button class="menu-close" onclick="toggleUserMenu()"
+            style="display: none; position: absolute; top: 20px; right: 20px; background: none; border: none; color: gold; font-size: 30px; cursor: pointer;">&times;</button>
       </div>
+
+      <!-- Hamburger Toggle Button -->
+      <button class="mobile-toggle" onclick="toggleUserMenu()">
+         <i class="fa-solid fa-bars"></i>
+      </button>
+
+      <!-- Sidebar Overlay -->
+      <div class="sidebar-overlay" onclick="toggleUserMenu()"></div>
+
+      <script>
+         function toggleUserMenu() {
+            const sidebar = document.querySelector('.sidebar');
+            const overlay = document.querySelector('.sidebar-overlay');
+            sidebar.classList.toggle('active');
+            overlay.classList.toggle('active');
+         }
+      </script>
 
    </div>
 

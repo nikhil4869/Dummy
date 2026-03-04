@@ -17,8 +17,13 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 import java.util.stream.Collectors;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 @Service
 public class FavoriteServiceImpl implements FavoriteService {
+
+    private static final Logger logger = LogManager.getLogger(FavoriteServiceImpl.class);
 
     private final FavoriteRepository favoriteRepository;
     private final SongRepository songRepository;
@@ -30,9 +35,14 @@ public class FavoriteServiceImpl implements FavoriteService {
         this.favoriteRepository = favoriteRepository;
         this.songRepository = songRepository;
         this.userRepository = userRepository;
+
+        logger.info("FavoriteServiceImpl initialized");
     }
 
     private SongDTO mapToDTO(Song song) {
+
+        logger.debug("Mapping Song to DTO songId={}", song.getId());
+
         return new SongDTO(
                 song.getId(),
                 song.getTitle(),
@@ -47,7 +57,11 @@ public class FavoriteServiceImpl implements FavoriteService {
     @Override
     public void addFavorite(Long songId) {
 
+        logger.info("Adding favorite songId={}", songId);
+
         String email = SecurityUtil.getCurrentUserEmail();
+
+        logger.debug("Current user email={}", email);
 
         User user = userRepository.findByEmail(email)
                 .orElseThrow(() -> new ResourceNotFoundException("User not found"));
@@ -56,6 +70,10 @@ public class FavoriteServiceImpl implements FavoriteService {
                 .orElseThrow(() -> new ResourceNotFoundException("Song not found"));
 
         if (favoriteRepository.findByUserAndSong(user, song).isPresent()) {
+
+            logger.warn("Song already exists in favorites userId={} songId={}",
+                    user.getId(), songId);
+
             throw new BadRequestException("Song already in favorites");
         }
 
@@ -64,12 +82,19 @@ public class FavoriteServiceImpl implements FavoriteService {
         favorite.setSong(song);
 
         favoriteRepository.save(favorite);
+
+        logger.info("Song added to favorites successfully userId={} songId={}",
+                user.getId(), songId);
     }
 
     @Override
     public void removeFavorite(Long songId) {
 
+        logger.info("Removing favorite songId={}", songId);
+
         String email = SecurityUtil.getCurrentUserEmail();
+
+        logger.debug("Current user email={}", email);
 
         User user = userRepository.findByEmail(email)
                 .orElseThrow(() -> new ResourceNotFoundException("User not found"));
@@ -81,19 +106,30 @@ public class FavoriteServiceImpl implements FavoriteService {
                 .orElseThrow(() -> new ResourceNotFoundException("Favorite not found"));
 
         favoriteRepository.delete(favorite);
+
+        logger.info("Favorite removed successfully userId={} songId={}",
+                user.getId(), songId);
     }
 
     @Override
     public List<SongDTO> getMyFavorites() {
 
+        logger.info("Fetching favorite songs for current user");
+
         String email = SecurityUtil.getCurrentUserEmail();
+
+        logger.debug("Current user email={}", email);
 
         User user = userRepository.findByEmail(email)
                 .orElseThrow(() -> new ResourceNotFoundException("User not found"));
 
-        return favoriteRepository.findByUser(user)
+        List<SongDTO> favorites = favoriteRepository.findByUser(user)
                 .stream()
                 .map(fav -> mapToDTO(fav.getSong()))
                 .collect(Collectors.toList());
+
+        logger.info("Total favorites found={} for userId={}", favorites.size(), user.getId());
+
+        return favorites;
     }
 }

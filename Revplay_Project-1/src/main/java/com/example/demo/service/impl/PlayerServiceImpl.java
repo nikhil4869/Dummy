@@ -15,8 +15,13 @@ import java.time.LocalDateTime;
 import java.util.List;
 import java.util.stream.Collectors;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 @Service
 public class PlayerServiceImpl implements PlayerService {
+
+    private static final Logger logger = LogManager.getLogger(PlayerServiceImpl.class);
 
     private final SongRepository songRepository;
     private final UserRepository userRepository;
@@ -28,12 +33,18 @@ public class PlayerServiceImpl implements PlayerService {
         this.songRepository = songRepository;
         this.userRepository = userRepository;
         this.historyRepository = historyRepository;
+
+        logger.info("PlayerServiceImpl initialized");
     }
 
     @Override
     public void playSong(Long songId) {
 
+        logger.info("Play song request received songId={}", songId);
+
         String email = SecurityUtil.getCurrentUserEmail();
+
+        logger.debug("Current user email={}", email);
 
         User user = userRepository.findByEmail(email)
                 .orElseThrow(() -> new ResourceNotFoundException("User not found"));
@@ -47,6 +58,9 @@ public class PlayerServiceImpl implements PlayerService {
 
             song.setPlayCount(song.getPlayCount() + 1);
             songRepository.save(song);
+
+            logger.debug("Play count incremented songId={} newCount={}",
+                    song.getId(), song.getPlayCount());
         }
 
         // Save history for both user and artist
@@ -67,23 +81,32 @@ public class PlayerServiceImpl implements PlayerService {
         history.setDurationPlayed(seconds);
 
         historyRepository.save(history);
+
+        logger.info("Play history saved userId={} songId={} secondsPlayed={}",
+                user.getId(), song.getId(), seconds);
     }
-    
+
     @Override
     public List<SongDTO> getTrendingSongs(int limit) {
 
-        // For now trending = most played (simple logic)
-        // Later we can improve with weekly trend
+        logger.info("Fetching trending songs limit={}", limit);
 
-        return songRepository
+        List<SongDTO> trendingSongs = songRepository
                 .findByIsPublicTrueOrderByPlayCountDesc()
                 .stream()
                 .limit(limit)
                 .map(this::mapToDTO)
                 .collect(Collectors.toList());
+
+        logger.info("Trending songs fetched count={}", trendingSongs.size());
+
+        return trendingSongs;
     }
-    
+
     private SongDTO mapToDTO(Song song) {
+
+        logger.debug("Mapping Song to DTO songId={}", song.getId());
+
         return new SongDTO(
                 song.getId(),
                 song.getTitle(),

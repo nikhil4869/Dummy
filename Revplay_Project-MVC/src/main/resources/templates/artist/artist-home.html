@@ -3,6 +3,7 @@
 
 <head>
     <title>Artist Dashboard</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <style>
         body {
@@ -126,6 +127,54 @@
         .top-song-plays {
             color: #aaa;
             margin-top: 5px;
+        }
+
+        @media (max-width: 768px) {
+            .layout {
+                flex-direction: column;
+            }
+
+            .content {
+                padding: 20px;
+            }
+
+            .welcome {
+                flex-direction: column;
+                text-align: center;
+                gap: 20px;
+                padding: 20px;
+            }
+
+            .actions {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 10px;
+            }
+
+            .btn {
+                margin: 0;
+                width: 100%;
+            }
+
+            .stats {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .stat-card {
+                padding: 20px;
+            }
+
+            .stat-card p {
+                font-size: 24px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .welcome h2 {
+                font-size: 20px;
+            }
         }
     </style>
 </head>

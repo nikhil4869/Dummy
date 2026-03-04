@@ -19,8 +19,13 @@ import com.example.demo.dto.analytics.DailyTrendDTO;
 import com.example.demo.dto.analytics.UserAnalyticsDTO;
 import com.example.demo.repository.PlaylistRepository;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 @Service
 public class AnalyticsServiceImpl implements AnalyticsService {
+
+	private static final Logger logger = LogManager.getLogger(AnalyticsServiceImpl.class);
 
 	private final UserRepository userRepository;
 	private final SongRepository songRepository;
@@ -39,25 +44,37 @@ public class AnalyticsServiceImpl implements AnalyticsService {
 		this.playHistoryRepository = playHistoryRepository;
 		this.albumRepository = albumRepository;
 		this.playlistRepository = playlistRepository;
+
+		logger.info("AnalyticsServiceImpl initialized");
 	}
 
 	@Override
 	public ArtistAnalyticsDTO getArtistAnalytics() {
 
+		logger.info("Fetching artist analytics");
+
 		String email = SecurityUtil.getCurrentUserEmail();
+
+		logger.debug("Current artist email={}", email);
 
 		User artist = userRepository.findByEmail(email).orElseThrow(() -> new RuntimeException("Artist not found"));
 
 		long totalSongs = songRepository.countByArtist(artist);
-		
+
 		long totalAlbums = albumRepository.countByArtist(artist);
 
 		long totalPlays = songRepository.sumPlayCountByArtist(artist);
 
 		long totalFavorites = favoriteRepository.countBySongArtist(artist);
 
-		var topSongs = songRepository.findTop5ByArtistOrderByPlayCountDesc(artist).stream().map(Song::getTitle)
+		logger.debug("Artist stats calculated songs={}, albums={}, plays={}, favorites={}",
+				totalSongs, totalAlbums, totalPlays, totalFavorites);
+
+		var topSongs = songRepository.findTop5ByArtistOrderByPlayCountDesc(artist).stream()
+				.map(Song::getTitle)
 				.collect(Collectors.toList());
+
+		logger.info("Artist analytics generated successfully");
 
 		return new ArtistAnalyticsDTO(totalSongs, totalAlbums, totalPlays, totalFavorites, topSongs);
 	}
@@ -65,16 +82,25 @@ public class AnalyticsServiceImpl implements AnalyticsService {
 	@Override
 	public List<SongPlayChartDTO> getPlayChart() {
 
+		logger.info("Fetching play chart for artist");
+
 		String email = SecurityUtil.getCurrentUserEmail();
 
 		User artist = userRepository.findByEmail(email).orElseThrow(() -> new RuntimeException("Artist not found"));
 
-		return songRepository.findByArtist(artist).stream()
-				.map(song -> new SongPlayChartDTO(song.getTitle(), song.getPlayCount())).toList();
+		List<SongPlayChartDTO> chart = songRepository.findByArtist(artist).stream()
+				.map(song -> new SongPlayChartDTO(song.getTitle(), song.getPlayCount()))
+				.toList();
+
+		logger.info("Play chart generated with {} songs", chart.size());
+
+		return chart;
 	}
 
 	@Override
 	public ListenerInsightsDTO getListenerInsights() {
+
+		logger.info("Fetching listener insights");
 
 		String email = SecurityUtil.getCurrentUserEmail();
 
@@ -82,30 +108,42 @@ public class AnalyticsServiceImpl implements AnalyticsService {
 
 		long listeners = playHistoryRepository.countUniqueListeners(artist);
 
+		logger.info("Total unique listeners={}", listeners);
+
 		return new ListenerInsightsDTO(listeners);
 	}
 
 	@Override
 	public UserAnalyticsDTO getUserAnalytics() {
+
+		logger.info("Fetching user analytics");
+
 		String email = SecurityUtil.getCurrentUserEmail();
+
+		logger.debug("Current user email={}", email);
+
 		User user = userRepository.findByEmail(email).orElseThrow(() -> new RuntimeException("User not found"));
 
 		long favorites = favoriteRepository.countByUser(user);
 		long playlists = playlistRepository.countByUser(user);
-		
+
+		logger.debug("User stats favorites={} playlists={}", favorites, playlists);
+
 		long totalSeconds = 0;
+
 		try {
 			totalSeconds = playHistoryRepository.getTotalListeningTime(user);
 		} catch (Exception e) {
-			// Fallback if query fails
+			logger.warn("Failed to fetch listening time, using fallback");
 		}
-		
+
 		long hours = totalSeconds / 3600;
 		long minutes = (totalSeconds % 3600) / 60;
+
 		String listeningTime = hours + " hr " + minutes + " min";
 
-		// Top 5 Songs
 		List<Map<String, Object>> topSongs = new ArrayList<>();
+
 		try {
 			topSongs = playHistoryRepository.findMostPlayedSongs(user).stream()
 					.limit(5)
@@ -117,26 +155,41 @@ public class AnalyticsServiceImpl implements AnalyticsService {
 						return map;
 					})
 					.collect(Collectors.toList());
-		} catch (Exception e) {}
 
-		// Basic Genre Analytics - Limit history to 200 items for safety
+			logger.debug("Top songs calculated count={}", topSongs.size());
+
+		} catch (Exception e) {
+			logger.warn("Failed to fetch top songs");
+		}
+
 		List<Object[]> history = new ArrayList<>();
+
 		try {
+
 			history = playHistoryRepository.findByUserOrderByPlayedAtDesc(user).stream()
 					.limit(200)
 					.filter(ph -> ph != null && ph.getSong() != null)
 					.map(ph -> {
-						String artistName = (ph.getSong().getArtist() != null) ? ph.getSong().getArtist().getName() : "Unknown";
+						String artistName = (ph.getSong().getArtist() != null)
+								? ph.getSong().getArtist().getName()
+								: "Unknown";
+
 						String genreName = ph.getSong().getGenre();
+
 						return new Object[]{artistName, genreName};
 					})
 					.collect(Collectors.toList());
-		} catch (Exception e) {}
+
+			logger.debug("History records processed={}", history.size());
+
+		} catch (Exception e) {
+			logger.warn("Failed to process listening history");
+		}
 
 		Map<String, Long> artistCounts = history.stream()
 				.filter(row -> row[0] != null)
-				.collect(Collectors.groupingBy(row -> (String)row[0], Collectors.counting()));
-		
+				.collect(Collectors.groupingBy(row -> (String) row[0], Collectors.counting()));
+
 		List<Map<String, Object>> topArtists = artistCounts.entrySet().stream()
 				.sorted((a, b) -> b.getValue().compareTo(a.getValue()))
 				.limit(5)
@@ -150,7 +203,7 @@ public class AnalyticsServiceImpl implements AnalyticsService {
 
 		Map<String, Long> genreCounts = history.stream()
 				.filter(row -> row[1] != null)
-				.collect(Collectors.groupingBy(row -> (String)row[1], Collectors.counting()));
+				.collect(Collectors.groupingBy(row -> (String) row[1], Collectors.counting()));
 
 		List<Map<String, Object>> topGenres = genreCounts.entrySet().stream()
 				.sorted((a, b) -> b.getValue().compareTo(a.getValue()))
@@ -163,19 +216,27 @@ public class AnalyticsServiceImpl implements AnalyticsService {
 				})
 				.collect(Collectors.toList());
 
+		logger.info("User analytics generated successfully");
+
 		return new UserAnalyticsDTO(favorites, playlists, listeningTime, topSongs, topArtists, topGenres);
 	}
 
 	@Override
 	public List<DailyTrendDTO> getDailyTrends() {
 
+		logger.info("Fetching daily play trends");
+
 		String email = SecurityUtil.getCurrentUserEmail();
 
 		User artist = userRepository.findByEmail(email).orElseThrow(() -> new RuntimeException("Artist not found"));
 
-		return playHistoryRepository.getDailyPlayCounts(artist.getId()).stream()
+		List<DailyTrendDTO> trends = playHistoryRepository.getDailyPlayCounts(artist.getId()).stream()
 				.map(row -> new DailyTrendDTO(((java.time.LocalDateTime) row[0]).toLocalDate(),
 						((Number) row[1]).longValue()))
 				.toList();
+
+		logger.info("Daily trends generated count={}", trends.size());
+
+		return trends;
 	}
 }

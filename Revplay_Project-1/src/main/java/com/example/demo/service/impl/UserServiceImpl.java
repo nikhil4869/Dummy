@@ -14,9 +14,13 @@ import com.example.demo.repository.PlayHistoryRepository;
 import com.example.demo.repository.PlaylistRepository;
 import com.example.demo.repository.FavoriteRepository;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 @Service
 public class UserServiceImpl implements UserService {
+
+    private static final Logger logger = LogManager.getLogger(UserServiceImpl.class);
 
     private final UserRepository userRepository;
     private final FileStorageService fileStorageService;
@@ -24,24 +28,28 @@ public class UserServiceImpl implements UserService {
     private final PlaylistRepository playlistRepository;
     private final PlayHistoryRepository playHistoryRepository;
 
+    public UserServiceImpl(UserRepository userRepository,
+                           FileStorageService fileStorageService,
+                           FavoriteRepository favoriteRepository,
+                           PlaylistRepository playlistRepository,
+                           PlayHistoryRepository playHistoryRepository) {
+        this.userRepository = userRepository;
+        this.fileStorageService = fileStorageService;
+        this.favoriteRepository = favoriteRepository;
+        this.playlistRepository = playlistRepository;
+        this.playHistoryRepository = playHistoryRepository;
 
+        logger.info("UserServiceImpl initialized");
+    }
 
-
-
-    public UserServiceImpl(UserRepository userRepository, FileStorageService fileStorageService,
-			FavoriteRepository favoriteRepository, PlaylistRepository playlistRepository,
-			PlayHistoryRepository playHistoryRepository) {
-		this.userRepository = userRepository;
-		this.fileStorageService = fileStorageService;
-		this.favoriteRepository = favoriteRepository;
-		this.playlistRepository = playlistRepository;
-		this.playHistoryRepository = playHistoryRepository;
-	}
-
-	@Override
+    @Override
     public void deactivateMyAccount() {
 
+        logger.info("Deactivate account request received");
+
         String email = SecurityUtil.getCurrentUserEmail();
+
+        logger.debug("Current user email={}", email);
 
         User user = userRepository.findByEmail(email)
                 .orElseThrow(() -> new ResourceNotFoundException("User not found"));
@@ -49,12 +57,18 @@ public class UserServiceImpl implements UserService {
         user.setEnabled(false);
 
         userRepository.save(user);
+
+        logger.info("User account deactivated userId={}", user.getId());
     }
-    
+
     @Override
     public UserProfileDTO getMyProfile() {
 
+        logger.info("Fetching user profile");
+
         String email = SecurityUtil.getCurrentUserEmail();
+
+        logger.debug("Current user email={}", email);
 
         User user = userRepository.findByEmail(email)
                 .orElseThrow(() -> new ResourceNotFoundException("User not found"));
@@ -65,7 +79,11 @@ public class UserServiceImpl implements UserService {
     @Override
     public UserProfileDTO updateProfile(UserProfileDTO dto) {
 
+        logger.info("Updating user profile");
+
         String email = SecurityUtil.getCurrentUserEmail();
+
+        logger.debug("Current user email={}", email);
 
         User user = userRepository.findByEmail(email)
                 .orElseThrow(() -> new ResourceNotFoundException("User not found"));
@@ -75,13 +93,19 @@ public class UserServiceImpl implements UserService {
 
         userRepository.save(user);
 
+        logger.info("User profile updated userId={}", user.getId());
+
         return mapToDTO(user);
     }
 
     @Override
     public UserProfileDTO uploadProfileImage(MultipartFile image) {
 
+        logger.info("Uploading user profile image");
+
         String email = SecurityUtil.getCurrentUserEmail();
+
+        logger.debug("Current user email={}", email);
 
         User user = userRepository.findByEmail(email)
                 .orElseThrow(() -> new ResourceNotFoundException("User not found"));
@@ -92,13 +116,19 @@ public class UserServiceImpl implements UserService {
 
         userRepository.save(user);
 
+        logger.info("Profile image uploaded userId={}", user.getId());
+
         return mapToDTO(user);
     }
-    
+
     @Override
     public UserDashboardDTO getDashboardStats() {
 
+        logger.info("Fetching dashboard stats for user");
+
         String email = SecurityUtil.getCurrentUserEmail();
+
+        logger.debug("Current user email={}", email);
 
         User user = userRepository.findByEmail(email)
                 .orElseThrow(() -> new ResourceNotFoundException("User not found"));
@@ -114,6 +144,9 @@ public class UserServiceImpl implements UserService {
 
         String listeningTime = hours + " hr " + minutes + " min";
 
+        logger.debug("Dashboard stats favorites={} playlists={} recent={} listeningTime={}",
+                favorites, playlists, recent, listeningTime);
+
         return new UserDashboardDTO(
                 favorites,
                 playlists,
@@ -121,8 +154,11 @@ public class UserServiceImpl implements UserService {
                 recent
         );
     }
-    
+
     private UserProfileDTO mapToDTO(User user) {
+
+        logger.debug("Mapping User to UserProfileDTO userId={}", user.getId());
+
         return new UserProfileDTO(
                 user.getName(),
                 user.getEmail(),

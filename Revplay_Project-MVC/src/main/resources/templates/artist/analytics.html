@@ -3,6 +3,8 @@
 
 <head>
 	<title>Analytics</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
 	<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 	<style>
@@ -160,6 +162,42 @@
 			background: linear-gradient(90deg, gold, #ffcc00);
 			border-radius: 4px;
 			transition: width 1s ease-in-out;
+		}
+
+		@media (max-width: 1024px) {
+			.hero-stats {
+				grid-template-columns: repeat(3, 1fr);
+			}
+		}
+
+		@media (max-width: 768px) {
+			.layout {
+				flex-direction: column;
+			}
+
+			.content {
+				padding: 20px;
+				padding-top: 80px;
+			}
+
+			.hero-stats {
+				grid-template-columns: repeat(2, 1fr);
+				gap: 15px;
+			}
+
+			.insights-grid {
+				grid-template-columns: 1fr;
+			}
+		}
+
+		@media (max-width: 480px) {
+			.hero-stats {
+				grid-template-columns: 1fr;
+			}
+
+			.stat-data .stat-value {
+				font-size: 20px;
+			}
 		}
 	</style>
 </head>

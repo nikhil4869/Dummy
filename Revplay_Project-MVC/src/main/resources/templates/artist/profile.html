@@ -3,6 +3,8 @@
 
 <head>
     <title>Artist Profile</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <style>
         /*  html, body {
@@ -131,6 +133,38 @@
 
         textarea {
             resize: none;
+        }
+
+        @media (max-width: 768px) {
+            .layout {
+                flex-direction: column;
+            }
+
+            .content {
+                padding: 20px;
+                padding-top: 80px;
+            }
+
+            .profile-container {
+                padding: 20px;
+            }
+
+            .profile-image {
+                width: 120px;
+                height: 120px;
+            }
+
+            .profile-actions {
+                flex-direction: column;
+                gap: 15px;
+                align-items: stretch;
+            }
+
+            .btn,
+            .danger-btn {
+                width: 100%;
+                margin: 0;
+            }
         }
     </style>
 </head>

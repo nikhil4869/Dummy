@@ -23,46 +23,57 @@ import com.example.demo.dto.music.SongDTO;
 import com.example.demo.entity.FollowedPlaylist;
 import com.example.demo.repository.FollowedPlaylistRepository;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 @Service
 public class PlaylistServiceImpl implements PlaylistService {
+
+    private static final Logger logger = LogManager.getLogger(PlaylistServiceImpl.class);
 
     private final PlaylistRepository playlistRepository;
     private final UserRepository userRepository;
     private final PlaylistSongRepository playlistSongRepository;
     private final SongRepository songRepository;
     private final FollowedPlaylistRepository followedPlaylistRepository;
-    
-
 
     public PlaylistServiceImpl(PlaylistRepository playlistRepository, UserRepository userRepository,
-			PlaylistSongRepository playlistSongRepository, SongRepository songRepository,
-			FollowedPlaylistRepository followedPlaylistRepository) {
-		this.playlistRepository = playlistRepository;
-		this.userRepository = userRepository;
-		this.playlistSongRepository = playlistSongRepository;
-		this.songRepository = songRepository;
-		this.followedPlaylistRepository = followedPlaylistRepository;
-	}
+            PlaylistSongRepository playlistSongRepository, SongRepository songRepository,
+            FollowedPlaylistRepository followedPlaylistRepository) {
+        this.playlistRepository = playlistRepository;
+        this.userRepository = userRepository;
+        this.playlistSongRepository = playlistSongRepository;
+        this.songRepository = songRepository;
+        this.followedPlaylistRepository = followedPlaylistRepository;
+
+        logger.info("PlaylistServiceImpl initialized");
+    }
 
     private PlaylistDTO convertToDTO(Playlist p, Boolean followedStatus) {
+
+        logger.debug("Converting playlist to DTO playlistId={}", p != null ? p.getId() : null);
+
         if (p == null) return null;
-        
+
         String name = p.getName();
         String description = p.getDescription();
-        
+
         try {
-            // Fix legacy data that might have been stored as URL-encoded
+
             if (name != null && name.contains("%")) {
                 name = URLDecoder.decode(name, StandardCharsets.UTF_8);
             }
+
             if (description != null && description.contains("%")) {
                 description = URLDecoder.decode(description, StandardCharsets.UTF_8);
             }
+
         } catch (Exception e) {
-            // Keep original if decoding fails
+            logger.warn("Failed to decode playlist name or description playlistId={}", p.getId());
         }
 
         String ownerName = (p.getUser() != null) ? p.getUser().getName() : "Unknown";
+
         return new PlaylistDTO(
                 p.getId(),
                 name,
@@ -80,7 +91,11 @@ public class PlaylistServiceImpl implements PlaylistService {
     @Override
     public PlaylistDTO createPlaylist(String name, String description, boolean isPublic) {
 
+        logger.info("Creating playlist name={}", name);
+
         String email = SecurityUtil.getCurrentUserEmail();
+
+        logger.debug("Current user email={}", email);
 
         User user = userRepository.findByEmail(email)
                 .orElseThrow(() -> new ResourceNotFoundException("User not found"));
@@ -91,27 +106,44 @@ public class PlaylistServiceImpl implements PlaylistService {
         p.setPublic(isPublic);
         p.setUser(user);
 
-        return convertToDTO(playlistRepository.save(p));
+        Playlist saved = playlistRepository.save(p);
+
+        logger.info("Playlist created playlistId={}", saved.getId());
+
+        return convertToDTO(saved);
     }
 
     @Override
     public List<PlaylistDTO> getMyPlaylists() {
+
+        logger.info("Fetching user playlists");
 
         String email = SecurityUtil.getCurrentUserEmail();
 
         User user = userRepository.findByEmail(email)
                 .orElseThrow(() -> new ResourceNotFoundException("User not found"));
 
-        return playlistRepository.findByUser(user)
-                .stream().map(p -> convertToDTO(p, false)).collect(Collectors.toList());
+        List<PlaylistDTO> playlists = playlistRepository.findByUser(user)
+                .stream()
+                .map(p -> convertToDTO(p, false))
+                .collect(Collectors.toList());
+
+        logger.info("User playlists fetched count={}", playlists.size());
+
+        return playlists;
     }
 
     @Override
     public List<PlaylistDTO> getPublicPlaylists() {
+
+        logger.info("Fetching public playlists");
+
         String email = SecurityUtil.getCurrentUserEmail();
+
         User currentUser = userRepository.findByEmail(email).orElse(null);
-        
+
         List<Long> followedPlaylistIds = new java.util.ArrayList<>();
+
         if (currentUser != null) {
             followedPlaylistIds = followedPlaylistRepository.findByUser(currentUser)
                     .stream()
@@ -120,25 +152,36 @@ public class PlaylistServiceImpl implements PlaylistService {
         }
 
         final List<Long> finalFollowedIds = followedPlaylistIds;
-        return playlistRepository.findByIsPublicTrue()
+
+        List<PlaylistDTO> playlists = playlistRepository.findByIsPublicTrue()
                 .stream()
                 .filter(p -> currentUser == null || !p.getUser().getId().equals(currentUser.getId()))
                 .map(p -> convertToDTO(p, finalFollowedIds.contains(p.getId())))
                 .collect(Collectors.toList());
+
+        logger.info("Public playlists fetched count={}", playlists.size());
+
+        return playlists;
     }
 
     @Override
     public void deletePlaylist(Long id) {
+
+        logger.info("Deleting playlist playlistId={}", id);
 
         Playlist p = playlistRepository.findById(id)
                 .orElseThrow(() -> new ResourceNotFoundException("Playlist not found"));
 
         p.setSongs(null);
         playlistRepository.delete(p);
+
+        logger.info("Playlist deleted playlistId={}", id);
     }
-    
+
     @Override
     public void addSongToPlaylist(Long playlistId, Long songId) {
+
+        logger.info("Adding song to playlist playlistId={} songId={}", playlistId, songId);
 
         String email = SecurityUtil.getCurrentUserEmail();
 
@@ -146,6 +189,7 @@ public class PlaylistServiceImpl implements PlaylistService {
                 .orElseThrow(() -> new ResourceNotFoundException("Playlist not found"));
 
         if (!playlist.getUser().getEmail().equals(email)) {
+            logger.warn("Unauthorized playlist modification attempt playlistId={}", playlistId);
             throw new UnauthorizedException("Not your playlist");
         }
 
@@ -153,6 +197,7 @@ public class PlaylistServiceImpl implements PlaylistService {
                 .orElseThrow(() -> new ResourceNotFoundException("Song not found"));
 
         if (playlistSongRepository.findByPlaylistAndSongId(playlist, songId).isPresent()) {
+            logger.warn("Song already exists in playlist playlistId={} songId={}", playlistId, songId);
             throw new BadRequestException("Song already in playlist");
         }
 
@@ -160,16 +205,20 @@ public class PlaylistServiceImpl implements PlaylistService {
         ps.setPlaylist(playlist);
         ps.setSong(song);
         ps.setPosition(
-        	    playlistSongRepository
-        	        .findByPlaylistOrderByPositionAsc(playlist)
-        	        .size() + 1
-        	);
+                playlistSongRepository
+                        .findByPlaylistOrderByPositionAsc(playlist)
+                        .size() + 1
+        );
 
         playlistSongRepository.save(ps);
+
+        logger.info("Song added to playlist playlistId={} songId={}", playlistId, songId);
     }
-    
+
     @Override
     public void removeSongFromPlaylist(Long playlistId, Long songId) {
+
+        logger.info("Removing song from playlist playlistId={} songId={}", playlistId, songId);
 
         String email = SecurityUtil.getCurrentUserEmail();
 
@@ -177,6 +226,7 @@ public class PlaylistServiceImpl implements PlaylistService {
                 .orElseThrow(() -> new ResourceNotFoundException("Playlist not found"));
 
         if (!playlist.getUser().getEmail().equals(email)) {
+            logger.warn("Unauthorized remove attempt playlistId={}", playlistId);
             throw new UnauthorizedException("Not your playlist");
         }
 
@@ -185,15 +235,19 @@ public class PlaylistServiceImpl implements PlaylistService {
                 .orElseThrow(() -> new ResourceNotFoundException("Song not in playlist"));
 
         playlistSongRepository.delete(ps);
+
+        logger.info("Song removed from playlist playlistId={} songId={}", playlistId, songId);
     }
-    
+
     @Override
     public List<SongDTO> getPlaylistSongs(Long playlistId) {
+
+        logger.info("Fetching songs from playlist playlistId={}", playlistId);
 
         Playlist playlist = playlistRepository.findById(playlistId)
                 .orElseThrow(() -> new ResourceNotFoundException("Playlist not found"));
 
-        return playlistSongRepository
+        List<SongDTO> songs = playlistSongRepository
                 .findByPlaylistOrderByPositionAsc(playlist)
                 .stream()
                 .map(ps -> new SongDTO(
@@ -206,10 +260,16 @@ public class PlaylistServiceImpl implements PlaylistService {
                         ps.getSong().getArtist().getName()
                 ))
                 .toList();
+
+        logger.info("Playlist songs fetched count={}", songs.size());
+
+        return songs;
     }
-    
+
     @Override
     public void followPlaylist(Long playlistId) {
+
+        logger.info("Follow playlist request playlistId={}", playlistId);
 
         String email = SecurityUtil.getCurrentUserEmail();
 
@@ -220,15 +280,17 @@ public class PlaylistServiceImpl implements PlaylistService {
                 .orElseThrow(() -> new ResourceNotFoundException("Playlist not found"));
 
         if (!playlist.isPublic()) {
+            logger.warn("Attempt to follow private playlist playlistId={}", playlistId);
             throw new BadRequestException("Cannot follow private playlist");
         }
-        
-        // prevent following own playlist
+
         if (playlist.getUser().getId().equals(user.getId())) {
+            logger.warn("User attempted to follow own playlist userId={} playlistId={}", user.getId(), playlistId);
             throw new BadRequestException("You cannot follow your own playlist");
         }
 
         if (followedPlaylistRepository.findByUserAndPlaylist(user, playlist).isPresent()) {
+            logger.warn("Already following playlist userId={} playlistId={}", user.getId(), playlistId);
             throw new BadRequestException("Already following");
         }
 
@@ -237,10 +299,14 @@ public class PlaylistServiceImpl implements PlaylistService {
         follow.setPlaylist(playlist);
 
         followedPlaylistRepository.save(follow);
+
+        logger.info("Playlist followed userId={} playlistId={}", user.getId(), playlistId);
     }
-    
+
     @Override
     public void unfollowPlaylist(Long playlistId) {
+
+        logger.info("Unfollow playlist request playlistId={}", playlistId);
 
         String email = SecurityUtil.getCurrentUserEmail();
 
@@ -255,10 +321,14 @@ public class PlaylistServiceImpl implements PlaylistService {
                 .orElseThrow(() -> new ResourceNotFoundException("Not following"));
 
         followedPlaylistRepository.delete(follow);
+
+        logger.info("Playlist unfollowed userId={} playlistId={}", user.getId(), playlistId);
     }
-    
+
     @Override
     public List<PlaylistDTO> getFollowedPlaylists() {
+
+        logger.info("Fetching followed playlists");
 
         String email = SecurityUtil.getCurrentUserEmail();
 
@@ -267,8 +337,12 @@ public class PlaylistServiceImpl implements PlaylistService {
 
         List<FollowedPlaylist> follows = followedPlaylistRepository.findByUser(user);
 
-        return follows.stream()
+        List<PlaylistDTO> playlists = follows.stream()
                 .map(f -> convertToDTO(f.getPlaylist(), true))
                 .collect(Collectors.toList());
+
+        logger.info("Followed playlists fetched count={}", playlists.size());
+
+        return playlists;
     }
 }

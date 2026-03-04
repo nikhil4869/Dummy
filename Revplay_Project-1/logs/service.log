@@ -1,0 +1,1668 @@
+2026-03-04 09:59:01 [restartedMain] INFO  com.example.demo.service.impl.AlbumServiceImpl - AlbumServiceImpl initialized
+2026-03-04 09:59:02 [restartedMain] INFO  com.example.demo.service.impl.AnalyticsServiceImpl - AnalyticsServiceImpl initialized
+2026-03-04 09:59:02 [restartedMain] INFO  com.example.demo.service.impl.ArtistServiceImpl - ArtistServiceImpl initialized
+2026-03-04 09:59:02 [restartedMain] INFO  com.example.demo.service.impl.SongServiceImpl - SongServiceImpl initialized
+2026-03-04 09:59:02 [restartedMain] INFO  com.example.demo.service.impl.AuthServiceImpl - AuthServiceImpl initialized
+2026-03-04 09:59:02 [restartedMain] INFO  com.example.demo.service.impl.FavoriteServiceImpl - FavoriteServiceImpl initialized
+2026-03-04 09:59:02 [restartedMain] INFO  com.example.demo.service.impl.HistoryServiceImpl - HistoryServiceImpl initialized
+2026-03-04 09:59:02 [restartedMain] INFO  com.example.demo.service.impl.PlayerServiceImpl - PlayerServiceImpl initialized
+2026-03-04 09:59:02 [restartedMain] INFO  com.example.demo.service.impl.PlaylistServiceImpl - PlaylistServiceImpl initialized
+2026-03-04 09:59:02 [restartedMain] INFO  com.example.demo.service.impl.SearchServiceImpl - SearchServiceImpl initialized
+2026-03-04 09:59:02 [restartedMain] INFO  com.example.demo.service.impl.UserServiceImpl - UserServiceImpl initialized
+2026-03-04 10:00:02 [http-nio-8080-exec-1] INFO  com.example.demo.service.impl.AuthServiceImpl - Login attempt for email=harish@gmail.com
+2026-03-04 10:00:03 [http-nio-8080-exec-1] INFO  com.example.demo.service.impl.AuthServiceImpl - Login successful email=harish@gmail.com role=ARTIST
+2026-03-04 10:00:03 [http-nio-8080-exec-2] INFO  com.example.demo.service.impl.AnalyticsServiceImpl - Fetching artist analytics
+2026-03-04 10:00:03 [http-nio-8080-exec-2] DEBUG com.example.demo.service.impl.AnalyticsServiceImpl - Current artist email=harish@gmail.com
+2026-03-04 10:00:03 [http-nio-8080-exec-2] DEBUG com.example.demo.service.impl.AnalyticsServiceImpl - Artist stats calculated songs=21, albums=5, plays=13, favorites=2
+2026-03-04 10:00:03 [http-nio-8080-exec-2] INFO  com.example.demo.service.impl.AnalyticsServiceImpl - Artist analytics generated successfully
+2026-03-04 10:00:03 [http-nio-8080-exec-3] INFO  com.example.demo.service.impl.AnalyticsServiceImpl - Fetching listener insights
+2026-03-04 10:00:03 [http-nio-8080-exec-3] INFO  com.example.demo.service.impl.AnalyticsServiceImpl - Total unique listeners=1
+2026-03-04 10:00:03 [http-nio-8080-exec-4] INFO  com.example.demo.service.impl.ArtistServiceImpl - Fetching current user's artist profile
+2026-03-04 10:00:03 [http-nio-8080-exec-4] DEBUG com.example.demo.service.impl.ArtistServiceImpl - Mapping ArtistProfile to DTO profileId=1
+2026-03-04 10:00:05 [http-nio-8080-exec-5] INFO  com.example.demo.service.impl.AnalyticsServiceImpl - Fetching artist analytics
+2026-03-04 10:00:05 [http-nio-8080-exec-5] DEBUG com.example.demo.service.impl.AnalyticsServiceImpl - Current artist email=harish@gmail.com
+2026-03-04 10:00:05 [http-nio-8080-exec-5] DEBUG com.example.demo.service.impl.AnalyticsServiceImpl - Artist stats calculated songs=21, albums=5, plays=13, favorites=2
+2026-03-04 10:00:05 [http-nio-8080-exec-5] INFO  com.example.demo.service.impl.AnalyticsServiceImpl - Artist analytics generated successfully
+2026-03-04 10:00:05 [http-nio-8080-exec-6] INFO  com.example.demo.service.impl.AnalyticsServiceImpl - Fetching listener insights
+2026-03-04 10:00:05 [http-nio-8080-exec-6] INFO  com.example.demo.service.impl.AnalyticsServiceImpl - Total unique listeners=1
+2026-03-04 10:00:05 [http-nio-8080-exec-7] INFO  com.example.demo.service.impl.ArtistServiceImpl - Fetching current user's artist profile
+2026-03-04 10:00:05 [http-nio-8080-exec-7] DEBUG com.example.demo.service.impl.ArtistServiceImpl - Mapping ArtistProfile to DTO profileId=1
+2026-03-04 10:00:07 [http-nio-8080-exec-8] INFO  com.example.demo.service.impl.AlbumServiceImpl - Fetching albums for current user
+2026-03-04 10:00:07 [http-nio-8080-exec-8] DEBUG com.example.demo.service.impl.AlbumServiceImpl - Mapping Album to DTO. AlbumId=1
+2026-03-04 10:00:07 [http-nio-8080-exec-8] DEBUG com.example.demo.service.impl.AlbumServiceImpl - Mapping Album to DTO. AlbumId=21
+2026-03-04 10:00:07 [http-nio-8080-exec-8] DEBUG com.example.demo.service.impl.AlbumServiceImpl - Mapping Album to DTO. AlbumId=22
+2026-03-04 10:00:07 [http-nio-8080-exec-8] DEBUG com.example.demo.service.impl.AlbumServiceImpl - Mapping Album to DTO. AlbumId=23
+2026-03-04 10:00:07 [http-nio-8080-exec-8] DEBUG com.example.demo.service.impl.AlbumServiceImpl - Mapping Album to DTO. AlbumId=2
+2026-03-04 10:00:07 [http-nio-8080-exec-8] INFO  com.example.demo.service.impl.AlbumServiceImpl - Found 5 albums for artistId=1
+2026-03-04 10:00:10 [http-nio-8080-exec-3] INFO  com.example.demo.service.impl.AlbumServiceImpl - Fetching album details for albumId=1
+2026-03-04 10:00:10 [http-nio-8080-exec-3] DEBUG com.example.demo.service.impl.AlbumServiceImpl - Mapping Album to DTO. AlbumId=1
+2026-03-04 10:00:10 [http-nio-8080-exec-4] INFO  com.example.demo.service.impl.SongServiceImpl - Fetching songs for albumId=1
+2026-03-04 10:00:10 [http-nio-8080-exec-4] DEBUG com.example.demo.service.impl.SongServiceImpl - Mapping song to DTO songId=1
+2026-03-04 10:00:10 [http-nio-8080-exec-4] INFO  com.example.demo.service.impl.SongServiceImpl - Album songs fetched count=1
+2026-03-04 10:00:12 [http-nio-8080-exec-6] INFO  com.example.demo.service.impl.AlbumServiceImpl - Fetching albums for current user
+2026-03-04 10:00:12 [http-nio-8080-exec-6] DEBUG com.example.demo.service.impl.AlbumServiceImpl - Mapping Album to DTO. AlbumId=1
+2026-03-04 10:00:12 [http-nio-8080-exec-6] DEBUG com.example.demo.service.impl.AlbumServiceImpl - Mapping Album to DTO. AlbumId=21
+2026-03-04 10:00:12 [http-nio-8080-exec-6] DEBUG com.example.demo.service.impl.AlbumServiceImpl - Mapping Album to DTO. AlbumId=22
+2026-03-04 10:00:12 [http-nio-8080-exec-6] DEBUG com.example.demo.service.impl.AlbumServiceImpl - Mapping Album to DTO. AlbumId=23
+2026-03-04 10:00:12 [http-nio-8080-exec-6] DEBUG com.example.demo.service.impl.AlbumServiceImpl - Mapping Album to DTO. AlbumId=2
+2026-03-04 10:00:12 [http-nio-8080-exec-6] INFO  com.example.demo.service.impl.AlbumServiceImpl - Found 5 albums for artistId=1
+2026-03-04 10:00:13 [http-nio-8080-exec-1] INFO  com.example.demo.service.impl.SongServiceImpl - Fetching songs for current artist
+2026-03-04 10:00:13 [http-nio-8080-exec-1] DEBUG com.example.demo.service.impl.SongServiceImpl - Mapping song to DTO songId=1
+2026-03-04 10:00:13 [http-nio-8080-exec-1] DEBUG com.example.demo.service.impl.SongServiceImpl - Mapping song to DTO songId=3
+2026-03-04 10:00:13 [http-nio-8080-exec-1] DEBUG com.example.demo.service.impl.SongServiceImpl - Mapping song to DTO songId=21
+2026-03-04 10:00:13 [http-nio-8080-exec-1] DEBUG com.example.demo.service.impl.SongServiceImpl - Mapping song to DTO songId=22
+2026-03-04 10:00:13 [http-nio-8080-exec-1] DEBUG com.example.demo.service.impl.SongServiceImpl - Mapping song to DTO songId=23
+2026-03-04 10:00:13 [http-nio-8080-exec-1] DEBUG com.example.demo.service.impl.SongServiceImpl - Mapping song to DTO songId=24
+2026-03-04 10:00:13 [http-nio-8080-exec-1] DEBUG com.example.demo.service.impl.SongServiceImpl - Mapping song to DTO songId=61
+2026-03-04 10:00:13 [http-nio-8080-exec-1] DEBUG com.example.demo.service.impl.SongServiceImpl - Mapping song to DTO songId=29
+2026-03-04 10:00:13 [http-nio-8080-exec-1] DEBUG com.example.demo.service.impl.SongServiceImpl - Mapping song to DTO songId=30
+2026-03-04 10:00:13 [http-nio-8080-exec-1] DEBUG com.example.demo.service.impl.SongServiceImpl - Mapping song to DTO songId=31
+2026-03-04 10:00:13 [http-nio-8080-exec-1] DEBUG com.example.demo.service.impl.SongServiceImpl - Mapping song to DTO songId=32
+2026-03-04 10:00:13 [http-nio-8080-exec-1] DEBUG com.example.demo.service.impl.SongServiceImpl - Mapping song to DTO songId=33
+2026-03-04 10:00:13 [http-nio-8080-exec-1] DEBUG com.example.demo.service.impl.SongServiceImpl - Mapping song to DTO songId=26
+2026-03-04 10:00:13 [http-nio-8080-exec-1] DEBUG com.example.demo.service.impl.SongServiceImpl - Mapping song to DTO songId=27
+2026-03-04 10:00:13 [http-nio-8080-exec-1] DEBUG com.example.demo.service.impl.SongServiceImpl - Mapping song to DTO songId=28
+2026-03-04 10:00:13 [http-nio-8080-exec-1] DEBUG com.example.demo.service.impl.SongServiceImpl - Mapping song to DTO songId=34
+2026-03-04 10:00:13 [http-nio-8080-exec-1] DEBUG com.example.demo.service.impl.SongServiceImpl - Mapping song to DTO songId=35
+2026-03-04 10:00:13 [http-nio-8080-exec-1] DEBUG com.example.demo.service.impl.SongServiceImpl - Mapping song to DTO songId=36
+2026-03-04 10:00:13 [http-nio-8080-exec-1] DEBUG com.example.demo.service.impl.SongServiceImpl - Mapping song to DTO songId=37
+2026-03-04 10:00:13 [http-nio-8080-exec-1] DEBUG com.example.demo.service.impl.SongServiceImpl - Mapping song to DTO songId=38
+2026-03-04 10:00:13 [http-nio-8080-exec-1] DEBUG com.example.demo.service.impl.SongServiceImpl - Mapping song to DTO songId=39
+2026-03-04 10:00:13 [http-nio-8080-exec-1] INFO  com.example.demo.service.impl.SongServiceImpl - Songs fetched count=21
+2026-03-04 10:00:18 [http-nio-8080-exec-7] INFO  com.example.demo.service.impl.ArtistServiceImpl - Fetching current user's artist profile
+2026-03-04 10:00:18 [http-nio-8080-exec-7] DEBUG com.example.demo.service.impl.ArtistServiceImpl - Mapping ArtistProfile to DTO profileId=1
+2026-03-04 10:00:20 [http-nio-8080-exec-8] INFO  com.example.demo.service.impl.AnalyticsServiceImpl - Fetching artist analytics
+2026-03-04 10:00:20 [http-nio-8080-exec-8] DEBUG com.example.demo.service.impl.AnalyticsServiceImpl - Current artist email=harish@gmail.com
+2026-03-04 10:00:20 [http-nio-8080-exec-8] DEBUG com.example.demo.service.impl.AnalyticsServiceImpl - Artist stats calculated songs=21, albums=5, plays=13, favorites=2
+2026-03-04 10:00:20 [http-nio-8080-exec-8] INFO  com.example.demo.service.impl.AnalyticsServiceImpl - Artist analytics generated successfully
+2026-03-04 10:00:20 [http-nio-8080-exec-4] INFO  com.example.demo.service.impl.AnalyticsServiceImpl - Fetching listener insights
+2026-03-04 10:00:20 [http-nio-8080-exec-4] INFO  com.example.demo.service.impl.AnalyticsServiceImpl - Total unique listeners=1
+2026-03-04 10:00:20 [http-nio-8080-exec-1] INFO  com.example.demo.service.impl.AnalyticsServiceImpl - Fetching play chart for artist
+2026-03-04 10:00:20 [http-nio-8080-exec-1] INFO  com.example.demo.service.impl.AnalyticsServiceImpl - Play chart generated with 21 songs
+2026-03-04 10:00:20 [http-nio-8080-exec-9] INFO  com.example.demo.service.impl.AnalyticsServiceImpl - Fetching daily play trends
+2026-03-04 10:00:20 [http-nio-8080-exec-9] INFO  com.example.demo.service.impl.AnalyticsServiceImpl - Daily trends generated count=2
+2026-03-04 10:00:56 [http-nio-8080-exec-3] INFO  com.example.demo.service.impl.AuthServiceImpl - Login attempt for email=nikhil@gmail.com
+2026-03-04 10:00:56 [http-nio-8080-exec-3] INFO  com.example.demo.service.impl.AuthServiceImpl - Login successful email=nikhil@gmail.com role=USER
+2026-03-04 10:00:56 [http-nio-8080-exec-5] INFO  com.example.demo.service.impl.UserServiceImpl - Fetching dashboard stats for user
+2026-03-04 10:00:56 [http-nio-8080-exec-5] DEBUG com.example.demo.service.impl.UserServiceImpl - Current user email=nikhil@gmail.com
+2026-03-04 10:00:56 [http-nio-8080-exec-5] DEBUG com.example.demo.service.impl.UserServiceImpl - Dashboard stats favorites=5 playlists=2 recent=47 listeningTime=3 hr 9 min
+2026-03-04 10:00:56 [http-nio-8080-exec-10] INFO  com.example.demo.service.impl.UserServiceImpl - Fetching user profile
+2026-03-04 10:00:56 [http-nio-8080-exec-10] DEBUG com.example.demo.service.impl.UserServiceImpl - Current user email=nikhil@gmail.com
+2026-03-04 10:00:56 [http-nio-8080-exec-10] DEBUG com.example.demo.service.impl.UserServiceImpl - Mapping User to UserProfileDTO userId=41
+2026-03-04 10:00:56 [http-nio-8080-exec-7] INFO  com.example.demo.service.impl.HistoryServiceImpl - Fetching recent listening history
+2026-03-04 10:00:56 [http-nio-8080-exec-7] DEBUG com.example.demo.service.impl.HistoryServiceImpl - Current user email=nikhil@gmail.com
+2026-03-04 10:00:57 [http-nio-8080-exec-7] DEBUG com.example.demo.service.impl.HistoryServiceImpl - Fetched 47 play history records
+2026-03-04 10:00:57 [http-nio-8080-exec-7] DEBUG com.example.demo.service.impl.HistoryServiceImpl - Unique songs after filtering=19
+2026-03-04 10:00:57 [http-nio-8080-exec-7] DEBUG com.example.demo.service.impl.HistoryServiceImpl - Mapping PlayHistory to DTO songId=26
+2026-03-04 10:00:57 [http-nio-8080-exec-7] DEBUG com.example.demo.service.impl.HistoryServiceImpl - Mapping PlayHistory to DTO songId=55
+2026-03-04 10:00:57 [http-nio-8080-exec-7] DEBUG com.example.demo.service.impl.HistoryServiceImpl - Mapping PlayHistory to DTO songId=52
+2026-03-04 10:00:57 [http-nio-8080-exec-7] DEBUG com.example.demo.service.impl.HistoryServiceImpl - Mapping PlayHistory to DTO songId=51
+2026-03-04 10:00:57 [http-nio-8080-exec-7] DEBUG com.example.demo.service.impl.HistoryServiceImpl - Mapping PlayHistory to DTO songId=3
+2026-03-04 10:00:57 [http-nio-8080-exec-7] DEBUG com.example.demo.service.impl.HistoryServiceImpl - Mapping PlayHistory to DTO songId=1
+2026-03-04 10:00:57 [http-nio-8080-exec-7] DEBUG com.example.demo.service.impl.HistoryServiceImpl - Mapping PlayHistory to DTO songId=44
+2026-03-04 10:00:57 [http-nio-8080-exec-7] DEBUG com.example.demo.service.impl.HistoryServiceImpl - Mapping PlayHistory to DTO songId=43
+2026-03-04 10:00:57 [http-nio-8080-exec-7] DEBUG com.example.demo.service.impl.HistoryServiceImpl - Mapping PlayHistory to DTO songId=23
+2026-03-04 10:00:57 [http-nio-8080-exec-7] DEBUG com.example.demo.service.impl.HistoryServiceImpl - Mapping PlayHistory to DTO songId=48
+2026-03-04 10:00:57 [http-nio-8080-exec-7] DEBUG com.example.demo.service.impl.HistoryServiceImpl - Mapping PlayHistory to DTO songId=47
+2026-03-04 10:00:57 [http-nio-8080-exec-7] DEBUG com.example.demo.service.impl.HistoryServiceImpl - Mapping PlayHistory to DTO songId=46
+2026-03-04 10:00:57 [http-nio-8080-exec-7] DEBUG com.example.demo.service.impl.HistoryServiceImpl - Mapping PlayHistory to DTO songId=45
+2026-03-04 10:00:57 [http-nio-8080-exec-7] DEBUG com.example.demo.service.impl.HistoryServiceImpl - Mapping PlayHistory to DTO songId=22
+2026-03-04 10:00:57 [http-nio-8080-exec-7] DEBUG com.example.demo.service.impl.HistoryServiceImpl - Mapping PlayHistory to DTO songId=54
+2026-03-04 10:00:57 [http-nio-8080-exec-7] DEBUG com.example.demo.service.impl.HistoryServiceImpl - Mapping PlayHistory to DTO songId=60
+2026-03-04 10:00:57 [http-nio-8080-exec-7] DEBUG com.example.demo.service.impl.HistoryServiceImpl - Mapping PlayHistory to DTO songId=59
+2026-03-04 10:00:57 [http-nio-8080-exec-7] DEBUG com.example.demo.service.impl.HistoryServiceImpl - Mapping PlayHistory to DTO songId=50
+2026-03-04 10:00:57 [http-nio-8080-exec-7] DEBUG com.example.demo.service.impl.HistoryServiceImpl - Mapping PlayHistory to DTO songId=21
+2026-03-04 10:01:04 [http-nio-8080-exec-5] INFO  com.example.demo.service.impl.PlayerServiceImpl - Play song request received songId=26
+2026-03-04 10:01:04 [http-nio-8080-exec-5] DEBUG com.example.demo.service.impl.PlayerServiceImpl - Current user email=nikhil@gmail.com
+2026-03-04 10:01:05 [http-nio-8080-exec-5] DEBUG com.example.demo.service.impl.PlayerServiceImpl - Play count incremented songId=26 newCount=3
+2026-03-04 10:01:05 [http-nio-8080-exec-5] INFO  com.example.demo.service.impl.PlayerServiceImpl - Play history saved userId=41 songId=26 secondsPlayed=309
+2026-03-04 10:01:13 [http-nio-8080-exec-7] INFO  com.example.demo.service.impl.SongServiceImpl - Fetching all songs
+2026-03-04 10:01:13 [http-nio-8080-exec-7] DEBUG com.example.demo.service.impl.SongServiceImpl - Mapping song to DTO songId=45
+2026-03-04 10:01:13 [http-nio-8080-exec-7] DEBUG com.example.demo.service.impl.SongServiceImpl - Mapping song to DTO songId=46
+2026-03-04 10:01:13 [http-nio-8080-exec-7] DEBUG com.example.demo.service.impl.SongServiceImpl - Mapping song to DTO songId=47
+2026-03-04 10:01:13 [http-nio-8080-exec-7] DEBUG com.example.demo.service.impl.SongServiceImpl - Mapping song to DTO songId=48
+2026-03-04 10:01:13 [http-nio-8080-exec-7] DEBUG com.example.demo.service.impl.SongServiceImpl - Mapping song to DTO songId=44
+2026-03-04 10:01:13 [http-nio-8080-exec-7] DEBUG com.example.demo.service.impl.SongServiceImpl - Mapping song to DTO songId=1
+2026-03-04 10:01:13 [http-nio-8080-exec-7] DEBUG com.example.demo.service.impl.SongServiceImpl - Mapping song to DTO songId=3
+2026-03-04 10:01:13 [http-nio-8080-exec-7] DEBUG com.example.demo.service.impl.SongServiceImpl - Mapping song to DTO songId=21
+2026-03-04 10:01:13 [http-nio-8080-exec-7] DEBUG com.example.demo.service.impl.SongServiceImpl - Mapping song to DTO songId=22
+2026-03-04 10:01:13 [http-nio-8080-exec-7] DEBUG com.example.demo.service.impl.SongServiceImpl - Mapping song to DTO songId=23
+2026-03-04 10:01:13 [http-nio-8080-exec-7] DEBUG com.example.demo.service.impl.SongServiceImpl - Mapping song to DTO songId=24
+2026-03-04 10:01:13 [http-nio-8080-exec-7] DEBUG com.example.demo.service.impl.SongServiceImpl - Mapping song to DTO songId=61
+2026-03-04 10:01:13 [http-nio-8080-exec-7] DEBUG com.example.demo.service.impl.SongServiceImpl - Mapping song to DTO songId=29
+2026-03-04 10:01:13 [http-nio-8080-exec-7] DEBUG com.example.demo.service.impl.SongServiceImpl - Mapping song to DTO songId=30
+2026-03-04 10:01:13 [http-nio-8080-exec-7] DEBUG com.example.demo.service.impl.SongServiceImpl - Mapping song to DTO songId=31
+2026-03-04 10:01:13 [http-nio-8080-exec-7] DEBUG com.example.demo.service.impl.SongServiceImpl - Mapping song to DTO songId=32
+2026-03-04 10:01:13 [http-nio-8080-exec-7] DEBUG com.example.demo.service.impl.SongServiceImpl - Mapping song to DTO songId=33
+2026-03-04 10:01:13 [http-nio-8080-exec-7] DEBUG com.example.demo.service.impl.SongServiceImpl - Mapping song to DTO songId=50
+2026-03-04 10:01:13 [http-nio-8080-exec-7] DEBUG com.example.demo.service.impl.SongServiceImpl - Mapping song to DTO songId=51
+2026-03-04 10:01:13 [http-nio-8080-exec-7] DEBUG com.example.demo.service.impl.SongServiceImpl - Mapping song to DTO songId=52
+2026-03-04 10:01:13 [http-nio-8080-exec-7] DEBUG com.example.demo.service.impl.SongServiceImpl - Mapping song to DTO songId=53
+2026-03-04 10:01:13 [http-nio-8080-exec-7] DEBUG com.example.demo.service.impl.SongServiceImpl - Mapping song to DTO songId=54
+2026-03-04 10:01:13 [http-nio-8080-exec-7] DEBUG com.example.demo.service.impl.SongServiceImpl - Mapping song to DTO songId=55
+2026-03-04 10:01:13 [http-nio-8080-exec-7] DEBUG com.example.demo.service.impl.SongServiceImpl - Mapping song to DTO songId=26
+2026-03-04 10:01:13 [http-nio-8080-exec-7] DEBUG com.example.demo.service.impl.SongServiceImpl - Mapping song to DTO songId=27
+2026-03-04 10:01:13 [http-nio-8080-exec-7] DEBUG com.example.demo.service.impl.SongServiceImpl - Mapping song to DTO songId=28
+2026-03-04 10:01:13 [http-nio-8080-exec-7] DEBUG com.example.demo.service.impl.SongServiceImpl - Mapping song to DTO songId=34
+2026-03-04 10:01:13 [http-nio-8080-exec-7] DEBUG com.example.demo.service.impl.SongServiceImpl - Mapping song to DTO songId=35
+2026-03-04 10:01:13 [http-nio-8080-exec-7] DEBUG com.example.demo.service.impl.SongServiceImpl - Mapping song to DTO songId=36
+2026-03-04 10:01:13 [http-nio-8080-exec-7] DEBUG com.example.demo.service.impl.SongServiceImpl - Mapping song to DTO songId=37
+2026-03-04 10:01:13 [http-nio-8080-exec-7] DEBUG com.example.demo.service.impl.SongServiceImpl - Mapping song to DTO songId=38
+2026-03-04 10:01:13 [http-nio-8080-exec-7] DEBUG com.example.demo.service.impl.SongServiceImpl - Mapping song to DTO songId=39
+2026-03-04 10:01:13 [http-nio-8080-exec-7] DEBUG com.example.demo.service.impl.SongServiceImpl - Mapping song to DTO songId=42
+2026-03-04 10:01:13 [http-nio-8080-exec-7] DEBUG com.example.demo.service.impl.SongServiceImpl - Mapping song to DTO songId=40
+2026-03-04 10:01:13 [http-nio-8080-exec-7] DEBUG com.example.demo.service.impl.SongServiceImpl - Mapping song to DTO songId=41
+2026-03-04 10:01:13 [http-nio-8080-exec-7] DEBUG com.example.demo.service.impl.SongServiceImpl - Mapping song to DTO songId=43
+2026-03-04 10:01:13 [http-nio-8080-exec-7] DEBUG com.example.demo.service.impl.SongServiceImpl - Mapping song to DTO songId=49
+2026-03-04 10:01:13 [http-nio-8080-exec-7] DEBUG com.example.demo.service.impl.SongServiceImpl - Mapping song to DTO songId=56
+2026-03-04 10:01:13 [http-nio-8080-exec-7] DEBUG com.example.demo.service.impl.SongServiceImpl - Mapping song to DTO songId=57
+2026-03-04 10:01:13 [http-nio-8080-exec-7] DEBUG com.example.demo.service.impl.SongServiceImpl - Mapping song to DTO songId=58
+2026-03-04 10:01:13 [http-nio-8080-exec-7] DEBUG com.example.demo.service.impl.SongServiceImpl - Mapping song to DTO songId=59
+2026-03-04 10:01:13 [http-nio-8080-exec-7] DEBUG com.example.demo.service.impl.SongServiceImpl - Mapping song to DTO songId=60
+2026-03-04 10:01:13 [http-nio-8080-exec-7] INFO  com.example.demo.service.impl.SongServiceImpl - Total songs fetched count=42
+2026-03-04 10:01:13 [http-nio-8080-exec-10] INFO  com.example.demo.service.impl.SearchServiceImpl - Fetching all genres
+2026-03-04 10:01:13 [http-nio-8080-exec-10] INFO  com.example.demo.service.impl.SearchServiceImpl - Genres found count=14
+2026-03-04 10:01:13 [http-nio-8080-exec-2] INFO  com.example.demo.service.impl.SearchServiceImpl - Fetching all release years
+2026-03-04 10:01:13 [http-nio-8080-exec-2] INFO  com.example.demo.service.impl.SearchServiceImpl - Years found count=10
+2026-03-04 10:01:13 [http-nio-8080-exec-2] INFO  com.example.demo.service.impl.SearchServiceImpl - Fetching all artists
+2026-03-04 10:01:13 [http-nio-8080-exec-2] INFO  com.example.demo.service.impl.SearchServiceImpl - Artists fetched count=3
+2026-03-04 10:01:13 [http-nio-8080-exec-9] INFO  com.example.demo.service.impl.SearchServiceImpl - Fetching all albums
+2026-03-04 10:01:13 [http-nio-8080-exec-9] INFO  com.example.demo.service.impl.SearchServiceImpl - Albums fetched count=9
+2026-03-04 10:01:14 [http-nio-8080-exec-4] INFO  com.example.demo.service.impl.PlayerServiceImpl - Play song request received songId=45
+2026-03-04 10:01:14 [http-nio-8080-exec-4] DEBUG com.example.demo.service.impl.PlayerServiceImpl - Current user email=nikhil@gmail.com
+2026-03-04 10:01:14 [http-nio-8080-exec-4] DEBUG com.example.demo.service.impl.PlayerServiceImpl - Play count incremented songId=45 newCount=11
+2026-03-04 10:01:14 [http-nio-8080-exec-4] INFO  com.example.demo.service.impl.PlayerServiceImpl - Play history saved userId=41 songId=45 secondsPlayed=207
+2026-03-04 10:01:23 [http-nio-8080-exec-6] INFO  com.example.demo.service.impl.SearchServiceImpl - Searching songs by artistId=21
+2026-03-04 10:01:23 [http-nio-8080-exec-6] INFO  com.example.demo.service.impl.SearchServiceImpl - Songs found for artistId=21 count=21
+2026-03-04 10:01:23 [http-nio-8080-exec-3] INFO  com.example.demo.service.impl.SearchServiceImpl - Fetching all genres
+2026-03-04 10:01:23 [http-nio-8080-exec-3] INFO  com.example.demo.service.impl.SearchServiceImpl - Genres found count=14
+2026-03-04 10:01:23 [http-nio-8080-exec-1] INFO  com.example.demo.service.impl.SearchServiceImpl - Fetching all release years
+2026-03-04 10:01:23 [http-nio-8080-exec-1] INFO  com.example.demo.service.impl.SearchServiceImpl - Years found count=10
+2026-03-04 10:01:23 [http-nio-8080-exec-2] INFO  com.example.demo.service.impl.SearchServiceImpl - Fetching all artists
+2026-03-04 10:01:23 [http-nio-8080-exec-2] INFO  com.example.demo.service.impl.SearchServiceImpl - Artists fetched count=3
+2026-03-04 10:01:23 [http-nio-8080-exec-10] INFO  com.example.demo.service.impl.SearchServiceImpl - Fetching all albums
+2026-03-04 10:01:23 [http-nio-8080-exec-10] INFO  com.example.demo.service.impl.SearchServiceImpl - Albums fetched count=9
+2026-03-04 10:01:27 [http-nio-8080-exec-3] INFO  com.example.demo.service.impl.SearchServiceImpl - Searching songs by genre=melody
+2026-03-04 10:01:27 [http-nio-8080-exec-3] INFO  com.example.demo.service.impl.SearchServiceImpl - Songs found for genre melody count=4
+2026-03-04 10:01:27 [http-nio-8080-exec-1] INFO  com.example.demo.service.impl.SearchServiceImpl - Fetching all genres
+2026-03-04 10:01:27 [http-nio-8080-exec-1] INFO  com.example.demo.service.impl.SearchServiceImpl - Genres found count=14
+2026-03-04 10:01:27 [http-nio-8080-exec-1] INFO  com.example.demo.service.impl.SearchServiceImpl - Fetching all release years
+2026-03-04 10:01:27 [http-nio-8080-exec-1] INFO  com.example.demo.service.impl.SearchServiceImpl - Years found count=10
+2026-03-04 10:01:28 [http-nio-8080-exec-2] INFO  com.example.demo.service.impl.SearchServiceImpl - Fetching all artists
+2026-03-04 10:01:28 [http-nio-8080-exec-2] INFO  com.example.demo.service.impl.SearchServiceImpl - Artists fetched count=3
+2026-03-04 10:01:28 [http-nio-8080-exec-10] INFO  com.example.demo.service.impl.SearchServiceImpl - Fetching all albums
+2026-03-04 10:01:28 [http-nio-8080-exec-10] INFO  com.example.demo.service.impl.SearchServiceImpl - Albums fetched count=9
+2026-03-04 10:01:30 [http-nio-8080-exec-7] INFO  com.example.demo.service.impl.SearchServiceImpl - Searching songs by year=2021
+2026-03-04 10:01:30 [http-nio-8080-exec-7] INFO  com.example.demo.service.impl.SearchServiceImpl - Songs found for year 2021 count=1
+2026-03-04 10:01:30 [http-nio-8080-exec-4] INFO  com.example.demo.service.impl.SearchServiceImpl - Fetching all genres
+2026-03-04 10:01:30 [http-nio-8080-exec-4] INFO  com.example.demo.service.impl.SearchServiceImpl - Genres found count=14
+2026-03-04 10:01:30 [http-nio-8080-exec-3] INFO  com.example.demo.service.impl.SearchServiceImpl - Fetching all release years
+2026-03-04 10:01:30 [http-nio-8080-exec-3] INFO  com.example.demo.service.impl.SearchServiceImpl - Years found count=10
+2026-03-04 10:01:30 [http-nio-8080-exec-1] INFO  com.example.demo.service.impl.SearchServiceImpl - Fetching all artists
+2026-03-04 10:01:31 [http-nio-8080-exec-1] INFO  com.example.demo.service.impl.SearchServiceImpl - Artists fetched count=3
+2026-03-04 10:01:31 [http-nio-8080-exec-2] INFO  com.example.demo.service.impl.SearchServiceImpl - Fetching all albums
+2026-03-04 10:01:31 [http-nio-8080-exec-2] INFO  com.example.demo.service.impl.SearchServiceImpl - Albums fetched count=9
+2026-03-04 10:01:35 [http-nio-8080-exec-5] INFO  com.example.demo.service.impl.SearchServiceImpl - Searching songs by albumId=2
+2026-03-04 10:01:35 [http-nio-8080-exec-5] INFO  com.example.demo.service.impl.SearchServiceImpl - Songs found for albumId=2 count=5
+2026-03-04 10:01:35 [http-nio-8080-exec-6] INFO  com.example.demo.service.impl.SearchServiceImpl - Fetching all genres
+2026-03-04 10:01:35 [http-nio-8080-exec-6] INFO  com.example.demo.service.impl.SearchServiceImpl - Genres found count=14
+2026-03-04 10:01:35 [http-nio-8080-exec-8] INFO  com.example.demo.service.impl.SearchServiceImpl - Fetching all release years
+2026-03-04 10:01:35 [http-nio-8080-exec-8] INFO  com.example.demo.service.impl.SearchServiceImpl - Years found count=10
+2026-03-04 10:01:35 [http-nio-8080-exec-9] INFO  com.example.demo.service.impl.SearchServiceImpl - Fetching all artists
+2026-03-04 10:01:35 [http-nio-8080-exec-9] INFO  com.example.demo.service.impl.SearchServiceImpl - Artists fetched count=3
+2026-03-04 10:01:35 [http-nio-8080-exec-7] INFO  com.example.demo.service.impl.SearchServiceImpl - Fetching all albums
+2026-03-04 10:01:35 [http-nio-8080-exec-7] INFO  com.example.demo.service.impl.SearchServiceImpl - Albums fetched count=9
+2026-03-04 10:01:37 [http-nio-8080-exec-2] INFO  com.example.demo.service.impl.SongServiceImpl - Fetching all songs
+2026-03-04 10:01:37 [http-nio-8080-exec-2] DEBUG com.example.demo.service.impl.SongServiceImpl - Mapping song to DTO songId=45
+2026-03-04 10:01:37 [http-nio-8080-exec-2] DEBUG com.example.demo.service.impl.SongServiceImpl - Mapping song to DTO songId=46
+2026-03-04 10:01:37 [http-nio-8080-exec-2] DEBUG com.example.demo.service.impl.SongServiceImpl - Mapping song to DTO songId=47
+2026-03-04 10:01:37 [http-nio-8080-exec-2] DEBUG com.example.demo.service.impl.SongServiceImpl - Mapping song to DTO songId=48
+2026-03-04 10:01:37 [http-nio-8080-exec-2] DEBUG com.example.demo.service.impl.SongServiceImpl - Mapping song to DTO songId=44
+2026-03-04 10:01:37 [http-nio-8080-exec-2] DEBUG com.example.demo.service.impl.SongServiceImpl - Mapping song to DTO songId=1
+2026-03-04 10:01:37 [http-nio-8080-exec-2] DEBUG com.example.demo.service.impl.SongServiceImpl - Mapping song to DTO songId=3
+2026-03-04 10:01:37 [http-nio-8080-exec-2] DEBUG com.example.demo.service.impl.SongServiceImpl - Mapping song to DTO songId=21
+2026-03-04 10:01:37 [http-nio-8080-exec-2] DEBUG com.example.demo.service.impl.SongServiceImpl - Mapping song to DTO songId=22
+2026-03-04 10:01:37 [http-nio-8080-exec-2] DEBUG com.example.demo.service.impl.SongServiceImpl - Mapping song to DTO songId=23
+2026-03-04 10:01:37 [http-nio-8080-exec-2] DEBUG com.example.demo.service.impl.SongServiceImpl - Mapping song to DTO songId=24
+2026-03-04 10:01:37 [http-nio-8080-exec-2] DEBUG com.example.demo.service.impl.SongServiceImpl - Mapping song to DTO songId=61
+2026-03-04 10:01:37 [http-nio-8080-exec-2] DEBUG com.example.demo.service.impl.SongServiceImpl - Mapping song to DTO songId=29
+2026-03-04 10:01:37 [http-nio-8080-exec-2] DEBUG com.example.demo.service.impl.SongServiceImpl - Mapping song to DTO songId=30
+2026-03-04 10:01:37 [http-nio-8080-exec-2] DEBUG com.example.demo.service.impl.SongServiceImpl - Mapping song to DTO songId=31
+2026-03-04 10:01:37 [http-nio-8080-exec-2] DEBUG com.example.demo.service.impl.SongServiceImpl - Mapping song to DTO songId=32
+2026-03-04 10:01:37 [http-nio-8080-exec-2] DEBUG com.example.demo.service.impl.SongServiceImpl - Mapping song to DTO songId=33
+2026-03-04 10:01:37 [http-nio-8080-exec-2] DEBUG com.example.demo.service.impl.SongServiceImpl - Mapping song to DTO songId=50
+2026-03-04 10:01:37 [http-nio-8080-exec-2] DEBUG com.example.demo.service.impl.SongServiceImpl - Mapping song to DTO songId=51
+2026-03-04 10:01:37 [http-nio-8080-exec-2] DEBUG com.example.demo.service.impl.SongServiceImpl - Mapping song to DTO songId=52
+2026-03-04 10:01:37 [http-nio-8080-exec-2] DEBUG com.example.demo.service.impl.SongServiceImpl - Mapping song to DTO songId=53
+2026-03-04 10:01:37 [http-nio-8080-exec-2] DEBUG com.example.demo.service.impl.SongServiceImpl - Mapping song to DTO songId=54
+2026-03-04 10:01:37 [http-nio-8080-exec-2] DEBUG com.example.demo.service.impl.SongServiceImpl - Mapping song to DTO songId=55
+2026-03-04 10:01:37 [http-nio-8080-exec-2] DEBUG com.example.demo.service.impl.SongServiceImpl - Mapping song to DTO songId=26
+2026-03-04 10:01:37 [http-nio-8080-exec-2] DEBUG com.example.demo.service.impl.SongServiceImpl - Mapping song to DTO songId=27
+2026-03-04 10:01:37 [http-nio-8080-exec-2] DEBUG com.example.demo.service.impl.SongServiceImpl - Mapping song to DTO songId=28
+2026-03-04 10:01:37 [http-nio-8080-exec-2] DEBUG com.example.demo.service.impl.SongServiceImpl - Mapping song to DTO songId=34
+2026-03-04 10:01:37 [http-nio-8080-exec-2] DEBUG com.example.demo.service.impl.SongServiceImpl - Mapping song to DTO songId=35
+2026-03-04 10:01:37 [http-nio-8080-exec-2] DEBUG com.example.demo.service.impl.SongServiceImpl - Mapping song to DTO songId=36
+2026-03-04 10:01:37 [http-nio-8080-exec-2] DEBUG com.example.demo.service.impl.SongServiceImpl - Mapping song to DTO songId=37
+2026-03-04 10:01:37 [http-nio-8080-exec-2] DEBUG com.example.demo.service.impl.SongServiceImpl - Mapping song to DTO songId=38
+2026-03-04 10:01:37 [http-nio-8080-exec-2] DEBUG com.example.demo.service.impl.SongServiceImpl - Mapping song to DTO songId=39
+2026-03-04 10:01:37 [http-nio-8080-exec-2] DEBUG com.example.demo.service.impl.SongServiceImpl - Mapping song to DTO songId=42
+2026-03-04 10:01:37 [http-nio-8080-exec-2] DEBUG com.example.demo.service.impl.SongServiceImpl - Mapping song to DTO songId=40
+2026-03-04 10:01:37 [http-nio-8080-exec-2] DEBUG com.example.demo.service.impl.SongServiceImpl - Mapping song to DTO songId=41
+2026-03-04 10:01:37 [http-nio-8080-exec-2] DEBUG com.example.demo.service.impl.SongServiceImpl - Mapping song to DTO songId=43
+2026-03-04 10:01:37 [http-nio-8080-exec-2] DEBUG com.example.demo.service.impl.SongServiceImpl - Mapping song to DTO songId=49
+2026-03-04 10:01:37 [http-nio-8080-exec-2] DEBUG com.example.demo.service.impl.SongServiceImpl - Mapping song to DTO songId=56
+2026-03-04 10:01:37 [http-nio-8080-exec-2] DEBUG com.example.demo.service.impl.SongServiceImpl - Mapping song to DTO songId=57
+2026-03-04 10:01:37 [http-nio-8080-exec-2] DEBUG com.example.demo.service.impl.SongServiceImpl - Mapping song to DTO songId=58
+2026-03-04 10:01:37 [http-nio-8080-exec-2] DEBUG com.example.demo.service.impl.SongServiceImpl - Mapping song to DTO songId=59
+2026-03-04 10:01:37 [http-nio-8080-exec-2] DEBUG com.example.demo.service.impl.SongServiceImpl - Mapping song to DTO songId=60
+2026-03-04 10:01:37 [http-nio-8080-exec-2] INFO  com.example.demo.service.impl.SongServiceImpl - Total songs fetched count=42
+2026-03-04 10:01:37 [http-nio-8080-exec-10] INFO  com.example.demo.service.impl.SearchServiceImpl - Fetching all genres
+2026-03-04 10:01:37 [http-nio-8080-exec-10] INFO  com.example.demo.service.impl.SearchServiceImpl - Genres found count=14
+2026-03-04 10:01:37 [http-nio-8080-exec-5] INFO  com.example.demo.service.impl.SearchServiceImpl - Fetching all release years
+2026-03-04 10:01:37 [http-nio-8080-exec-5] INFO  com.example.demo.service.impl.SearchServiceImpl - Years found count=10
+2026-03-04 10:01:37 [http-nio-8080-exec-6] INFO  com.example.demo.service.impl.SearchServiceImpl - Fetching all artists
+2026-03-04 10:01:37 [http-nio-8080-exec-6] INFO  com.example.demo.service.impl.SearchServiceImpl - Artists fetched count=3
+2026-03-04 10:01:37 [http-nio-8080-exec-8] INFO  com.example.demo.service.impl.SearchServiceImpl - Fetching all albums
+2026-03-04 10:01:37 [http-nio-8080-exec-8] INFO  com.example.demo.service.impl.SearchServiceImpl - Albums fetched count=9
+2026-03-04 10:01:38 [http-nio-8080-exec-7] INFO  com.example.demo.service.impl.SearchServiceImpl - Fetching all albums
+2026-03-04 10:01:38 [http-nio-8080-exec-7] INFO  com.example.demo.service.impl.SearchServiceImpl - Albums fetched count=9
+2026-03-04 10:01:40 [http-nio-8080-exec-9] INFO  com.example.demo.service.impl.AlbumServiceImpl - Fetching album details for albumId=25
+2026-03-04 10:01:40 [http-nio-8080-exec-9] DEBUG com.example.demo.service.impl.AlbumServiceImpl - Mapping Album to DTO. AlbumId=25
+2026-03-04 10:01:40 [http-nio-8080-exec-9] INFO  com.example.demo.service.impl.SongServiceImpl - Fetching songs for albumId=25
+2026-03-04 10:01:40 [http-nio-8080-exec-9] DEBUG com.example.demo.service.impl.SongServiceImpl - Mapping song to DTO songId=45
+2026-03-04 10:01:40 [http-nio-8080-exec-9] DEBUG com.example.demo.service.impl.SongServiceImpl - Mapping song to DTO songId=46
+2026-03-04 10:01:40 [http-nio-8080-exec-9] DEBUG com.example.demo.service.impl.SongServiceImpl - Mapping song to DTO songId=49
+2026-03-04 10:01:40 [http-nio-8080-exec-9] DEBUG com.example.demo.service.impl.SongServiceImpl - Mapping song to DTO songId=48
+2026-03-04 10:01:40 [http-nio-8080-exec-9] DEBUG com.example.demo.service.impl.SongServiceImpl - Mapping song to DTO songId=44
+2026-03-04 10:01:40 [http-nio-8080-exec-9] DEBUG com.example.demo.service.impl.SongServiceImpl - Mapping song to DTO songId=47
+2026-03-04 10:01:40 [http-nio-8080-exec-9] INFO  com.example.demo.service.impl.SongServiceImpl - Album songs fetched count=6
+2026-03-04 10:01:44 [http-nio-8080-exec-5] INFO  com.example.demo.service.impl.SearchServiceImpl - Fetching all albums
+2026-03-04 10:01:44 [http-nio-8080-exec-5] INFO  com.example.demo.service.impl.SearchServiceImpl - Albums fetched count=9
+2026-03-04 10:01:48 [http-nio-8080-exec-4] INFO  com.example.demo.service.impl.PlaylistServiceImpl - Fetching user playlists
+2026-03-04 10:01:48 [http-nio-8080-exec-4] DEBUG com.example.demo.service.impl.PlaylistServiceImpl - Converting playlist to DTO playlistId=2
+2026-03-04 10:01:48 [http-nio-8080-exec-4] DEBUG com.example.demo.service.impl.PlaylistServiceImpl - Converting playlist to DTO playlistId=3
+2026-03-04 10:01:48 [http-nio-8080-exec-4] INFO  com.example.demo.service.impl.PlaylistServiceImpl - User playlists fetched count=2
+2026-03-04 10:01:51 [http-nio-8080-exec-1] INFO  com.example.demo.service.impl.PlaylistServiceImpl - Fetching songs from playlist playlistId=2
+2026-03-04 10:01:51 [http-nio-8080-exec-1] INFO  com.example.demo.service.impl.PlaylistServiceImpl - Playlist songs fetched count=4
+2026-03-04 10:01:53 [http-nio-8080-exec-3] INFO  com.example.demo.service.impl.PlaylistServiceImpl - Fetching user playlists
+2026-03-04 10:01:53 [http-nio-8080-exec-3] DEBUG com.example.demo.service.impl.PlaylistServiceImpl - Converting playlist to DTO playlistId=2
+2026-03-04 10:01:53 [http-nio-8080-exec-3] DEBUG com.example.demo.service.impl.PlaylistServiceImpl - Converting playlist to DTO playlistId=3
+2026-03-04 10:01:53 [http-nio-8080-exec-3] INFO  com.example.demo.service.impl.PlaylistServiceImpl - User playlists fetched count=2
+2026-03-04 10:01:54 [http-nio-8080-exec-9] INFO  com.example.demo.service.impl.FavoriteServiceImpl - Fetching favorite songs for current user
+2026-03-04 10:01:54 [http-nio-8080-exec-9] DEBUG com.example.demo.service.impl.FavoriteServiceImpl - Current user email=nikhil@gmail.com
+2026-03-04 10:01:54 [http-nio-8080-exec-9] DEBUG com.example.demo.service.impl.FavoriteServiceImpl - Mapping Song to DTO songId=21
+2026-03-04 10:01:54 [http-nio-8080-exec-9] DEBUG com.example.demo.service.impl.FavoriteServiceImpl - Mapping Song to DTO songId=23
+2026-03-04 10:01:54 [http-nio-8080-exec-9] DEBUG com.example.demo.service.impl.FavoriteServiceImpl - Mapping Song to DTO songId=43
+2026-03-04 10:01:54 [http-nio-8080-exec-9] DEBUG com.example.demo.service.impl.FavoriteServiceImpl - Mapping Song to DTO songId=45
+2026-03-04 10:01:54 [http-nio-8080-exec-9] DEBUG com.example.demo.service.impl.FavoriteServiceImpl - Mapping Song to DTO songId=47
+2026-03-04 10:01:54 [http-nio-8080-exec-9] INFO  com.example.demo.service.impl.FavoriteServiceImpl - Total favorites found=5 for userId=41
+2026-03-04 10:01:58 [http-nio-8080-exec-7] INFO  com.example.demo.service.impl.PlayerServiceImpl - Play song request received songId=21
+2026-03-04 10:01:58 [http-nio-8080-exec-7] DEBUG com.example.demo.service.impl.PlayerServiceImpl - Current user email=nikhil@gmail.com
+2026-03-04 10:01:58 [http-nio-8080-exec-7] DEBUG com.example.demo.service.impl.PlayerServiceImpl - Play count incremented songId=21 newCount=2
+2026-03-04 10:01:58 [http-nio-8080-exec-7] INFO  com.example.demo.service.impl.PlayerServiceImpl - Play history saved userId=41 songId=21 secondsPlayed=202
+2026-03-04 10:02:01 [http-nio-8080-exec-8] INFO  com.example.demo.service.impl.UserServiceImpl - Fetching user profile
+2026-03-04 10:02:01 [http-nio-8080-exec-8] DEBUG com.example.demo.service.impl.UserServiceImpl - Current user email=nikhil@gmail.com
+2026-03-04 10:02:01 [http-nio-8080-exec-8] DEBUG com.example.demo.service.impl.UserServiceImpl - Mapping User to UserProfileDTO userId=41
+2026-03-04 10:02:05 [http-nio-8080-exec-3] INFO  com.example.demo.service.impl.AnalyticsServiceImpl - Fetching user analytics
+2026-03-04 10:02:05 [http-nio-8080-exec-3] DEBUG com.example.demo.service.impl.AnalyticsServiceImpl - Current user email=nikhil@gmail.com
+2026-03-04 10:02:05 [http-nio-8080-exec-3] DEBUG com.example.demo.service.impl.AnalyticsServiceImpl - User stats favorites=5 playlists=2
+2026-03-04 10:02:05 [http-nio-8080-exec-3] DEBUG com.example.demo.service.impl.AnalyticsServiceImpl - Top songs calculated count=5
+2026-03-04 10:02:05 [http-nio-8080-exec-3] DEBUG com.example.demo.service.impl.AnalyticsServiceImpl - History records processed=50
+2026-03-04 10:02:05 [http-nio-8080-exec-3] INFO  com.example.demo.service.impl.AnalyticsServiceImpl - User analytics generated successfully
+2026-03-04 10:02:05 [http-nio-8080-exec-9] INFO  com.example.demo.service.impl.UserServiceImpl - Fetching user profile
+2026-03-04 10:02:05 [http-nio-8080-exec-9] DEBUG com.example.demo.service.impl.UserServiceImpl - Current user email=nikhil@gmail.com
+2026-03-04 10:02:05 [http-nio-8080-exec-9] DEBUG com.example.demo.service.impl.UserServiceImpl - Mapping User to UserProfileDTO userId=41
+2026-03-04 10:02:08 [http-nio-8080-exec-4] INFO  com.example.demo.service.impl.AnalyticsServiceImpl - Fetching user analytics
+2026-03-04 10:02:08 [http-nio-8080-exec-4] DEBUG com.example.demo.service.impl.AnalyticsServiceImpl - Current user email=nikhil@gmail.com
+2026-03-04 10:02:08 [http-nio-8080-exec-4] DEBUG com.example.demo.service.impl.AnalyticsServiceImpl - User stats favorites=5 playlists=2
+2026-03-04 10:02:08 [http-nio-8080-exec-4] DEBUG com.example.demo.service.impl.AnalyticsServiceImpl - Top songs calculated count=5
+2026-03-04 10:02:08 [http-nio-8080-exec-4] DEBUG com.example.demo.service.impl.AnalyticsServiceImpl - History records processed=50
+2026-03-04 10:02:08 [http-nio-8080-exec-4] INFO  com.example.demo.service.impl.AnalyticsServiceImpl - User analytics generated successfully
+2026-03-04 10:02:08 [http-nio-8080-exec-2] INFO  com.example.demo.service.impl.UserServiceImpl - Fetching user profile
+2026-03-04 10:02:08 [http-nio-8080-exec-2] DEBUG com.example.demo.service.impl.UserServiceImpl - Current user email=nikhil@gmail.com
+2026-03-04 10:02:08 [http-nio-8080-exec-2] DEBUG com.example.demo.service.impl.UserServiceImpl - Mapping User to UserProfileDTO userId=41
+2026-03-04 10:14:32 [main] INFO  com.example.demo.service.impl.AlbumServiceImpl - AlbumServiceImpl initialized
+2026-03-04 10:14:32 [main] INFO  com.example.demo.service.impl.AlbumServiceImpl - Fetching album details for albumId=10
+2026-03-04 10:14:32 [main] DEBUG com.example.demo.service.impl.AlbumServiceImpl - Mapping Album to DTO. AlbumId=null
+2026-03-04 10:14:32 [main] INFO  com.example.demo.service.impl.AlbumServiceImpl - AlbumServiceImpl initialized
+2026-03-04 10:14:32 [main] INFO  com.example.demo.service.impl.AlbumServiceImpl - Fetching album details for albumId=10
+2026-03-04 10:14:32 [main] INFO  com.example.demo.service.impl.AlbumServiceImpl - AlbumServiceImpl initialized
+2026-03-04 10:14:32 [main] INFO  com.example.demo.service.impl.AlbumServiceImpl - Fetching all albums
+2026-03-04 10:14:32 [main] DEBUG com.example.demo.service.impl.AlbumServiceImpl - Mapping Album to DTO. AlbumId=null
+2026-03-04 10:14:32 [main] INFO  com.example.demo.service.impl.AlbumServiceImpl - Total albums found=1
+2026-03-04 10:14:32 [main] INFO  com.example.demo.service.impl.AlbumServiceImpl - AlbumServiceImpl initialized
+2026-03-04 10:14:32 [main] INFO  com.example.demo.service.impl.AlbumServiceImpl - Fetching albums for current user
+2026-03-04 10:14:32 [main] DEBUG com.example.demo.service.impl.AlbumServiceImpl - Mapping Album to DTO. AlbumId=null
+2026-03-04 10:14:32 [main] INFO  com.example.demo.service.impl.AlbumServiceImpl - Found 1 albums for artistId=null
+2026-03-04 10:14:32 [main] INFO  com.example.demo.service.impl.AlbumServiceImpl - AlbumServiceImpl initialized
+2026-03-04 10:14:32 [main] INFO  com.example.demo.service.impl.AlbumServiceImpl - Creating album with name=Album1
+2026-03-04 10:14:32 [main] DEBUG com.example.demo.service.impl.AlbumServiceImpl - Current user email=artist@test.com
+2026-03-04 10:14:32 [main] INFO  com.example.demo.service.impl.AlbumServiceImpl - Album created successfully for artistId=null
+2026-03-04 10:14:32 [main] DEBUG com.example.demo.service.impl.AlbumServiceImpl - Mapping Album to DTO. AlbumId=null
+2026-03-04 10:14:32 [main] INFO  com.example.demo.service.impl.AlbumServiceImpl - AlbumServiceImpl initialized
+2026-03-04 10:14:32 [main] INFO  com.example.demo.service.impl.AlbumServiceImpl - Uploading cover image for albumId=10
+2026-03-04 10:14:32 [main] INFO  com.example.demo.service.impl.AlbumServiceImpl - AlbumServiceImpl initialized
+2026-03-04 10:14:32 [main] INFO  com.example.demo.service.impl.AlbumServiceImpl - Uploading cover image for albumId=10
+2026-03-04 10:14:32 [main] INFO  com.example.demo.service.impl.AlbumServiceImpl - AlbumServiceImpl initialized
+2026-03-04 10:14:32 [main] INFO  com.example.demo.service.impl.AlbumServiceImpl - Deleting album with albumId=10
+2026-03-04 10:14:32 [main] INFO  com.example.demo.service.impl.AlbumServiceImpl - AlbumServiceImpl initialized
+2026-03-04 10:14:32 [main] INFO  com.example.demo.service.impl.AlbumServiceImpl - Creating album with name=Album1
+2026-03-04 10:14:32 [main] DEBUG com.example.demo.service.impl.AlbumServiceImpl - Current user email=artist@test.com
+2026-03-04 10:14:32 [main] WARN  com.example.demo.service.impl.AlbumServiceImpl - Duplicate album attempt detected for artistId=null albumName=Album1
+2026-03-04 10:14:32 [main] INFO  com.example.demo.service.impl.AlbumServiceImpl - AlbumServiceImpl initialized
+2026-03-04 10:14:32 [main] INFO  com.example.demo.service.impl.AlbumServiceImpl - Deleting album with albumId=10
+2026-03-04 10:14:32 [main] INFO  com.example.demo.service.impl.AlbumServiceImpl - AlbumServiceImpl initialized
+2026-03-04 10:14:32 [main] INFO  com.example.demo.service.impl.AlbumServiceImpl - Updating album with albumId=10
+2026-03-04 10:17:47 [main] INFO  com.example.demo.service.impl.AlbumServiceImpl - AlbumServiceImpl initialized
+2026-03-04 10:17:47 [main] INFO  com.example.demo.service.impl.AlbumServiceImpl - Fetching album details for albumId=1
+2026-03-04 10:17:47 [main] DEBUG com.example.demo.service.impl.AlbumServiceImpl - Mapping Album to DTO. AlbumId=null
+2026-03-04 10:17:47 [main] INFO  com.example.demo.service.impl.AlbumServiceImpl - AlbumServiceImpl initialized
+2026-03-04 10:17:47 [main] INFO  com.example.demo.service.impl.AlbumServiceImpl - Fetching album details for albumId=1
+2026-03-04 10:17:47 [main] INFO  com.example.demo.service.impl.AlbumServiceImpl - AlbumServiceImpl initialized
+2026-03-04 10:17:47 [main] INFO  com.example.demo.service.impl.AlbumServiceImpl - Fetching all albums
+2026-03-04 10:17:47 [main] DEBUG com.example.demo.service.impl.AlbumServiceImpl - Mapping Album to DTO. AlbumId=null
+2026-03-04 10:17:47 [main] INFO  com.example.demo.service.impl.AlbumServiceImpl - Total albums found=1
+2026-03-04 10:17:47 [main] INFO  com.example.demo.service.impl.AlbumServiceImpl - AlbumServiceImpl initialized
+2026-03-04 10:17:47 [main] INFO  com.example.demo.service.impl.AlbumServiceImpl - Fetching albums for current user
+2026-03-04 10:17:47 [main] DEBUG com.example.demo.service.impl.AlbumServiceImpl - Mapping Album to DTO. AlbumId=null
+2026-03-04 10:17:47 [main] INFO  com.example.demo.service.impl.AlbumServiceImpl - Found 1 albums for artistId=null
+2026-03-04 10:17:47 [main] INFO  com.example.demo.service.impl.AlbumServiceImpl - AlbumServiceImpl initialized
+2026-03-04 10:17:47 [main] INFO  com.example.demo.service.impl.AlbumServiceImpl - Creating album with name=Album1
+2026-03-04 10:17:47 [main] DEBUG com.example.demo.service.impl.AlbumServiceImpl - Current user email=artist@test.com
+2026-03-04 10:17:47 [main] INFO  com.example.demo.service.impl.AlbumServiceImpl - Album created successfully for artistId=null
+2026-03-04 10:17:47 [main] DEBUG com.example.demo.service.impl.AlbumServiceImpl - Mapping Album to DTO. AlbumId=null
+2026-03-04 10:17:47 [main] INFO  com.example.demo.service.impl.AlbumServiceImpl - AlbumServiceImpl initialized
+2026-03-04 10:17:47 [main] INFO  com.example.demo.service.impl.AlbumServiceImpl - Uploading cover image for albumId=1
+2026-03-04 10:17:47 [main] INFO  com.example.demo.service.impl.AlbumServiceImpl - AlbumServiceImpl initialized
+2026-03-04 10:17:47 [main] INFO  com.example.demo.service.impl.AlbumServiceImpl - Uploading cover image for albumId=1
+2026-03-04 10:17:47 [main] INFO  com.example.demo.service.impl.AlbumServiceImpl - AlbumServiceImpl initialized
+2026-03-04 10:17:47 [main] INFO  com.example.demo.service.impl.AlbumServiceImpl - Deleting album with albumId=1
+2026-03-04 10:17:47 [main] INFO  com.example.demo.service.impl.AlbumServiceImpl - AlbumServiceImpl initialized
+2026-03-04 10:17:47 [main] INFO  com.example.demo.service.impl.AlbumServiceImpl - Creating album with name=Album1
+2026-03-04 10:17:47 [main] DEBUG com.example.demo.service.impl.AlbumServiceImpl - Current user email=artist@test.com
+2026-03-04 10:17:47 [main] WARN  com.example.demo.service.impl.AlbumServiceImpl - Duplicate album attempt detected for artistId=null albumName=Album1
+2026-03-04 10:17:47 [main] INFO  com.example.demo.service.impl.AlbumServiceImpl - AlbumServiceImpl initialized
+2026-03-04 10:17:47 [main] INFO  com.example.demo.service.impl.AlbumServiceImpl - Deleting album with albumId=1
+2026-03-04 10:17:47 [main] INFO  com.example.demo.service.impl.AlbumServiceImpl - AlbumServiceImpl initialized
+2026-03-04 10:17:47 [main] INFO  com.example.demo.service.impl.AlbumServiceImpl - Updating album with albumId=1
+2026-03-04 10:23:15 [main] INFO  com.example.demo.service.impl.AlbumServiceImpl - AlbumServiceImpl initialized
+2026-03-04 10:23:15 [main] INFO  com.example.demo.service.impl.AlbumServiceImpl - Fetching album details for albumId=3
+2026-03-04 10:23:15 [main] DEBUG com.example.demo.service.impl.AlbumServiceImpl - Mapping Album to DTO. AlbumId=null
+2026-03-04 10:23:15 [main] INFO  com.example.demo.service.impl.AlbumServiceImpl - AlbumServiceImpl initialized
+2026-03-04 10:23:15 [main] INFO  com.example.demo.service.impl.AlbumServiceImpl - Fetching album details for albumId=3
+2026-03-04 10:23:15 [main] INFO  com.example.demo.service.impl.AlbumServiceImpl - AlbumServiceImpl initialized
+2026-03-04 10:23:15 [main] INFO  com.example.demo.service.impl.AlbumServiceImpl - Fetching all albums
+2026-03-04 10:23:15 [main] DEBUG com.example.demo.service.impl.AlbumServiceImpl - Mapping Album to DTO. AlbumId=null
+2026-03-04 10:23:15 [main] INFO  com.example.demo.service.impl.AlbumServiceImpl - Total albums found=1
+2026-03-04 10:23:15 [main] INFO  com.example.demo.service.impl.AlbumServiceImpl - AlbumServiceImpl initialized
+2026-03-04 10:23:15 [main] INFO  com.example.demo.service.impl.AlbumServiceImpl - Fetching albums for current user
+2026-03-04 10:23:15 [main] DEBUG com.example.demo.service.impl.AlbumServiceImpl - Mapping Album to DTO. AlbumId=null
+2026-03-04 10:23:15 [main] INFO  com.example.demo.service.impl.AlbumServiceImpl - Found 1 albums for artistId=null
+2026-03-04 10:23:15 [main] INFO  com.example.demo.service.impl.AlbumServiceImpl - AlbumServiceImpl initialized
+2026-03-04 10:23:15 [main] INFO  com.example.demo.service.impl.AlbumServiceImpl - Creating album with name=Album1
+2026-03-04 10:23:15 [main] DEBUG com.example.demo.service.impl.AlbumServiceImpl - Current user email=artist@test.com
+2026-03-04 10:23:15 [main] INFO  com.example.demo.service.impl.AlbumServiceImpl - Album created successfully for artistId=null
+2026-03-04 10:23:15 [main] DEBUG com.example.demo.service.impl.AlbumServiceImpl - Mapping Album to DTO. AlbumId=null
+2026-03-04 10:23:15 [main] INFO  com.example.demo.service.impl.AlbumServiceImpl - AlbumServiceImpl initialized
+2026-03-04 10:23:15 [main] INFO  com.example.demo.service.impl.AlbumServiceImpl - Uploading cover image for albumId=5
+2026-03-04 10:23:15 [main] INFO  com.example.demo.service.impl.AlbumServiceImpl - AlbumServiceImpl initialized
+2026-03-04 10:23:15 [main] INFO  com.example.demo.service.impl.AlbumServiceImpl - Uploading cover image for albumId=5
+2026-03-04 10:23:15 [main] INFO  com.example.demo.service.impl.AlbumServiceImpl - AlbumServiceImpl initialized
+2026-03-04 10:23:15 [main] INFO  com.example.demo.service.impl.AlbumServiceImpl - Deleting album with albumId=5
+2026-03-04 10:23:15 [main] INFO  com.example.demo.service.impl.AlbumServiceImpl - AlbumServiceImpl initialized
+2026-03-04 10:23:15 [main] INFO  com.example.demo.service.impl.AlbumServiceImpl - Creating album with name=Album1
+2026-03-04 10:23:15 [main] DEBUG com.example.demo.service.impl.AlbumServiceImpl - Current user email=artist@test.com
+2026-03-04 10:23:15 [main] WARN  com.example.demo.service.impl.AlbumServiceImpl - Duplicate album attempt detected for artistId=null albumName=Album1
+2026-03-04 10:23:15 [main] INFO  com.example.demo.service.impl.AlbumServiceImpl - AlbumServiceImpl initialized
+2026-03-04 10:23:15 [main] INFO  com.example.demo.service.impl.AlbumServiceImpl - Deleting album with albumId=5
+2026-03-04 10:23:15 [main] INFO  com.example.demo.service.impl.AlbumServiceImpl - AlbumServiceImpl initialized
+2026-03-04 10:23:15 [main] INFO  com.example.demo.service.impl.AlbumServiceImpl - Updating album with albumId=6
+2026-03-04 10:26:49 [main] INFO  com.example.demo.service.impl.AlbumServiceImpl - AlbumServiceImpl initialized
+2026-03-04 10:26:49 [main] INFO  com.example.demo.service.impl.AlbumServiceImpl - Fetching album details for albumId=3
+2026-03-04 10:26:49 [main] DEBUG com.example.demo.service.impl.AlbumServiceImpl - Mapping Album to DTO. AlbumId=null
+2026-03-04 10:26:49 [main] INFO  com.example.demo.service.impl.AlbumServiceImpl - AlbumServiceImpl initialized
+2026-03-04 10:26:49 [main] INFO  com.example.demo.service.impl.AlbumServiceImpl - Fetching album details for albumId=3
+2026-03-04 10:26:49 [main] INFO  com.example.demo.service.impl.AlbumServiceImpl - AlbumServiceImpl initialized
+2026-03-04 10:26:49 [main] INFO  com.example.demo.service.impl.AlbumServiceImpl - Fetching all albums
+2026-03-04 10:26:49 [main] DEBUG com.example.demo.service.impl.AlbumServiceImpl - Mapping Album to DTO. AlbumId=null
+2026-03-04 10:26:49 [main] INFO  com.example.demo.service.impl.AlbumServiceImpl - Total albums found=1
+2026-03-04 10:26:49 [main] INFO  com.example.demo.service.impl.AlbumServiceImpl - AlbumServiceImpl initialized
+2026-03-04 10:26:49 [main] INFO  com.example.demo.service.impl.AlbumServiceImpl - Fetching albums for current user
+2026-03-04 10:26:49 [main] DEBUG com.example.demo.service.impl.AlbumServiceImpl - Mapping Album to DTO. AlbumId=null
+2026-03-04 10:26:49 [main] INFO  com.example.demo.service.impl.AlbumServiceImpl - Found 1 albums for artistId=null
+2026-03-04 10:26:49 [main] INFO  com.example.demo.service.impl.AlbumServiceImpl - AlbumServiceImpl initialized
+2026-03-04 10:26:49 [main] INFO  com.example.demo.service.impl.AlbumServiceImpl - Creating album with name=Album1
+2026-03-04 10:26:49 [main] DEBUG com.example.demo.service.impl.AlbumServiceImpl - Current user email=artist@test.com
+2026-03-04 10:26:49 [main] INFO  com.example.demo.service.impl.AlbumServiceImpl - Album created successfully for artistId=null
+2026-03-04 10:26:49 [main] DEBUG com.example.demo.service.impl.AlbumServiceImpl - Mapping Album to DTO. AlbumId=null
+2026-03-04 10:26:49 [main] INFO  com.example.demo.service.impl.AlbumServiceImpl - AlbumServiceImpl initialized
+2026-03-04 10:26:49 [main] INFO  com.example.demo.service.impl.AlbumServiceImpl - Uploading cover image for albumId=5
+2026-03-04 10:26:49 [main] INFO  com.example.demo.service.impl.AlbumServiceImpl - AlbumServiceImpl initialized
+2026-03-04 10:26:49 [main] INFO  com.example.demo.service.impl.AlbumServiceImpl - Uploading cover image for albumId=5
+2026-03-04 10:26:49 [main] INFO  com.example.demo.service.impl.AlbumServiceImpl - AlbumServiceImpl initialized
+2026-03-04 10:26:49 [main] INFO  com.example.demo.service.impl.AlbumServiceImpl - Deleting album with albumId=5
+2026-03-04 10:26:49 [main] INFO  com.example.demo.service.impl.AlbumServiceImpl - AlbumServiceImpl initialized
+2026-03-04 10:26:49 [main] INFO  com.example.demo.service.impl.AlbumServiceImpl - Creating album with name=Album1
+2026-03-04 10:26:49 [main] DEBUG com.example.demo.service.impl.AlbumServiceImpl - Current user email=artist@test.com
+2026-03-04 10:26:49 [main] WARN  com.example.demo.service.impl.AlbumServiceImpl - Duplicate album attempt detected for artistId=null albumName=Album1
+2026-03-04 10:26:49 [main] INFO  com.example.demo.service.impl.AlbumServiceImpl - AlbumServiceImpl initialized
+2026-03-04 10:26:49 [main] INFO  com.example.demo.service.impl.AlbumServiceImpl - Deleting album with albumId=5
+2026-03-04 10:26:49 [main] INFO  com.example.demo.service.impl.AlbumServiceImpl - AlbumServiceImpl initialized
+2026-03-04 10:26:49 [main] INFO  com.example.demo.service.impl.AlbumServiceImpl - Updating album with albumId=5
+2026-03-04 10:28:44 [main] INFO  com.example.demo.service.impl.AlbumServiceImpl - AlbumServiceImpl initialized
+2026-03-04 10:28:44 [main] INFO  com.example.demo.service.impl.AlbumServiceImpl - Fetching album details for albumId=10
+2026-03-04 10:28:44 [main] INFO  com.example.demo.service.impl.AlbumServiceImpl - AlbumServiceImpl initialized
+2026-03-04 10:28:44 [main] INFO  com.example.demo.service.impl.AlbumServiceImpl - Fetching all albums
+2026-03-04 10:28:44 [main] DEBUG com.example.demo.service.impl.AlbumServiceImpl - Mapping Album to DTO. AlbumId=10
+2026-03-04 10:28:44 [main] INFO  com.example.demo.service.impl.AlbumServiceImpl - Total albums found=1
+2026-03-04 10:28:44 [main] INFO  com.example.demo.service.impl.AlbumServiceImpl - AlbumServiceImpl initialized
+2026-03-04 10:28:44 [main] INFO  com.example.demo.service.impl.AlbumServiceImpl - Creating album with name=Test
+2026-03-04 10:28:44 [main] DEBUG com.example.demo.service.impl.AlbumServiceImpl - Current user email=unknown@test.com
+2026-03-04 10:28:44 [main] INFO  com.example.demo.service.impl.AlbumServiceImpl - AlbumServiceImpl initialized
+2026-03-04 10:28:44 [main] INFO  com.example.demo.service.impl.AlbumServiceImpl - Deleting album with albumId=10
+2026-03-04 10:28:44 [main] WARN  com.example.demo.service.impl.AlbumServiceImpl - Unauthorized delete attempt by userId=55 for albumId=10
+2026-03-04 10:28:44 [main] INFO  com.example.demo.service.impl.AlbumServiceImpl - AlbumServiceImpl initialized
+2026-03-04 10:28:44 [main] INFO  com.example.demo.service.impl.AlbumServiceImpl - Fetching albums for current user
+2026-03-04 10:28:44 [main] DEBUG com.example.demo.service.impl.AlbumServiceImpl - Mapping Album to DTO. AlbumId=10
+2026-03-04 10:28:44 [main] INFO  com.example.demo.service.impl.AlbumServiceImpl - Found 1 albums for artistId=1
+2026-03-04 10:28:44 [main] INFO  com.example.demo.service.impl.AlbumServiceImpl - AlbumServiceImpl initialized
+2026-03-04 10:28:44 [main] INFO  com.example.demo.service.impl.AlbumServiceImpl - Creating album with name=Test Album
+2026-03-04 10:28:44 [main] DEBUG com.example.demo.service.impl.AlbumServiceImpl - Current user email=artist@test.com
+2026-03-04 10:28:44 [main] INFO  com.example.demo.service.impl.AlbumServiceImpl - Album created successfully for artistId=1
+2026-03-04 10:28:44 [main] DEBUG com.example.demo.service.impl.AlbumServiceImpl - Mapping Album to DTO. AlbumId=10
+2026-03-04 10:28:44 [main] INFO  com.example.demo.service.impl.AlbumServiceImpl - AlbumServiceImpl initialized
+2026-03-04 10:28:44 [main] INFO  com.example.demo.service.impl.AlbumServiceImpl - Uploading cover image for albumId=10
+2026-03-04 10:28:44 [main] DEBUG com.example.demo.service.impl.AlbumServiceImpl - Image stored at path=image/path.jpg
+2026-03-04 10:28:44 [main] INFO  com.example.demo.service.impl.AlbumServiceImpl - Cover image uploaded successfully for albumId=10
+2026-03-04 10:28:44 [main] DEBUG com.example.demo.service.impl.AlbumServiceImpl - Mapping Album to DTO. AlbumId=10
+2026-03-04 10:28:44 [main] INFO  com.example.demo.service.impl.AlbumServiceImpl - AlbumServiceImpl initialized
+2026-03-04 10:28:44 [main] INFO  com.example.demo.service.impl.AlbumServiceImpl - Uploading cover image for albumId=10
+2026-03-04 10:28:44 [main] WARN  com.example.demo.service.impl.AlbumServiceImpl - Unauthorized cover upload attempt by userId=99 for albumId=10
+2026-03-04 10:28:44 [main] INFO  com.example.demo.service.impl.AlbumServiceImpl - AlbumServiceImpl initialized
+2026-03-04 10:28:44 [main] INFO  com.example.demo.service.impl.AlbumServiceImpl - Fetching album details for albumId=10
+2026-03-04 10:28:44 [main] DEBUG com.example.demo.service.impl.AlbumServiceImpl - Mapping Album to DTO. AlbumId=10
+2026-03-04 10:28:44 [main] INFO  com.example.demo.service.impl.AlbumServiceImpl - AlbumServiceImpl initialized
+2026-03-04 10:28:44 [main] INFO  com.example.demo.service.impl.AlbumServiceImpl - Uploading cover image for albumId=10
+2026-03-04 10:28:44 [main] INFO  com.example.demo.service.impl.AlbumServiceImpl - AlbumServiceImpl initialized
+2026-03-04 10:28:44 [main] INFO  com.example.demo.service.impl.AlbumServiceImpl - Deleting album with albumId=10
+2026-03-04 10:28:44 [main] DEBUG com.example.demo.service.impl.AlbumServiceImpl - Detaching 0 songs from albumId=10
+2026-03-04 10:28:44 [main] INFO  com.example.demo.service.impl.AlbumServiceImpl - Album deleted successfully. albumId=10
+2026-03-04 10:28:44 [main] INFO  com.example.demo.service.impl.AlbumServiceImpl - AlbumServiceImpl initialized
+2026-03-04 10:28:44 [main] INFO  com.example.demo.service.impl.AlbumServiceImpl - Creating album with name=Test
+2026-03-04 10:28:44 [main] DEBUG com.example.demo.service.impl.AlbumServiceImpl - Current user email=artist@test.com
+2026-03-04 10:28:44 [main] WARN  com.example.demo.service.impl.AlbumServiceImpl - Duplicate album attempt detected for artistId=1 albumName=Test
+2026-03-04 10:28:44 [main] INFO  com.example.demo.service.impl.AlbumServiceImpl - AlbumServiceImpl initialized
+2026-03-04 10:28:44 [main] INFO  com.example.demo.service.impl.AlbumServiceImpl - Updating album with albumId=10
+2026-03-04 10:28:44 [main] INFO  com.example.demo.service.impl.AlbumServiceImpl - Album updated successfully. albumId=10
+2026-03-04 10:28:44 [main] DEBUG com.example.demo.service.impl.AlbumServiceImpl - Mapping Album to DTO. AlbumId=10
+2026-03-04 10:29:07 [main] INFO  com.example.demo.service.impl.AlbumServiceImpl - AlbumServiceImpl initialized
+2026-03-04 10:29:07 [main] INFO  com.example.demo.service.impl.AlbumServiceImpl - Fetching album details for albumId=10
+2026-03-04 10:29:07 [main] INFO  com.example.demo.service.impl.AlbumServiceImpl - AlbumServiceImpl initialized
+2026-03-04 10:29:07 [main] INFO  com.example.demo.service.impl.AlbumServiceImpl - Fetching all albums
+2026-03-04 10:29:07 [main] DEBUG com.example.demo.service.impl.AlbumServiceImpl - Mapping Album to DTO. AlbumId=10
+2026-03-04 10:29:07 [main] INFO  com.example.demo.service.impl.AlbumServiceImpl - Total albums found=1
+2026-03-04 10:29:07 [main] INFO  com.example.demo.service.impl.AlbumServiceImpl - AlbumServiceImpl initialized
+2026-03-04 10:29:07 [main] INFO  com.example.demo.service.impl.AlbumServiceImpl - Creating album with name=Test
+2026-03-04 10:29:07 [main] DEBUG com.example.demo.service.impl.AlbumServiceImpl - Current user email=unknown@test.com
+2026-03-04 10:29:07 [main] INFO  com.example.demo.service.impl.AlbumServiceImpl - AlbumServiceImpl initialized
+2026-03-04 10:29:07 [main] INFO  com.example.demo.service.impl.AlbumServiceImpl - Deleting album with albumId=10
+2026-03-04 10:29:07 [main] WARN  com.example.demo.service.impl.AlbumServiceImpl - Unauthorized delete attempt by userId=55 for albumId=10
+2026-03-04 10:29:07 [main] INFO  com.example.demo.service.impl.AlbumServiceImpl - AlbumServiceImpl initialized
+2026-03-04 10:29:07 [main] INFO  com.example.demo.service.impl.AlbumServiceImpl - Fetching albums for current user
+2026-03-04 10:29:07 [main] DEBUG com.example.demo.service.impl.AlbumServiceImpl - Mapping Album to DTO. AlbumId=10
+2026-03-04 10:29:07 [main] INFO  com.example.demo.service.impl.AlbumServiceImpl - Found 1 albums for artistId=1
+2026-03-04 10:29:07 [main] INFO  com.example.demo.service.impl.AlbumServiceImpl - AlbumServiceImpl initialized
+2026-03-04 10:29:07 [main] INFO  com.example.demo.service.impl.AlbumServiceImpl - Creating album with name=Test Album
+2026-03-04 10:29:07 [main] DEBUG com.example.demo.service.impl.AlbumServiceImpl - Current user email=artist@test.com
+2026-03-04 10:29:07 [main] INFO  com.example.demo.service.impl.AlbumServiceImpl - Album created successfully for artistId=1
+2026-03-04 10:29:07 [main] DEBUG com.example.demo.service.impl.AlbumServiceImpl - Mapping Album to DTO. AlbumId=10
+2026-03-04 10:29:07 [main] INFO  com.example.demo.service.impl.AlbumServiceImpl - AlbumServiceImpl initialized
+2026-03-04 10:29:07 [main] INFO  com.example.demo.service.impl.AlbumServiceImpl - Uploading cover image for albumId=10
+2026-03-04 10:29:07 [main] DEBUG com.example.demo.service.impl.AlbumServiceImpl - Image stored at path=image/path.jpg
+2026-03-04 10:29:07 [main] INFO  com.example.demo.service.impl.AlbumServiceImpl - Cover image uploaded successfully for albumId=10
+2026-03-04 10:29:07 [main] DEBUG com.example.demo.service.impl.AlbumServiceImpl - Mapping Album to DTO. AlbumId=10
+2026-03-04 10:29:07 [main] INFO  com.example.demo.service.impl.AlbumServiceImpl - AlbumServiceImpl initialized
+2026-03-04 10:29:07 [main] INFO  com.example.demo.service.impl.AlbumServiceImpl - Uploading cover image for albumId=10
+2026-03-04 10:29:07 [main] WARN  com.example.demo.service.impl.AlbumServiceImpl - Unauthorized cover upload attempt by userId=99 for albumId=10
+2026-03-04 10:29:07 [main] INFO  com.example.demo.service.impl.AlbumServiceImpl - AlbumServiceImpl initialized
+2026-03-04 10:29:07 [main] INFO  com.example.demo.service.impl.AlbumServiceImpl - Fetching album details for albumId=10
+2026-03-04 10:29:07 [main] DEBUG com.example.demo.service.impl.AlbumServiceImpl - Mapping Album to DTO. AlbumId=10
+2026-03-04 10:29:07 [main] INFO  com.example.demo.service.impl.AlbumServiceImpl - AlbumServiceImpl initialized
+2026-03-04 10:29:07 [main] INFO  com.example.demo.service.impl.AlbumServiceImpl - Uploading cover image for albumId=10
+2026-03-04 10:29:07 [main] INFO  com.example.demo.service.impl.AlbumServiceImpl - AlbumServiceImpl initialized
+2026-03-04 10:29:07 [main] INFO  com.example.demo.service.impl.AlbumServiceImpl - Deleting album with albumId=10
+2026-03-04 10:29:07 [main] DEBUG com.example.demo.service.impl.AlbumServiceImpl - Detaching 0 songs from albumId=10
+2026-03-04 10:29:07 [main] INFO  com.example.demo.service.impl.AlbumServiceImpl - Album deleted successfully. albumId=10
+2026-03-04 10:29:07 [main] INFO  com.example.demo.service.impl.AlbumServiceImpl - AlbumServiceImpl initialized
+2026-03-04 10:29:07 [main] INFO  com.example.demo.service.impl.AlbumServiceImpl - Creating album with name=Test
+2026-03-04 10:29:07 [main] DEBUG com.example.demo.service.impl.AlbumServiceImpl - Current user email=artist@test.com
+2026-03-04 10:29:07 [main] WARN  com.example.demo.service.impl.AlbumServiceImpl - Duplicate album attempt detected for artistId=1 albumName=Test
+2026-03-04 10:29:07 [main] INFO  com.example.demo.service.impl.AlbumServiceImpl - AlbumServiceImpl initialized
+2026-03-04 10:29:07 [main] INFO  com.example.demo.service.impl.AlbumServiceImpl - Updating album with albumId=10
+2026-03-04 10:29:07 [main] INFO  com.example.demo.service.impl.AlbumServiceImpl - Album updated successfully. albumId=10
+2026-03-04 10:29:07 [main] DEBUG com.example.demo.service.impl.AlbumServiceImpl - Mapping Album to DTO. AlbumId=10
+2026-03-04 10:30:08 [main] INFO  com.example.demo.service.impl.AnalyticsServiceImpl - AnalyticsServiceImpl initialized
+2026-03-04 10:30:08 [main] INFO  com.example.demo.service.impl.AnalyticsServiceImpl - Fetching listener insights
+2026-03-04 10:30:08 [main] INFO  com.example.demo.service.impl.AnalyticsServiceImpl - Total unique listeners=25
+2026-03-04 10:30:08 [main] INFO  com.example.demo.service.impl.AnalyticsServiceImpl - AnalyticsServiceImpl initialized
+2026-03-04 10:30:08 [main] INFO  com.example.demo.service.impl.AnalyticsServiceImpl - Fetching play chart for artist
+2026-03-04 10:30:08 [main] INFO  com.example.demo.service.impl.AnalyticsServiceImpl - Play chart generated with 1 songs
+2026-03-04 10:30:08 [main] INFO  com.example.demo.service.impl.AnalyticsServiceImpl - AnalyticsServiceImpl initialized
+2026-03-04 10:30:08 [main] INFO  com.example.demo.service.impl.AnalyticsServiceImpl - Fetching artist analytics
+2026-03-04 10:30:08 [main] DEBUG com.example.demo.service.impl.AnalyticsServiceImpl - Current artist email=unknown@test.com
+2026-03-04 10:30:08 [main] INFO  com.example.demo.service.impl.AnalyticsServiceImpl - AnalyticsServiceImpl initialized
+2026-03-04 10:30:08 [main] INFO  com.example.demo.service.impl.AnalyticsServiceImpl - Fetching daily play trends
+2026-03-04 10:30:08 [main] INFO  com.example.demo.service.impl.AnalyticsServiceImpl - AnalyticsServiceImpl initialized
+2026-03-04 10:30:08 [main] INFO  com.example.demo.service.impl.AnalyticsServiceImpl - Fetching artist analytics
+2026-03-04 10:30:08 [main] DEBUG com.example.demo.service.impl.AnalyticsServiceImpl - Current artist email=artist@test.com
+2026-03-04 10:30:08 [main] DEBUG com.example.demo.service.impl.AnalyticsServiceImpl - Artist stats calculated songs=5, albums=2, plays=100, favorites=20
+2026-03-04 10:30:08 [main] INFO  com.example.demo.service.impl.AnalyticsServiceImpl - Artist analytics generated successfully
+2026-03-04 10:30:08 [main] INFO  com.example.demo.service.impl.AnalyticsServiceImpl - AnalyticsServiceImpl initialized
+2026-03-04 10:30:08 [main] INFO  com.example.demo.service.impl.AnalyticsServiceImpl - Fetching daily play trends
+2026-03-04 10:30:08 [main] INFO  com.example.demo.service.impl.AnalyticsServiceImpl - Daily trends generated count=2
+2026-03-04 10:30:08 [main] INFO  com.example.demo.service.impl.AnalyticsServiceImpl - AnalyticsServiceImpl initialized
+2026-03-04 10:30:08 [main] INFO  com.example.demo.service.impl.AnalyticsServiceImpl - Fetching play chart for artist
+2026-03-04 10:31:24 [main] INFO  com.example.demo.service.impl.ArtistServiceImpl - ArtistServiceImpl initialized
+2026-03-04 10:31:25 [main] INFO  com.example.demo.service.impl.ArtistServiceImpl - Fetching artist profile for artistId=10
+2026-03-04 10:31:25 [main] DEBUG com.example.demo.service.impl.ArtistServiceImpl - Mapping ArtistProfile to DTO profileId=10
+2026-03-04 10:31:25 [main] INFO  com.example.demo.service.impl.ArtistServiceImpl - ArtistServiceImpl initialized
+2026-03-04 10:31:25 [main] INFO  com.example.demo.service.impl.ArtistServiceImpl - Fetching current user's artist profile
+2026-03-04 10:31:25 [main] DEBUG com.example.demo.service.impl.ArtistServiceImpl - Mapping ArtistProfile to DTO profileId=10
+2026-03-04 10:31:25 [main] INFO  com.example.demo.service.impl.ArtistServiceImpl - ArtistServiceImpl initialized
+2026-03-04 10:31:25 [main] INFO  com.example.demo.service.impl.ArtistServiceImpl - Creating artist profile
+2026-03-04 10:31:25 [main] DEBUG com.example.demo.service.impl.ArtistServiceImpl - Current user email=artist@test.com
+2026-03-04 10:31:25 [main] INFO  com.example.demo.service.impl.ArtistServiceImpl - ArtistServiceImpl initialized
+2026-03-04 10:31:25 [main] INFO  com.example.demo.service.impl.ArtistServiceImpl - Updating artist profile
+2026-03-04 10:31:25 [main] DEBUG com.example.demo.service.impl.ArtistServiceImpl - Current user email=artist@test.com
+2026-03-04 10:31:25 [main] INFO  com.example.demo.service.impl.ArtistServiceImpl - Artist profile updated successfully for profileId=10
+2026-03-04 10:31:25 [main] INFO  com.example.demo.service.impl.ArtistServiceImpl - ArtistServiceImpl initialized
+2026-03-04 10:31:25 [main] INFO  com.example.demo.service.impl.ArtistServiceImpl - Uploading profile image for profileId=10
+2026-03-04 10:31:25 [main] DEBUG com.example.demo.service.impl.ArtistServiceImpl - Profile image stored at path=image/path.jpg
+2026-03-04 10:31:25 [main] INFO  com.example.demo.service.impl.ArtistServiceImpl - Profile image uploaded successfully for profileId=10
+2026-03-04 10:31:25 [main] DEBUG com.example.demo.service.impl.ArtistServiceImpl - Mapping ArtistProfile to DTO profileId=10
+2026-03-04 10:31:25 [main] INFO  com.example.demo.service.impl.ArtistServiceImpl - ArtistServiceImpl initialized
+2026-03-04 10:31:25 [main] INFO  com.example.demo.service.impl.ArtistServiceImpl - Creating artist profile
+2026-03-04 10:31:25 [main] DEBUG com.example.demo.service.impl.ArtistServiceImpl - Current user email=artist@test.com
+2026-03-04 10:31:25 [main] WARN  com.example.demo.service.impl.ArtistServiceImpl - Artist profile already exists for userId=1
+2026-03-04 10:31:25 [main] INFO  com.example.demo.service.impl.ArtistServiceImpl - ArtistServiceImpl initialized
+2026-03-04 10:31:25 [main] INFO  com.example.demo.service.impl.ArtistServiceImpl - Uploading profile image for profileId=10
+2026-03-04 10:31:25 [main] WARN  com.example.demo.service.impl.ArtistServiceImpl - Unauthorized profile image upload attempt by userId=99 for profileId=10
+2026-03-04 10:31:25 [main] INFO  com.example.demo.service.impl.ArtistServiceImpl - ArtistServiceImpl initialized
+2026-03-04 10:31:25 [main] INFO  com.example.demo.service.impl.ArtistServiceImpl - Fetching artist profile for artistId=10
+2026-03-04 10:31:25 [main] INFO  com.example.demo.service.impl.ArtistServiceImpl - ArtistServiceImpl initialized
+2026-03-04 10:31:25 [main] INFO  com.example.demo.service.impl.ArtistServiceImpl - Updating artist profile
+2026-03-04 10:31:25 [main] DEBUG com.example.demo.service.impl.ArtistServiceImpl - Current user email=artist@test.com
+2026-03-04 10:31:25 [main] INFO  com.example.demo.service.impl.ArtistServiceImpl - ArtistServiceImpl initialized
+2026-03-04 10:31:25 [main] INFO  com.example.demo.service.impl.ArtistServiceImpl - Creating artist profile
+2026-03-04 10:31:25 [main] DEBUG com.example.demo.service.impl.ArtistServiceImpl - Current user email=artist@test.com
+2026-03-04 10:31:25 [main] INFO  com.example.demo.service.impl.ArtistServiceImpl - Artist profile created successfully for userId=1
+2026-03-04 10:32:33 [main] INFO  com.example.demo.service.impl.AuthServiceImpl - AuthServiceImpl initialized
+2026-03-04 10:32:33 [main] INFO  com.example.demo.service.impl.AuthServiceImpl - Register request received for email=test@example.com
+2026-03-04 10:32:33 [main] WARN  com.example.demo.service.impl.AuthServiceImpl - Weak password attempt during registration for email=test@example.com
+2026-03-04 10:32:33 [main] INFO  com.example.demo.service.impl.AuthServiceImpl - AuthServiceImpl initialized
+2026-03-04 10:32:33 [main] INFO  com.example.demo.service.impl.AuthServiceImpl - Register request received for email=test@example.com
+2026-03-04 10:32:33 [main] WARN  com.example.demo.service.impl.AuthServiceImpl - Underage registration attempt for email=test@example.com
+2026-03-04 10:32:33 [main] INFO  com.example.demo.service.impl.AuthServiceImpl - AuthServiceImpl initialized
+2026-03-04 10:32:33 [main] INFO  com.example.demo.service.impl.AuthServiceImpl - Login attempt for email=test@example.com
+2026-03-04 10:32:33 [main] WARN  com.example.demo.service.impl.AuthServiceImpl - Login attempt for disabled account email=test@example.com
+2026-03-04 10:32:33 [main] INFO  com.example.demo.service.impl.AuthServiceImpl - AuthServiceImpl initialized
+2026-03-04 10:32:33 [main] INFO  com.example.demo.service.impl.AuthServiceImpl - Password reset requested for email=test@example.com
+2026-03-04 10:32:33 [main] INFO  com.example.demo.service.impl.AuthServiceImpl - Password reset successful and account activated email=test@example.com
+2026-03-04 10:32:33 [main] INFO  com.example.demo.service.impl.AuthServiceImpl - AuthServiceImpl initialized
+2026-03-04 10:32:33 [main] INFO  com.example.demo.service.impl.AuthServiceImpl - Password reset requested for email=test@example.com
+2026-03-04 10:32:33 [main] WARN  com.example.demo.service.impl.AuthServiceImpl - Password reset failed - user not found email=test@example.com
+2026-03-04 10:32:33 [main] INFO  com.example.demo.service.impl.AuthServiceImpl - AuthServiceImpl initialized
+2026-03-04 10:32:33 [main] INFO  com.example.demo.service.impl.AuthServiceImpl - Register request received for email=test@example.com
+2026-03-04 10:32:33 [main] WARN  com.example.demo.service.impl.AuthServiceImpl - Registration attempt with existing email=test@example.com
+2026-03-04 10:32:33 [main] INFO  com.example.demo.service.impl.AuthServiceImpl - AuthServiceImpl initialized
+2026-03-04 10:32:33 [main] INFO  com.example.demo.service.impl.AuthServiceImpl - Register request received for email=test@example.com
+2026-03-04 10:32:33 [main] WARN  com.example.demo.service.impl.AuthServiceImpl - Password mismatch during registration for email=test@example.com
+2026-03-04 10:32:33 [main] INFO  com.example.demo.service.impl.AuthServiceImpl - AuthServiceImpl initialized
+2026-03-04 10:32:33 [main] INFO  com.example.demo.service.impl.AuthServiceImpl - Login attempt for email=test@example.com
+2026-03-04 10:32:33 [main] INFO  com.example.demo.service.impl.AuthServiceImpl - Login successful email=test@example.com role=USER
+2026-03-04 10:32:33 [main] INFO  com.example.demo.service.impl.AuthServiceImpl - AuthServiceImpl initialized
+2026-03-04 10:32:33 [main] INFO  com.example.demo.service.impl.AuthServiceImpl - Login attempt for email=test@example.com
+2026-03-04 10:32:33 [main] WARN  com.example.demo.service.impl.AuthServiceImpl - Login failed - user not found email=test@example.com
+2026-03-04 10:32:33 [main] INFO  com.example.demo.service.impl.AuthServiceImpl - AuthServiceImpl initialized
+2026-03-04 10:32:33 [main] INFO  com.example.demo.service.impl.AuthServiceImpl - Login attempt for email=test@example.com
+2026-03-04 10:32:33 [main] WARN  com.example.demo.service.impl.AuthServiceImpl - Invalid password attempt for email=test@example.com
+2026-03-04 10:32:33 [main] INFO  com.example.demo.service.impl.AuthServiceImpl - AuthServiceImpl initialized
+2026-03-04 10:32:33 [main] INFO  com.example.demo.service.impl.AuthServiceImpl - Password reset requested for email=test@example.com
+2026-03-04 10:32:33 [main] WARN  com.example.demo.service.impl.AuthServiceImpl - Password reset failed due to DOB mismatch email=test@example.com
+2026-03-04 10:32:33 [main] INFO  com.example.demo.service.impl.AuthServiceImpl - AuthServiceImpl initialized
+2026-03-04 10:32:33 [main] INFO  com.example.demo.service.impl.AuthServiceImpl - Register request received for email=test@example.com
+2026-03-04 10:32:33 [main] DEBUG com.example.demo.service.impl.AuthServiceImpl - Role found for registration role=USER
+2026-03-04 10:32:33 [main] INFO  com.example.demo.service.impl.AuthServiceImpl - User registered successfully email=test@example.com
+2026-03-04 10:33:44 [main] INFO  com.example.demo.service.impl.FavoriteServiceImpl - FavoriteServiceImpl initialized
+2026-03-04 10:33:44 [main] INFO  com.example.demo.service.impl.FavoriteServiceImpl - Adding favorite songId=1
+2026-03-04 10:33:44 [main] DEBUG com.example.demo.service.impl.FavoriteServiceImpl - Current user email=john@example.com
+2026-03-04 10:33:44 [main] WARN  com.example.demo.service.impl.FavoriteServiceImpl - Song already exists in favorites userId=null songId=1
+2026-03-04 10:33:44 [main] INFO  com.example.demo.service.impl.FavoriteServiceImpl - FavoriteServiceImpl initialized
+2026-03-04 10:33:44 [main] INFO  com.example.demo.service.impl.FavoriteServiceImpl - Fetching favorite songs for current user
+2026-03-04 10:33:44 [main] DEBUG com.example.demo.service.impl.FavoriteServiceImpl - Current user email=john@example.com
+2026-03-04 10:33:44 [main] INFO  com.example.demo.service.impl.FavoriteServiceImpl - FavoriteServiceImpl initialized
+2026-03-04 10:33:44 [main] INFO  com.example.demo.service.impl.FavoriteServiceImpl - Adding favorite songId=1
+2026-03-04 10:33:44 [main] DEBUG com.example.demo.service.impl.FavoriteServiceImpl - Current user email=john@example.com
+2026-03-04 10:33:44 [main] INFO  com.example.demo.service.impl.FavoriteServiceImpl - Song added to favorites successfully userId=null songId=1
+2026-03-04 10:33:44 [main] INFO  com.example.demo.service.impl.FavoriteServiceImpl - FavoriteServiceImpl initialized
+2026-03-04 10:33:44 [main] INFO  com.example.demo.service.impl.FavoriteServiceImpl - Fetching favorite songs for current user
+2026-03-04 10:33:44 [main] DEBUG com.example.demo.service.impl.FavoriteServiceImpl - Current user email=john@example.com
+2026-03-04 10:33:44 [main] DEBUG com.example.demo.service.impl.FavoriteServiceImpl - Mapping Song to DTO songId=null
+2026-03-04 10:33:44 [main] INFO  com.example.demo.service.impl.FavoriteServiceImpl - Total favorites found=1 for userId=null
+2026-03-04 10:33:44 [main] INFO  com.example.demo.service.impl.FavoriteServiceImpl - FavoriteServiceImpl initialized
+2026-03-04 10:33:44 [main] INFO  com.example.demo.service.impl.FavoriteServiceImpl - Adding favorite songId=1
+2026-03-04 10:33:44 [main] DEBUG com.example.demo.service.impl.FavoriteServiceImpl - Current user email=john@example.com
+2026-03-04 10:33:44 [main] INFO  com.example.demo.service.impl.FavoriteServiceImpl - FavoriteServiceImpl initialized
+2026-03-04 10:33:44 [main] INFO  com.example.demo.service.impl.FavoriteServiceImpl - Removing favorite songId=1
+2026-03-04 10:33:44 [main] DEBUG com.example.demo.service.impl.FavoriteServiceImpl - Current user email=john@example.com
+2026-03-04 10:33:44 [main] INFO  com.example.demo.service.impl.FavoriteServiceImpl - Favorite removed successfully userId=null songId=1
+2026-03-04 10:33:44 [main] INFO  com.example.demo.service.impl.FavoriteServiceImpl - FavoriteServiceImpl initialized
+2026-03-04 10:33:44 [main] INFO  com.example.demo.service.impl.FavoriteServiceImpl - Adding favorite songId=1
+2026-03-04 10:33:44 [main] DEBUG com.example.demo.service.impl.FavoriteServiceImpl - Current user email=john@example.com
+2026-03-04 10:33:44 [main] INFO  com.example.demo.service.impl.FavoriteServiceImpl - FavoriteServiceImpl initialized
+2026-03-04 10:33:44 [main] INFO  com.example.demo.service.impl.FavoriteServiceImpl - Removing favorite songId=1
+2026-03-04 10:33:44 [main] DEBUG com.example.demo.service.impl.FavoriteServiceImpl - Current user email=john@example.com
+2026-03-04 10:34:56 [main] INFO  com.example.demo.service.impl.FileStorageServiceImpl - Image upload requested
+2026-03-04 10:34:56 [main] DEBUG com.example.demo.service.impl.FileStorageServiceImpl - Saving image file name=3dd1d3bb-a0c3-4deb-bea3-94e9e5ae87e0_image.jpg
+2026-03-04 10:34:56 [main] INFO  com.example.demo.service.impl.FileStorageServiceImpl - Image file stored successfully path=D:\Dummy1\Revplay_Project-1\uploads\images\3dd1d3bb-a0c3-4deb-bea3-94e9e5ae87e0_image.jpg
+2026-03-04 10:34:56 [main] INFO  com.example.demo.service.impl.FileStorageServiceImpl - File delete requested path=/audio/test.txt
+2026-03-04 10:34:56 [main] DEBUG com.example.demo.service.impl.FileStorageServiceImpl - Resolved file path=D:\Dummy1\Revplay_Project-1\uploads\audio\test.txt
+2026-03-04 10:34:56 [main] INFO  com.example.demo.service.impl.FileStorageServiceImpl - File deleted successfully path=D:\Dummy1\Revplay_Project-1\uploads\audio\test.txt
+2026-03-04 10:34:56 [main] INFO  com.example.demo.service.impl.FileStorageServiceImpl - File delete requested path=null
+2026-03-04 10:34:56 [main] WARN  com.example.demo.service.impl.FileStorageServiceImpl - File delete skipped: path is null or blank
+2026-03-04 10:34:56 [main] INFO  com.example.demo.service.impl.FileStorageServiceImpl - Audio upload requested
+2026-03-04 10:34:56 [main] DEBUG com.example.demo.service.impl.FileStorageServiceImpl - Saving audio file name=135ab3b8-d0a9-4462-a8fe-8651d08520c9_song.mp3
+2026-03-04 10:34:56 [main] ERROR com.example.demo.service.impl.FileStorageServiceImpl - Failed to store audio file
+java.io.IOException
+	at com.example.demo.service.impl.FileStorageServiceImpl.storeAudio(FileStorageServiceImpl.java:47)
+	at com.example.demo.service.impl.FileStorageServiceImplTest.lambda$1(FileStorageServiceImplTest.java:68)
+	at org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:54)
+	at org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:35)
+	at org.junit.jupiter.api.Assertions.assertThrows(Assertions.java:3223)
+	at com.example.demo.service.impl.FileStorageServiceImplTest.storeAudio_IOException(FileStorageServiceImplTest.java:67)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:701)
+	at org.junit.platform.commons.support.ReflectionSupport.invokeMethod(ReflectionSupport.java:502)
+	at org.junit.jupiter.engine.support.MethodReflectionUtils.invoke(MethodReflectionUtils.java:45)
+	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:61)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:124)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:163)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:148)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:86)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(InterceptingExecutableInvoker.java:123)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.lambda$invoke$0(InterceptingExecutableInvoker.java:105)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:99)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:66)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:47)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:39)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:104)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:98)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invokeVoid(InterceptingExecutableInvoker.java:71)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$0(TestMethodTestDescriptor.java:219)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:215)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:157)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:70)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$2(NodeTestTask.java:176)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$1(NodeTestTask.java:166)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$0(NodeTestTask.java:164)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:163)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:116)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:42)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$2(NodeTestTask.java:180)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$1(NodeTestTask.java:166)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$0(NodeTestTask.java:164)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:163)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:116)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:42)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$2(NodeTestTask.java:180)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$1(NodeTestTask.java:166)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$0(NodeTestTask.java:164)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:163)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:116)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:36)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:52)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:58)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.executeEngine(EngineExecutionOrchestrator.java:246)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.failOrExecuteEngine(EngineExecutionOrchestrator.java:218)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:179)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:108)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:66)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:157)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:65)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:125)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:114)
+	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:58)
+	at org.junit.platform.launcher.core.InterceptingLauncher.lambda$execute$2(InterceptingLauncher.java:57)
+	at org.junit.platform.launcher.core.ClasspathAlignmentCheckingLauncherInterceptor.intercept(ClasspathAlignmentCheckingLauncherInterceptor.java:25)
+	at org.junit.platform.launcher.core.InterceptingLauncher.execute(InterceptingLauncher.java:56)
+	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:58)
+	at org.junit.platform.launcher.core.SessionPerRequestLauncher.execute(SessionPerRequestLauncher.java:81)
+	at org.eclipse.jdt.internal.junit6.runner.JUnit6TestReference.run(JUnit6TestReference.java:105)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:40)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:520)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:748)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:443)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:211)
+2026-03-04 10:34:56 [main] INFO  com.example.demo.service.impl.FileStorageServiceImpl - Audio upload requested
+2026-03-04 10:34:56 [main] DEBUG com.example.demo.service.impl.FileStorageServiceImpl - Saving audio file name=53dc2004-40f2-41f3-820a-38c13d31af24_song.mp3
+2026-03-04 10:34:56 [main] INFO  com.example.demo.service.impl.FileStorageServiceImpl - Audio file stored successfully path=D:\Dummy1\Revplay_Project-1\uploads\audio\53dc2004-40f2-41f3-820a-38c13d31af24_song.mp3
+2026-03-04 10:34:56 [main] INFO  com.example.demo.service.impl.FileStorageServiceImpl - Audio upload requested
+2026-03-04 10:34:56 [main] WARN  com.example.demo.service.impl.FileStorageServiceImpl - Audio upload failed: file is empty
+2026-03-04 10:34:56 [main] INFO  com.example.demo.service.impl.FileStorageServiceImpl - Image upload requested
+2026-03-04 10:34:56 [main] WARN  com.example.demo.service.impl.FileStorageServiceImpl - Image upload failed: file is empty
+2026-03-04 10:34:56 [main] INFO  com.example.demo.service.impl.FileStorageServiceImpl - Image upload requested
+2026-03-04 10:34:56 [main] DEBUG com.example.demo.service.impl.FileStorageServiceImpl - Saving image file name=3edb45ee-f8c5-4d2d-924c-899b2c612e02_image.jpg
+2026-03-04 10:34:56 [main] ERROR com.example.demo.service.impl.FileStorageServiceImpl - Failed to store image file
+java.io.IOException
+	at com.example.demo.service.impl.FileStorageServiceImpl.storeImage(FileStorageServiceImpl.java:85)
+	at com.example.demo.service.impl.FileStorageServiceImplTest.lambda$3(FileStorageServiceImplTest.java:109)
+	at org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:54)
+	at org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:35)
+	at org.junit.jupiter.api.Assertions.assertThrows(Assertions.java:3223)
+	at com.example.demo.service.impl.FileStorageServiceImplTest.storeImage_IOException(FileStorageServiceImplTest.java:108)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:701)
+	at org.junit.platform.commons.support.ReflectionSupport.invokeMethod(ReflectionSupport.java:502)
+	at org.junit.jupiter.engine.support.MethodReflectionUtils.invoke(MethodReflectionUtils.java:45)
+	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:61)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:124)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:163)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:148)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:86)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(InterceptingExecutableInvoker.java:123)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.lambda$invoke$0(InterceptingExecutableInvoker.java:105)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:99)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:66)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:47)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:39)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:104)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:98)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invokeVoid(InterceptingExecutableInvoker.java:71)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$0(TestMethodTestDescriptor.java:219)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:215)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:157)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:70)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$2(NodeTestTask.java:176)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$1(NodeTestTask.java:166)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$0(NodeTestTask.java:164)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:163)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:116)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:42)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$2(NodeTestTask.java:180)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$1(NodeTestTask.java:166)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$0(NodeTestTask.java:164)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:163)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:116)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:42)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$2(NodeTestTask.java:180)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$1(NodeTestTask.java:166)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$0(NodeTestTask.java:164)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:163)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:116)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:36)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:52)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:58)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.executeEngine(EngineExecutionOrchestrator.java:246)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.failOrExecuteEngine(EngineExecutionOrchestrator.java:218)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:179)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:108)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:66)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:157)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:65)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:125)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:114)
+	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:58)
+	at org.junit.platform.launcher.core.InterceptingLauncher.lambda$execute$2(InterceptingLauncher.java:57)
+	at org.junit.platform.launcher.core.ClasspathAlignmentCheckingLauncherInterceptor.intercept(ClasspathAlignmentCheckingLauncherInterceptor.java:25)
+	at org.junit.platform.launcher.core.InterceptingLauncher.execute(InterceptingLauncher.java:56)
+	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:58)
+	at org.junit.platform.launcher.core.SessionPerRequestLauncher.execute(SessionPerRequestLauncher.java:81)
+	at org.eclipse.jdt.internal.junit6.runner.JUnit6TestReference.run(JUnit6TestReference.java:105)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:40)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:520)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:748)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:443)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:211)
+2026-03-04 10:36:27 [main] INFO  com.example.demo.service.impl.AlbumServiceImpl - AlbumServiceImpl initialized
+2026-03-04 10:36:27 [main] INFO  com.example.demo.service.impl.AnalyticsServiceImpl - AnalyticsServiceImpl initialized
+2026-03-04 10:36:27 [main] INFO  com.example.demo.service.impl.ArtistServiceImpl - ArtistServiceImpl initialized
+2026-03-04 10:36:27 [main] INFO  com.example.demo.service.impl.SongServiceImpl - SongServiceImpl initialized
+2026-03-04 10:36:27 [main] INFO  com.example.demo.service.impl.AuthServiceImpl - AuthServiceImpl initialized
+2026-03-04 10:36:27 [main] INFO  com.example.demo.service.impl.FavoriteServiceImpl - FavoriteServiceImpl initialized
+2026-03-04 10:36:27 [main] INFO  com.example.demo.service.impl.HistoryServiceImpl - HistoryServiceImpl initialized
+2026-03-04 10:36:27 [main] INFO  com.example.demo.service.impl.PlayerServiceImpl - PlayerServiceImpl initialized
+2026-03-04 10:36:27 [main] INFO  com.example.demo.service.impl.PlaylistServiceImpl - PlaylistServiceImpl initialized
+2026-03-04 10:36:27 [main] INFO  com.example.demo.service.impl.SearchServiceImpl - SearchServiceImpl initialized
+2026-03-04 10:36:28 [main] INFO  com.example.demo.service.impl.UserServiceImpl - UserServiceImpl initialized
+2026-03-04 10:36:30 [main] INFO  com.example.demo.service.impl.AuthServiceImpl - AuthServiceImpl initialized
+2026-03-04 10:36:30 [main] INFO  com.example.demo.service.impl.AuthServiceImpl - Register request received for email=test@example.com
+2026-03-04 10:36:30 [main] WARN  com.example.demo.service.impl.AuthServiceImpl - Weak password attempt during registration for email=test@example.com
+2026-03-04 10:36:30 [main] INFO  com.example.demo.service.impl.AuthServiceImpl - AuthServiceImpl initialized
+2026-03-04 10:36:30 [main] INFO  com.example.demo.service.impl.AuthServiceImpl - Register request received for email=test@example.com
+2026-03-04 10:36:30 [main] WARN  com.example.demo.service.impl.AuthServiceImpl - Underage registration attempt for email=test@example.com
+2026-03-04 10:36:30 [main] INFO  com.example.demo.service.impl.AuthServiceImpl - AuthServiceImpl initialized
+2026-03-04 10:36:30 [main] INFO  com.example.demo.service.impl.AuthServiceImpl - Login attempt for email=test@example.com
+2026-03-04 10:36:30 [main] WARN  com.example.demo.service.impl.AuthServiceImpl - Login attempt for disabled account email=test@example.com
+2026-03-04 10:36:30 [main] INFO  com.example.demo.service.impl.AuthServiceImpl - AuthServiceImpl initialized
+2026-03-04 10:36:30 [main] INFO  com.example.demo.service.impl.AuthServiceImpl - Password reset requested for email=test@example.com
+2026-03-04 10:36:30 [main] INFO  com.example.demo.service.impl.AuthServiceImpl - Password reset successful and account activated email=test@example.com
+2026-03-04 10:36:30 [main] INFO  com.example.demo.service.impl.AuthServiceImpl - AuthServiceImpl initialized
+2026-03-04 10:36:30 [main] INFO  com.example.demo.service.impl.AuthServiceImpl - Password reset requested for email=test@example.com
+2026-03-04 10:36:30 [main] WARN  com.example.demo.service.impl.AuthServiceImpl - Password reset failed - user not found email=test@example.com
+2026-03-04 10:36:30 [main] INFO  com.example.demo.service.impl.AuthServiceImpl - AuthServiceImpl initialized
+2026-03-04 10:36:30 [main] INFO  com.example.demo.service.impl.AuthServiceImpl - Register request received for email=test@example.com
+2026-03-04 10:36:30 [main] WARN  com.example.demo.service.impl.AuthServiceImpl - Registration attempt with existing email=test@example.com
+2026-03-04 10:36:30 [main] INFO  com.example.demo.service.impl.AuthServiceImpl - AuthServiceImpl initialized
+2026-03-04 10:36:30 [main] INFO  com.example.demo.service.impl.AuthServiceImpl - Register request received for email=test@example.com
+2026-03-04 10:36:30 [main] WARN  com.example.demo.service.impl.AuthServiceImpl - Password mismatch during registration for email=test@example.com
+2026-03-04 10:36:30 [main] INFO  com.example.demo.service.impl.AuthServiceImpl - AuthServiceImpl initialized
+2026-03-04 10:36:30 [main] INFO  com.example.demo.service.impl.AuthServiceImpl - Login attempt for email=test@example.com
+2026-03-04 10:36:30 [main] INFO  com.example.demo.service.impl.AuthServiceImpl - Login successful email=test@example.com role=USER
+2026-03-04 10:36:30 [main] INFO  com.example.demo.service.impl.AuthServiceImpl - AuthServiceImpl initialized
+2026-03-04 10:36:30 [main] INFO  com.example.demo.service.impl.AuthServiceImpl - Login attempt for email=test@example.com
+2026-03-04 10:36:30 [main] WARN  com.example.demo.service.impl.AuthServiceImpl - Login failed - user not found email=test@example.com
+2026-03-04 10:36:30 [main] INFO  com.example.demo.service.impl.AuthServiceImpl - AuthServiceImpl initialized
+2026-03-04 10:36:30 [main] INFO  com.example.demo.service.impl.AuthServiceImpl - Login attempt for email=test@example.com
+2026-03-04 10:36:30 [main] WARN  com.example.demo.service.impl.AuthServiceImpl - Invalid password attempt for email=test@example.com
+2026-03-04 10:36:30 [main] INFO  com.example.demo.service.impl.AuthServiceImpl - AuthServiceImpl initialized
+2026-03-04 10:36:30 [main] INFO  com.example.demo.service.impl.AuthServiceImpl - Password reset requested for email=test@example.com
+2026-03-04 10:36:30 [main] WARN  com.example.demo.service.impl.AuthServiceImpl - Password reset failed due to DOB mismatch email=test@example.com
+2026-03-04 10:36:30 [main] INFO  com.example.demo.service.impl.AuthServiceImpl - AuthServiceImpl initialized
+2026-03-04 10:36:30 [main] INFO  com.example.demo.service.impl.AuthServiceImpl - Register request received for email=test@example.com
+2026-03-04 10:36:30 [main] DEBUG com.example.demo.service.impl.AuthServiceImpl - Role found for registration role=USER
+2026-03-04 10:36:30 [main] INFO  com.example.demo.service.impl.AuthServiceImpl - User registered successfully email=test@example.com
+2026-03-04 10:36:31 [main] INFO  com.example.demo.service.impl.AnalyticsServiceImpl - AnalyticsServiceImpl initialized
+2026-03-04 10:36:31 [main] INFO  com.example.demo.service.impl.AnalyticsServiceImpl - Fetching listener insights
+2026-03-04 10:36:31 [main] INFO  com.example.demo.service.impl.AnalyticsServiceImpl - Total unique listeners=25
+2026-03-04 10:36:31 [main] INFO  com.example.demo.service.impl.AnalyticsServiceImpl - AnalyticsServiceImpl initialized
+2026-03-04 10:36:31 [main] INFO  com.example.demo.service.impl.AnalyticsServiceImpl - Fetching play chart for artist
+2026-03-04 10:36:31 [main] INFO  com.example.demo.service.impl.AnalyticsServiceImpl - Play chart generated with 1 songs
+2026-03-04 10:36:31 [main] INFO  com.example.demo.service.impl.AnalyticsServiceImpl - AnalyticsServiceImpl initialized
+2026-03-04 10:36:31 [main] INFO  com.example.demo.service.impl.AnalyticsServiceImpl - Fetching artist analytics
+2026-03-04 10:36:31 [main] DEBUG com.example.demo.service.impl.AnalyticsServiceImpl - Current artist email=unknown@test.com
+2026-03-04 10:36:31 [main] INFO  com.example.demo.service.impl.AnalyticsServiceImpl - AnalyticsServiceImpl initialized
+2026-03-04 10:36:31 [main] INFO  com.example.demo.service.impl.AnalyticsServiceImpl - Fetching daily play trends
+2026-03-04 10:36:31 [main] INFO  com.example.demo.service.impl.AnalyticsServiceImpl - AnalyticsServiceImpl initialized
+2026-03-04 10:36:31 [main] INFO  com.example.demo.service.impl.AnalyticsServiceImpl - Fetching artist analytics
+2026-03-04 10:36:31 [main] DEBUG com.example.demo.service.impl.AnalyticsServiceImpl - Current artist email=artist@test.com
+2026-03-04 10:36:31 [main] DEBUG com.example.demo.service.impl.AnalyticsServiceImpl - Artist stats calculated songs=5, albums=2, plays=100, favorites=20
+2026-03-04 10:36:31 [main] INFO  com.example.demo.service.impl.AnalyticsServiceImpl - Artist analytics generated successfully
+2026-03-04 10:36:31 [main] INFO  com.example.demo.service.impl.AnalyticsServiceImpl - AnalyticsServiceImpl initialized
+2026-03-04 10:36:31 [main] INFO  com.example.demo.service.impl.AnalyticsServiceImpl - Fetching daily play trends
+2026-03-04 10:36:31 [main] INFO  com.example.demo.service.impl.AnalyticsServiceImpl - Daily trends generated count=2
+2026-03-04 10:36:31 [main] INFO  com.example.demo.service.impl.AnalyticsServiceImpl - AnalyticsServiceImpl initialized
+2026-03-04 10:36:31 [main] INFO  com.example.demo.service.impl.AnalyticsServiceImpl - Fetching play chart for artist
+2026-03-04 10:36:31 [main] INFO  com.example.demo.service.impl.FileStorageServiceImpl - Image upload requested
+2026-03-04 10:36:31 [main] DEBUG com.example.demo.service.impl.FileStorageServiceImpl - Saving image file name=c49fb848-b710-4648-8a8c-c9d749d687fd_image.jpg
+2026-03-04 10:36:31 [main] INFO  com.example.demo.service.impl.FileStorageServiceImpl - Image file stored successfully path=D:\Dummy1\Revplay_Project-1\uploads\images\c49fb848-b710-4648-8a8c-c9d749d687fd_image.jpg
+2026-03-04 10:36:31 [main] INFO  com.example.demo.service.impl.FileStorageServiceImpl - File delete requested path=/audio/test.txt
+2026-03-04 10:36:31 [main] DEBUG com.example.demo.service.impl.FileStorageServiceImpl - Resolved file path=D:\Dummy1\Revplay_Project-1\uploads\audio\test.txt
+2026-03-04 10:36:31 [main] INFO  com.example.demo.service.impl.FileStorageServiceImpl - File deleted successfully path=D:\Dummy1\Revplay_Project-1\uploads\audio\test.txt
+2026-03-04 10:36:31 [main] INFO  com.example.demo.service.impl.FileStorageServiceImpl - File delete requested path=null
+2026-03-04 10:36:31 [main] WARN  com.example.demo.service.impl.FileStorageServiceImpl - File delete skipped: path is null or blank
+2026-03-04 10:36:31 [main] INFO  com.example.demo.service.impl.FileStorageServiceImpl - Audio upload requested
+2026-03-04 10:36:31 [main] DEBUG com.example.demo.service.impl.FileStorageServiceImpl - Saving audio file name=5b852ec1-8342-4381-867b-aec2acc220a8_song.mp3
+2026-03-04 10:36:31 [main] ERROR com.example.demo.service.impl.FileStorageServiceImpl - Failed to store audio file
+java.io.IOException
+	at com.example.demo.service.impl.FileStorageServiceImpl.storeAudio(FileStorageServiceImpl.java:47)
+	at com.example.demo.service.impl.FileStorageServiceImplTest.lambda$1(FileStorageServiceImplTest.java:68)
+	at org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:54)
+	at org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:35)
+	at org.junit.jupiter.api.Assertions.assertThrows(Assertions.java:3223)
+	at com.example.demo.service.impl.FileStorageServiceImplTest.storeAudio_IOException(FileStorageServiceImplTest.java:67)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:701)
+	at org.junit.platform.commons.support.ReflectionSupport.invokeMethod(ReflectionSupport.java:502)
+	at org.junit.jupiter.engine.support.MethodReflectionUtils.invoke(MethodReflectionUtils.java:45)
+	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:61)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:124)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:163)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:148)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:86)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(InterceptingExecutableInvoker.java:123)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.lambda$invoke$0(InterceptingExecutableInvoker.java:105)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:99)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:66)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:47)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:39)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:104)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:98)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invokeVoid(InterceptingExecutableInvoker.java:71)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$0(TestMethodTestDescriptor.java:219)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:215)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:157)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:70)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$2(NodeTestTask.java:176)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$1(NodeTestTask.java:166)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$0(NodeTestTask.java:164)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:163)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:116)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:42)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$2(NodeTestTask.java:180)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$1(NodeTestTask.java:166)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$0(NodeTestTask.java:164)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:163)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:116)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:42)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$2(NodeTestTask.java:180)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$1(NodeTestTask.java:166)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$0(NodeTestTask.java:164)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:163)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:116)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:36)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:52)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:58)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.executeEngine(EngineExecutionOrchestrator.java:246)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.failOrExecuteEngine(EngineExecutionOrchestrator.java:218)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:179)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:108)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:66)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:157)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:65)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:125)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:114)
+	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:58)
+	at org.junit.platform.launcher.core.InterceptingLauncher.lambda$execute$2(InterceptingLauncher.java:57)
+	at org.junit.platform.launcher.core.ClasspathAlignmentCheckingLauncherInterceptor.intercept(ClasspathAlignmentCheckingLauncherInterceptor.java:25)
+	at org.junit.platform.launcher.core.InterceptingLauncher.execute(InterceptingLauncher.java:56)
+	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:58)
+	at org.junit.platform.launcher.core.SessionPerRequestLauncher.execute(SessionPerRequestLauncher.java:81)
+	at org.eclipse.jdt.internal.junit6.runner.JUnit6TestReference.run(JUnit6TestReference.java:105)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:40)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:520)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:748)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:443)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:211)
+2026-03-04 10:36:31 [main] INFO  com.example.demo.service.impl.FileStorageServiceImpl - Audio upload requested
+2026-03-04 10:36:31 [main] DEBUG com.example.demo.service.impl.FileStorageServiceImpl - Saving audio file name=31d9ecfe-0f33-4461-a8fd-9ac41cd0d61e_song.mp3
+2026-03-04 10:36:31 [main] INFO  com.example.demo.service.impl.FileStorageServiceImpl - Audio file stored successfully path=D:\Dummy1\Revplay_Project-1\uploads\audio\31d9ecfe-0f33-4461-a8fd-9ac41cd0d61e_song.mp3
+2026-03-04 10:36:31 [main] INFO  com.example.demo.service.impl.FileStorageServiceImpl - Audio upload requested
+2026-03-04 10:36:31 [main] WARN  com.example.demo.service.impl.FileStorageServiceImpl - Audio upload failed: file is empty
+2026-03-04 10:36:31 [main] INFO  com.example.demo.service.impl.FileStorageServiceImpl - Image upload requested
+2026-03-04 10:36:31 [main] WARN  com.example.demo.service.impl.FileStorageServiceImpl - Image upload failed: file is empty
+2026-03-04 10:36:31 [main] INFO  com.example.demo.service.impl.FileStorageServiceImpl - Image upload requested
+2026-03-04 10:36:31 [main] DEBUG com.example.demo.service.impl.FileStorageServiceImpl - Saving image file name=c97a3b0d-3e1d-4011-9d5f-d6eac6a2f97e_image.jpg
+2026-03-04 10:36:31 [main] ERROR com.example.demo.service.impl.FileStorageServiceImpl - Failed to store image file
+java.io.IOException
+	at com.example.demo.service.impl.FileStorageServiceImpl.storeImage(FileStorageServiceImpl.java:85)
+	at com.example.demo.service.impl.FileStorageServiceImplTest.lambda$3(FileStorageServiceImplTest.java:109)
+	at org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:54)
+	at org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:35)
+	at org.junit.jupiter.api.Assertions.assertThrows(Assertions.java:3223)
+	at com.example.demo.service.impl.FileStorageServiceImplTest.storeImage_IOException(FileStorageServiceImplTest.java:108)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:701)
+	at org.junit.platform.commons.support.ReflectionSupport.invokeMethod(ReflectionSupport.java:502)
+	at org.junit.jupiter.engine.support.MethodReflectionUtils.invoke(MethodReflectionUtils.java:45)
+	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:61)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:124)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:163)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:148)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:86)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(InterceptingExecutableInvoker.java:123)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.lambda$invoke$0(InterceptingExecutableInvoker.java:105)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:99)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:66)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:47)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:39)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:104)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:98)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invokeVoid(InterceptingExecutableInvoker.java:71)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$0(TestMethodTestDescriptor.java:219)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:215)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:157)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:70)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$2(NodeTestTask.java:176)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$1(NodeTestTask.java:166)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$0(NodeTestTask.java:164)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:163)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:116)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:42)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$2(NodeTestTask.java:180)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$1(NodeTestTask.java:166)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$0(NodeTestTask.java:164)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:163)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:116)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:42)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$2(NodeTestTask.java:180)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$1(NodeTestTask.java:166)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$0(NodeTestTask.java:164)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:163)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:116)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:36)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:52)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:58)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.executeEngine(EngineExecutionOrchestrator.java:246)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.failOrExecuteEngine(EngineExecutionOrchestrator.java:218)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:179)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:108)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:66)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:157)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:65)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:125)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:114)
+	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:58)
+	at org.junit.platform.launcher.core.InterceptingLauncher.lambda$execute$2(InterceptingLauncher.java:57)
+	at org.junit.platform.launcher.core.ClasspathAlignmentCheckingLauncherInterceptor.intercept(ClasspathAlignmentCheckingLauncherInterceptor.java:25)
+	at org.junit.platform.launcher.core.InterceptingLauncher.execute(InterceptingLauncher.java:56)
+	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:58)
+	at org.junit.platform.launcher.core.SessionPerRequestLauncher.execute(SessionPerRequestLauncher.java:81)
+	at org.eclipse.jdt.internal.junit6.runner.JUnit6TestReference.run(JUnit6TestReference.java:105)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:40)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:520)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:748)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:443)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:211)
+2026-03-04 10:36:31 [main] INFO  com.example.demo.service.impl.AlbumServiceImpl - AlbumServiceImpl initialized
+2026-03-04 10:36:31 [main] INFO  com.example.demo.service.impl.AlbumServiceImpl - Fetching album details for albumId=10
+2026-03-04 10:36:31 [main] INFO  com.example.demo.service.impl.AlbumServiceImpl - AlbumServiceImpl initialized
+2026-03-04 10:36:31 [main] INFO  com.example.demo.service.impl.AlbumServiceImpl - Fetching all albums
+2026-03-04 10:36:31 [main] DEBUG com.example.demo.service.impl.AlbumServiceImpl - Mapping Album to DTO. AlbumId=10
+2026-03-04 10:36:31 [main] INFO  com.example.demo.service.impl.AlbumServiceImpl - Total albums found=1
+2026-03-04 10:36:31 [main] INFO  com.example.demo.service.impl.AlbumServiceImpl - AlbumServiceImpl initialized
+2026-03-04 10:36:31 [main] INFO  com.example.demo.service.impl.AlbumServiceImpl - Creating album with name=Test
+2026-03-04 10:36:31 [main] DEBUG com.example.demo.service.impl.AlbumServiceImpl - Current user email=unknown@test.com
+2026-03-04 10:36:31 [main] INFO  com.example.demo.service.impl.AlbumServiceImpl - AlbumServiceImpl initialized
+2026-03-04 10:36:31 [main] INFO  com.example.demo.service.impl.AlbumServiceImpl - Deleting album with albumId=10
+2026-03-04 10:36:31 [main] WARN  com.example.demo.service.impl.AlbumServiceImpl - Unauthorized delete attempt by userId=55 for albumId=10
+2026-03-04 10:36:31 [main] INFO  com.example.demo.service.impl.AlbumServiceImpl - AlbumServiceImpl initialized
+2026-03-04 10:36:31 [main] INFO  com.example.demo.service.impl.AlbumServiceImpl - Fetching albums for current user
+2026-03-04 10:36:31 [main] DEBUG com.example.demo.service.impl.AlbumServiceImpl - Mapping Album to DTO. AlbumId=10
+2026-03-04 10:36:31 [main] INFO  com.example.demo.service.impl.AlbumServiceImpl - Found 1 albums for artistId=1
+2026-03-04 10:36:31 [main] INFO  com.example.demo.service.impl.AlbumServiceImpl - AlbumServiceImpl initialized
+2026-03-04 10:36:31 [main] INFO  com.example.demo.service.impl.AlbumServiceImpl - Creating album with name=Test Album
+2026-03-04 10:36:31 [main] DEBUG com.example.demo.service.impl.AlbumServiceImpl - Current user email=artist@test.com
+2026-03-04 10:36:31 [main] INFO  com.example.demo.service.impl.AlbumServiceImpl - Album created successfully for artistId=1
+2026-03-04 10:36:31 [main] DEBUG com.example.demo.service.impl.AlbumServiceImpl - Mapping Album to DTO. AlbumId=10
+2026-03-04 10:36:31 [main] INFO  com.example.demo.service.impl.AlbumServiceImpl - AlbumServiceImpl initialized
+2026-03-04 10:36:31 [main] INFO  com.example.demo.service.impl.AlbumServiceImpl - Uploading cover image for albumId=10
+2026-03-04 10:36:31 [main] DEBUG com.example.demo.service.impl.AlbumServiceImpl - Image stored at path=image/path.jpg
+2026-03-04 10:36:31 [main] INFO  com.example.demo.service.impl.AlbumServiceImpl - Cover image uploaded successfully for albumId=10
+2026-03-04 10:36:31 [main] DEBUG com.example.demo.service.impl.AlbumServiceImpl - Mapping Album to DTO. AlbumId=10
+2026-03-04 10:36:31 [main] INFO  com.example.demo.service.impl.AlbumServiceImpl - AlbumServiceImpl initialized
+2026-03-04 10:36:31 [main] INFO  com.example.demo.service.impl.AlbumServiceImpl - Uploading cover image for albumId=10
+2026-03-04 10:36:31 [main] WARN  com.example.demo.service.impl.AlbumServiceImpl - Unauthorized cover upload attempt by userId=99 for albumId=10
+2026-03-04 10:36:31 [main] INFO  com.example.demo.service.impl.AlbumServiceImpl - AlbumServiceImpl initialized
+2026-03-04 10:36:31 [main] INFO  com.example.demo.service.impl.AlbumServiceImpl - Fetching album details for albumId=10
+2026-03-04 10:36:31 [main] DEBUG com.example.demo.service.impl.AlbumServiceImpl - Mapping Album to DTO. AlbumId=10
+2026-03-04 10:36:31 [main] INFO  com.example.demo.service.impl.AlbumServiceImpl - AlbumServiceImpl initialized
+2026-03-04 10:36:31 [main] INFO  com.example.demo.service.impl.AlbumServiceImpl - Uploading cover image for albumId=10
+2026-03-04 10:36:31 [main] INFO  com.example.demo.service.impl.AlbumServiceImpl - AlbumServiceImpl initialized
+2026-03-04 10:36:31 [main] INFO  com.example.demo.service.impl.AlbumServiceImpl - Deleting album with albumId=10
+2026-03-04 10:36:31 [main] DEBUG com.example.demo.service.impl.AlbumServiceImpl - Detaching 0 songs from albumId=10
+2026-03-04 10:36:31 [main] INFO  com.example.demo.service.impl.AlbumServiceImpl - Album deleted successfully. albumId=10
+2026-03-04 10:36:31 [main] INFO  com.example.demo.service.impl.AlbumServiceImpl - AlbumServiceImpl initialized
+2026-03-04 10:36:31 [main] INFO  com.example.demo.service.impl.AlbumServiceImpl - Creating album with name=Test
+2026-03-04 10:36:31 [main] DEBUG com.example.demo.service.impl.AlbumServiceImpl - Current user email=artist@test.com
+2026-03-04 10:36:31 [main] WARN  com.example.demo.service.impl.AlbumServiceImpl - Duplicate album attempt detected for artistId=1 albumName=Test
+2026-03-04 10:36:31 [main] INFO  com.example.demo.service.impl.AlbumServiceImpl - AlbumServiceImpl initialized
+2026-03-04 10:36:31 [main] INFO  com.example.demo.service.impl.AlbumServiceImpl - Updating album with albumId=10
+2026-03-04 10:36:31 [main] INFO  com.example.demo.service.impl.AlbumServiceImpl - Album updated successfully. albumId=10
+2026-03-04 10:36:31 [main] DEBUG com.example.demo.service.impl.AlbumServiceImpl - Mapping Album to DTO. AlbumId=10
+2026-03-04 10:36:31 [main] INFO  com.example.demo.service.impl.FavoriteServiceImpl - FavoriteServiceImpl initialized
+2026-03-04 10:36:31 [main] INFO  com.example.demo.service.impl.FavoriteServiceImpl - Adding favorite songId=1
+2026-03-04 10:36:31 [main] DEBUG com.example.demo.service.impl.FavoriteServiceImpl - Current user email=john@example.com
+2026-03-04 10:36:31 [main] WARN  com.example.demo.service.impl.FavoriteServiceImpl - Song already exists in favorites userId=null songId=1
+2026-03-04 10:36:31 [main] INFO  com.example.demo.service.impl.FavoriteServiceImpl - FavoriteServiceImpl initialized
+2026-03-04 10:36:31 [main] INFO  com.example.demo.service.impl.FavoriteServiceImpl - Fetching favorite songs for current user
+2026-03-04 10:36:31 [main] DEBUG com.example.demo.service.impl.FavoriteServiceImpl - Current user email=john@example.com
+2026-03-04 10:36:31 [main] INFO  com.example.demo.service.impl.FavoriteServiceImpl - FavoriteServiceImpl initialized
+2026-03-04 10:36:31 [main] INFO  com.example.demo.service.impl.FavoriteServiceImpl - Adding favorite songId=1
+2026-03-04 10:36:31 [main] DEBUG com.example.demo.service.impl.FavoriteServiceImpl - Current user email=john@example.com
+2026-03-04 10:36:31 [main] INFO  com.example.demo.service.impl.FavoriteServiceImpl - Song added to favorites successfully userId=null songId=1
+2026-03-04 10:36:31 [main] INFO  com.example.demo.service.impl.FavoriteServiceImpl - FavoriteServiceImpl initialized
+2026-03-04 10:36:31 [main] INFO  com.example.demo.service.impl.FavoriteServiceImpl - Fetching favorite songs for current user
+2026-03-04 10:36:31 [main] DEBUG com.example.demo.service.impl.FavoriteServiceImpl - Current user email=john@example.com
+2026-03-04 10:36:31 [main] DEBUG com.example.demo.service.impl.FavoriteServiceImpl - Mapping Song to DTO songId=null
+2026-03-04 10:36:31 [main] INFO  com.example.demo.service.impl.FavoriteServiceImpl - Total favorites found=1 for userId=null
+2026-03-04 10:36:31 [main] INFO  com.example.demo.service.impl.FavoriteServiceImpl - FavoriteServiceImpl initialized
+2026-03-04 10:36:31 [main] INFO  com.example.demo.service.impl.FavoriteServiceImpl - Adding favorite songId=1
+2026-03-04 10:36:31 [main] DEBUG com.example.demo.service.impl.FavoriteServiceImpl - Current user email=john@example.com
+2026-03-04 10:36:31 [main] INFO  com.example.demo.service.impl.FavoriteServiceImpl - FavoriteServiceImpl initialized
+2026-03-04 10:36:31 [main] INFO  com.example.demo.service.impl.FavoriteServiceImpl - Removing favorite songId=1
+2026-03-04 10:36:31 [main] DEBUG com.example.demo.service.impl.FavoriteServiceImpl - Current user email=john@example.com
+2026-03-04 10:36:31 [main] INFO  com.example.demo.service.impl.FavoriteServiceImpl - Favorite removed successfully userId=null songId=1
+2026-03-04 10:36:31 [main] INFO  com.example.demo.service.impl.FavoriteServiceImpl - FavoriteServiceImpl initialized
+2026-03-04 10:36:31 [main] INFO  com.example.demo.service.impl.FavoriteServiceImpl - Adding favorite songId=1
+2026-03-04 10:36:31 [main] DEBUG com.example.demo.service.impl.FavoriteServiceImpl - Current user email=john@example.com
+2026-03-04 10:36:31 [main] INFO  com.example.demo.service.impl.FavoriteServiceImpl - FavoriteServiceImpl initialized
+2026-03-04 10:36:31 [main] INFO  com.example.demo.service.impl.FavoriteServiceImpl - Removing favorite songId=1
+2026-03-04 10:36:31 [main] DEBUG com.example.demo.service.impl.FavoriteServiceImpl - Current user email=john@example.com
+2026-03-04 10:36:32 [main] INFO  com.example.demo.service.impl.ArtistServiceImpl - ArtistServiceImpl initialized
+2026-03-04 10:36:32 [main] INFO  com.example.demo.service.impl.ArtistServiceImpl - Fetching artist profile for artistId=10
+2026-03-04 10:36:32 [main] DEBUG com.example.demo.service.impl.ArtistServiceImpl - Mapping ArtistProfile to DTO profileId=10
+2026-03-04 10:36:32 [main] INFO  com.example.demo.service.impl.ArtistServiceImpl - ArtistServiceImpl initialized
+2026-03-04 10:36:32 [main] INFO  com.example.demo.service.impl.ArtistServiceImpl - Fetching current user's artist profile
+2026-03-04 10:36:32 [main] DEBUG com.example.demo.service.impl.ArtistServiceImpl - Mapping ArtistProfile to DTO profileId=10
+2026-03-04 10:36:32 [main] INFO  com.example.demo.service.impl.ArtistServiceImpl - ArtistServiceImpl initialized
+2026-03-04 10:36:32 [main] INFO  com.example.demo.service.impl.ArtistServiceImpl - Creating artist profile
+2026-03-04 10:36:32 [main] DEBUG com.example.demo.service.impl.ArtistServiceImpl - Current user email=artist@test.com
+2026-03-04 10:36:32 [main] INFO  com.example.demo.service.impl.ArtistServiceImpl - ArtistServiceImpl initialized
+2026-03-04 10:36:32 [main] INFO  com.example.demo.service.impl.ArtistServiceImpl - Updating artist profile
+2026-03-04 10:36:32 [main] DEBUG com.example.demo.service.impl.ArtistServiceImpl - Current user email=artist@test.com
+2026-03-04 10:36:32 [main] INFO  com.example.demo.service.impl.ArtistServiceImpl - Artist profile updated successfully for profileId=10
+2026-03-04 10:36:32 [main] INFO  com.example.demo.service.impl.ArtistServiceImpl - ArtistServiceImpl initialized
+2026-03-04 10:36:32 [main] INFO  com.example.demo.service.impl.ArtistServiceImpl - Uploading profile image for profileId=10
+2026-03-04 10:36:32 [main] DEBUG com.example.demo.service.impl.ArtistServiceImpl - Profile image stored at path=image/path.jpg
+2026-03-04 10:36:32 [main] INFO  com.example.demo.service.impl.ArtistServiceImpl - Profile image uploaded successfully for profileId=10
+2026-03-04 10:36:32 [main] DEBUG com.example.demo.service.impl.ArtistServiceImpl - Mapping ArtistProfile to DTO profileId=10
+2026-03-04 10:36:32 [main] INFO  com.example.demo.service.impl.ArtistServiceImpl - ArtistServiceImpl initialized
+2026-03-04 10:36:32 [main] INFO  com.example.demo.service.impl.ArtistServiceImpl - Creating artist profile
+2026-03-04 10:36:32 [main] DEBUG com.example.demo.service.impl.ArtistServiceImpl - Current user email=artist@test.com
+2026-03-04 10:36:32 [main] WARN  com.example.demo.service.impl.ArtistServiceImpl - Artist profile already exists for userId=1
+2026-03-04 10:36:32 [main] INFO  com.example.demo.service.impl.ArtistServiceImpl - ArtistServiceImpl initialized
+2026-03-04 10:36:32 [main] INFO  com.example.demo.service.impl.ArtistServiceImpl - Uploading profile image for profileId=10
+2026-03-04 10:36:32 [main] WARN  com.example.demo.service.impl.ArtistServiceImpl - Unauthorized profile image upload attempt by userId=99 for profileId=10
+2026-03-04 10:36:32 [main] INFO  com.example.demo.service.impl.ArtistServiceImpl - ArtistServiceImpl initialized
+2026-03-04 10:36:32 [main] INFO  com.example.demo.service.impl.ArtistServiceImpl - Fetching artist profile for artistId=10
+2026-03-04 10:36:32 [main] INFO  com.example.demo.service.impl.ArtistServiceImpl - ArtistServiceImpl initialized
+2026-03-04 10:36:32 [main] INFO  com.example.demo.service.impl.ArtistServiceImpl - Updating artist profile
+2026-03-04 10:36:32 [main] DEBUG com.example.demo.service.impl.ArtistServiceImpl - Current user email=artist@test.com
+2026-03-04 10:36:32 [main] INFO  com.example.demo.service.impl.ArtistServiceImpl - ArtistServiceImpl initialized
+2026-03-04 10:36:32 [main] INFO  com.example.demo.service.impl.ArtistServiceImpl - Creating artist profile
+2026-03-04 10:36:32 [main] DEBUG com.example.demo.service.impl.ArtistServiceImpl - Current user email=artist@test.com
+2026-03-04 10:36:32 [main] INFO  com.example.demo.service.impl.ArtistServiceImpl - Artist profile created successfully for userId=1
+2026-03-04 10:37:03 [restartedMain] INFO  com.example.demo.service.impl.AlbumServiceImpl - AlbumServiceImpl initialized
+2026-03-04 10:37:03 [restartedMain] INFO  com.example.demo.service.impl.AnalyticsServiceImpl - AnalyticsServiceImpl initialized
+2026-03-04 10:37:03 [restartedMain] INFO  com.example.demo.service.impl.ArtistServiceImpl - ArtistServiceImpl initialized
+2026-03-04 10:37:03 [restartedMain] INFO  com.example.demo.service.impl.SongServiceImpl - SongServiceImpl initialized
+2026-03-04 10:37:04 [restartedMain] INFO  com.example.demo.service.impl.AuthServiceImpl - AuthServiceImpl initialized
+2026-03-04 10:37:04 [restartedMain] INFO  com.example.demo.service.impl.FavoriteServiceImpl - FavoriteServiceImpl initialized
+2026-03-04 10:37:04 [restartedMain] INFO  com.example.demo.service.impl.HistoryServiceImpl - HistoryServiceImpl initialized
+2026-03-04 10:37:04 [restartedMain] INFO  com.example.demo.service.impl.PlayerServiceImpl - PlayerServiceImpl initialized
+2026-03-04 10:37:04 [restartedMain] INFO  com.example.demo.service.impl.PlaylistServiceImpl - PlaylistServiceImpl initialized
+2026-03-04 10:37:04 [restartedMain] INFO  com.example.demo.service.impl.SearchServiceImpl - SearchServiceImpl initialized
+2026-03-04 10:37:04 [restartedMain] INFO  com.example.demo.service.impl.UserServiceImpl - UserServiceImpl initialized
+2026-03-04 10:37:43 [main] INFO  com.example.demo.service.impl.HistoryServiceImpl - HistoryServiceImpl initialized
+2026-03-04 10:37:43 [main] INFO  com.example.demo.service.impl.HistoryServiceImpl - Fetching recent listening history
+2026-03-04 10:37:43 [main] DEBUG com.example.demo.service.impl.HistoryServiceImpl - Current user email=test@mail.com
+2026-03-04 10:37:43 [main] INFO  com.example.demo.service.impl.HistoryServiceImpl - HistoryServiceImpl initialized
+2026-03-04 10:37:43 [main] INFO  com.example.demo.service.impl.HistoryServiceImpl - Fetching full listening history
+2026-03-04 10:37:43 [main] DEBUG com.example.demo.service.impl.HistoryServiceImpl - Current user email=test@mail.com
+2026-03-04 10:37:43 [main] DEBUG com.example.demo.service.impl.HistoryServiceImpl - Mapping PlayHistory to DTO songId=null
+2026-03-04 10:37:43 [main] INFO  com.example.demo.service.impl.HistoryServiceImpl - Total history records returned=1
+2026-03-04 10:37:43 [main] INFO  com.example.demo.service.impl.HistoryServiceImpl - HistoryServiceImpl initialized
+2026-03-04 10:37:43 [main] INFO  com.example.demo.service.impl.HistoryServiceImpl - Calculating total listening time
+2026-03-04 10:37:43 [main] DEBUG com.example.demo.service.impl.HistoryServiceImpl - Current user email=test@mail.com
+2026-03-04 10:37:43 [main] INFO  com.example.demo.service.impl.HistoryServiceImpl - Total listening time calculated seconds=120
+2026-03-04 10:37:43 [main] INFO  com.example.demo.service.impl.HistoryServiceImpl - HistoryServiceImpl initialized
+2026-03-04 10:37:43 [main] INFO  com.example.demo.service.impl.HistoryServiceImpl - Fetching most played songs
+2026-03-04 10:37:43 [main] DEBUG com.example.demo.service.impl.HistoryServiceImpl - Current user email=test@mail.com
+2026-03-04 10:37:43 [main] INFO  com.example.demo.service.impl.HistoryServiceImpl - Most played songs count=1
+2026-03-04 10:37:43 [main] INFO  com.example.demo.service.impl.HistoryServiceImpl - HistoryServiceImpl initialized
+2026-03-04 10:37:43 [main] INFO  com.example.demo.service.impl.HistoryServiceImpl - Clearing user listening history
+2026-03-04 10:37:43 [main] DEBUG com.example.demo.service.impl.HistoryServiceImpl - Current user email=test@mail.com
+2026-03-04 10:37:43 [main] INFO  com.example.demo.service.impl.HistoryServiceImpl - History cleared successfully for userId=null
+2026-03-04 10:37:43 [main] INFO  com.example.demo.service.impl.HistoryServiceImpl - HistoryServiceImpl initialized
+2026-03-04 10:37:43 [main] INFO  com.example.demo.service.impl.HistoryServiceImpl - Fetching recent listening history
+2026-03-04 10:37:43 [main] DEBUG com.example.demo.service.impl.HistoryServiceImpl - Current user email=test@mail.com
+2026-03-04 10:37:43 [main] DEBUG com.example.demo.service.impl.HistoryServiceImpl - Fetched 1 play history records
+2026-03-04 10:37:43 [main] DEBUG com.example.demo.service.impl.HistoryServiceImpl - Unique songs after filtering=1
+2026-03-04 10:37:43 [main] DEBUG com.example.demo.service.impl.HistoryServiceImpl - Mapping PlayHistory to DTO songId=null
+2026-03-04 10:38:41 [main] INFO  com.example.demo.service.impl.PlayerServiceImpl - PlayerServiceImpl initialized
+2026-03-04 10:38:41 [main] INFO  com.example.demo.service.impl.PlayerServiceImpl - Play song request received songId=1
+2026-03-04 10:38:41 [main] DEBUG com.example.demo.service.impl.PlayerServiceImpl - Current user email=test@mail.com
+2026-03-04 10:38:41 [main] INFO  com.example.demo.service.impl.PlayerServiceImpl - PlayerServiceImpl initialized
+2026-03-04 10:38:41 [main] INFO  com.example.demo.service.impl.PlayerServiceImpl - Play song request received songId=1
+2026-03-04 10:38:41 [main] DEBUG com.example.demo.service.impl.PlayerServiceImpl - Current user email=test@mail.com
+2026-03-04 10:38:41 [main] DEBUG com.example.demo.service.impl.PlayerServiceImpl - Play count incremented songId=null newCount=1
+2026-03-04 10:38:41 [main] INFO  com.example.demo.service.impl.PlayerServiceImpl - Play history saved userId=null songId=null secondsPlayed=120
+2026-03-04 10:38:41 [main] INFO  com.example.demo.service.impl.PlayerServiceImpl - PlayerServiceImpl initialized
+2026-03-04 10:38:41 [main] INFO  com.example.demo.service.impl.PlayerServiceImpl - Play song request received songId=1
+2026-03-04 10:38:41 [main] DEBUG com.example.demo.service.impl.PlayerServiceImpl - Current user email=test@mail.com
+2026-03-04 10:38:41 [main] INFO  com.example.demo.service.impl.PlayerServiceImpl - Play history saved userId=null songId=null secondsPlayed=120
+2026-03-04 10:38:41 [main] INFO  com.example.demo.service.impl.PlayerServiceImpl - PlayerServiceImpl initialized
+2026-03-04 10:38:41 [main] INFO  com.example.demo.service.impl.PlayerServiceImpl - Fetching trending songs limit=1
+2026-03-04 10:38:41 [main] DEBUG com.example.demo.service.impl.PlayerServiceImpl - Mapping Song to DTO songId=null
+2026-03-04 10:38:41 [main] INFO  com.example.demo.service.impl.PlayerServiceImpl - Trending songs fetched count=1
+2026-03-04 10:38:41 [main] INFO  com.example.demo.service.impl.PlayerServiceImpl - PlayerServiceImpl initialized
+2026-03-04 10:38:41 [main] INFO  com.example.demo.service.impl.PlayerServiceImpl - Play song request received songId=1
+2026-03-04 10:38:41 [main] DEBUG com.example.demo.service.impl.PlayerServiceImpl - Current user email=test@mail.com
+2026-03-04 10:39:26 [main] INFO  com.example.demo.service.impl.PlaylistServiceImpl - PlaylistServiceImpl initialized
+2026-03-04 10:39:26 [main] INFO  com.example.demo.service.impl.PlaylistServiceImpl - Follow playlist request playlistId=10
+2026-03-04 10:39:26 [main] INFO  com.example.demo.service.impl.PlaylistServiceImpl - Playlist followed userId=1 playlistId=10
+2026-03-04 10:39:26 [main] INFO  com.example.demo.service.impl.PlaylistServiceImpl - PlaylistServiceImpl initialized
+2026-03-04 10:39:26 [main] INFO  com.example.demo.service.impl.PlaylistServiceImpl - Follow playlist request playlistId=10
+2026-03-04 10:39:26 [main] WARN  com.example.demo.service.impl.PlaylistServiceImpl - User attempted to follow own playlist userId=1 playlistId=10
+2026-03-04 10:40:13 [main] INFO  com.example.demo.service.impl.SearchServiceImpl - SearchServiceImpl initialized
+2026-03-04 10:40:13 [main] INFO  com.example.demo.service.impl.SearchServiceImpl - Searching songs with keyword=Test
+2026-03-04 10:40:13 [main] INFO  com.example.demo.service.impl.SearchServiceImpl - Songs found count=0
+2026-03-04 10:40:13 [main] INFO  com.example.demo.service.impl.SearchServiceImpl - SearchServiceImpl initialized
+2026-03-04 10:40:13 [main] INFO  com.example.demo.service.impl.SearchServiceImpl - Searching albums with keyword=Test
+2026-03-04 10:40:13 [main] INFO  com.example.demo.service.impl.SearchServiceImpl - Albums found count=1
+2026-03-04 10:40:13 [main] INFO  com.example.demo.service.impl.SearchServiceImpl - SearchServiceImpl initialized
+2026-03-04 10:40:13 [main] INFO  com.example.demo.service.impl.SearchServiceImpl - Searching songs by year=2023
+2026-03-04 10:40:13 [main] INFO  com.example.demo.service.impl.SearchServiceImpl - Songs found for year 2023 count=0
+2026-03-04 10:40:13 [main] INFO  com.example.demo.service.impl.SearchServiceImpl - SearchServiceImpl initialized
+2026-03-04 10:40:13 [main] INFO  com.example.demo.service.impl.SearchServiceImpl - Searching songs by genre=Pop
+2026-03-04 10:40:13 [main] INFO  com.example.demo.service.impl.SearchServiceImpl - Songs found for genre Pop count=0
+2026-03-04 10:40:13 [main] INFO  com.example.demo.service.impl.SearchServiceImpl - SearchServiceImpl initialized
+2026-03-04 10:40:13 [main] INFO  com.example.demo.service.impl.SearchServiceImpl - Fetching all genres
+2026-03-04 10:40:13 [main] INFO  com.example.demo.service.impl.SearchServiceImpl - Genres found count=2
+2026-03-04 10:40:13 [main] INFO  com.example.demo.service.impl.SearchServiceImpl - SearchServiceImpl initialized
+2026-03-04 10:40:13 [main] INFO  com.example.demo.service.impl.SearchServiceImpl - Searching songs by year=2022
+2026-03-04 10:40:13 [main] INFO  com.example.demo.service.impl.SearchServiceImpl - Songs found for year 2022 count=0
+2026-03-04 10:40:13 [main] INFO  com.example.demo.service.impl.SearchServiceImpl - SearchServiceImpl initialized
+2026-03-04 10:40:13 [main] INFO  com.example.demo.service.impl.SearchServiceImpl - Searching artists with keyword=Test
+2026-03-04 10:40:13 [main] INFO  com.example.demo.service.impl.SearchServiceImpl - Artists found count=1
+2026-03-04 10:40:44 [restartedMain] INFO  com.example.demo.service.impl.AlbumServiceImpl - AlbumServiceImpl initialized
+2026-03-04 10:40:44 [restartedMain] INFO  com.example.demo.service.impl.AnalyticsServiceImpl - AnalyticsServiceImpl initialized
+2026-03-04 10:40:44 [restartedMain] INFO  com.example.demo.service.impl.ArtistServiceImpl - ArtistServiceImpl initialized
+2026-03-04 10:40:44 [restartedMain] INFO  com.example.demo.service.impl.SongServiceImpl - SongServiceImpl initialized
+2026-03-04 10:40:44 [restartedMain] INFO  com.example.demo.service.impl.AuthServiceImpl - AuthServiceImpl initialized
+2026-03-04 10:40:44 [restartedMain] INFO  com.example.demo.service.impl.FavoriteServiceImpl - FavoriteServiceImpl initialized
+2026-03-04 10:40:44 [restartedMain] INFO  com.example.demo.service.impl.HistoryServiceImpl - HistoryServiceImpl initialized
+2026-03-04 10:40:45 [restartedMain] INFO  com.example.demo.service.impl.PlayerServiceImpl - PlayerServiceImpl initialized
+2026-03-04 10:40:45 [restartedMain] INFO  com.example.demo.service.impl.PlaylistServiceImpl - PlaylistServiceImpl initialized
+2026-03-04 10:40:45 [restartedMain] INFO  com.example.demo.service.impl.SearchServiceImpl - SearchServiceImpl initialized
+2026-03-04 10:40:45 [restartedMain] INFO  com.example.demo.service.impl.UserServiceImpl - UserServiceImpl initialized
+2026-03-04 10:41:32 [main] INFO  com.example.demo.service.impl.SongServiceImpl - SongServiceImpl initialized
+2026-03-04 10:41:32 [main] INFO  com.example.demo.service.impl.SongServiceImpl - Fetching song details songId=10
+2026-03-04 10:41:32 [main] DEBUG com.example.demo.service.impl.SongServiceImpl - Mapping song to DTO songId=10
+2026-03-04 10:41:32 [main] INFO  com.example.demo.service.impl.SongServiceImpl - SongServiceImpl initialized
+2026-03-04 10:41:32 [main] INFO  com.example.demo.service.impl.SongServiceImpl - Deleting song songId=10
+2026-03-04 10:41:32 [main] INFO  com.example.demo.service.impl.SongServiceImpl - Song deleted successfully songId=10
+2026-03-04 10:41:32 [main] INFO  com.example.demo.service.impl.SongServiceImpl - SongServiceImpl initialized
+2026-03-04 10:41:32 [main] INFO  com.example.demo.service.impl.SongServiceImpl - Fetching songs for current artist
+2026-03-04 10:41:32 [main] DEBUG com.example.demo.service.impl.SongServiceImpl - Mapping song to DTO songId=10
+2026-03-04 10:41:32 [main] INFO  com.example.demo.service.impl.SongServiceImpl - Songs fetched count=1
+2026-03-04 10:41:32 [main] INFO  com.example.demo.service.impl.SongServiceImpl - SongServiceImpl initialized
+2026-03-04 10:41:32 [main] INFO  com.example.demo.service.impl.SongServiceImpl - Fetching favorite stats for artist songs
+2026-03-04 10:41:32 [main] INFO  com.example.demo.service.impl.SongServiceImpl - Favorite stats generated count=1
+2026-03-04 10:41:32 [main] INFO  com.example.demo.service.impl.SongServiceImpl - SongServiceImpl initialized
+2026-03-04 10:41:32 [main] INFO  com.example.demo.service.impl.SongServiceImpl - Uploading new song title=Test Song
+2026-03-04 10:41:32 [main] DEBUG com.example.demo.service.impl.SongServiceImpl - Current artist email=artist@example.com
+2026-03-04 10:41:32 [main] INFO  com.example.demo.service.impl.SongServiceImpl - Song uploaded successfully songId=10
+2026-03-04 10:41:32 [main] DEBUG com.example.demo.service.impl.SongServiceImpl - Mapping song to DTO songId=10
+2026-03-04 10:41:32 [main] INFO  com.example.demo.service.impl.SongServiceImpl - SongServiceImpl initialized
+2026-03-04 10:41:32 [main] INFO  com.example.demo.service.impl.SongServiceImpl - Fetching songs for albumId=100
+2026-03-04 10:41:32 [main] DEBUG com.example.demo.service.impl.SongServiceImpl - Mapping song to DTO songId=10
+2026-03-04 10:41:32 [main] INFO  com.example.demo.service.impl.SongServiceImpl - Album songs fetched count=1
+2026-03-04 10:41:32 [main] INFO  com.example.demo.service.impl.SongServiceImpl - SongServiceImpl initialized
+2026-03-04 10:41:32 [main] INFO  com.example.demo.service.impl.SongServiceImpl - Fetching all songs
+2026-03-04 10:41:32 [main] DEBUG com.example.demo.service.impl.SongServiceImpl - Mapping song to DTO songId=10
+2026-03-04 10:41:32 [main] INFO  com.example.demo.service.impl.SongServiceImpl - Total songs fetched count=1
+2026-03-04 10:41:32 [main] INFO  com.example.demo.service.impl.SongServiceImpl - SongServiceImpl initialized
+2026-03-04 10:41:32 [main] INFO  com.example.demo.service.impl.SongServiceImpl - Uploading cover image for songId=10
+2026-03-04 10:41:32 [main] INFO  com.example.demo.service.impl.SongServiceImpl - Cover image uploaded songId=10
+2026-03-04 10:41:32 [main] DEBUG com.example.demo.service.impl.SongServiceImpl - Mapping song to DTO songId=10
+2026-03-04 10:41:32 [main] INFO  com.example.demo.service.impl.SongServiceImpl - SongServiceImpl initialized
+2026-03-04 10:41:32 [main] INFO  com.example.demo.service.impl.SongServiceImpl - Fetching public songs
+2026-03-04 10:41:32 [main] DEBUG com.example.demo.service.impl.SongServiceImpl - Mapping song to DTO songId=10
+2026-03-04 10:41:32 [main] INFO  com.example.demo.service.impl.SongServiceImpl - Public songs fetched count=1
+2026-03-04 10:43:10 [main] INFO  com.example.demo.service.impl.UserServiceImpl - UserServiceImpl initialized
+2026-03-04 10:43:10 [main] INFO  com.example.demo.service.impl.UserServiceImpl - Fetching user profile
+2026-03-04 10:43:10 [main] DEBUG com.example.demo.service.impl.UserServiceImpl - Current user email=user@example.com
+2026-03-04 10:43:10 [main] DEBUG com.example.demo.service.impl.UserServiceImpl - Mapping User to UserProfileDTO userId=1
+2026-03-04 10:43:10 [main] INFO  com.example.demo.service.impl.UserServiceImpl - UserServiceImpl initialized
+2026-03-04 10:43:10 [main] INFO  com.example.demo.service.impl.UserServiceImpl - Updating user profile
+2026-03-04 10:43:10 [main] DEBUG com.example.demo.service.impl.UserServiceImpl - Current user email=user@example.com
+2026-03-04 10:43:10 [main] INFO  com.example.demo.service.impl.UserServiceImpl - User profile updated userId=1
+2026-03-04 10:43:10 [main] DEBUG com.example.demo.service.impl.UserServiceImpl - Mapping User to UserProfileDTO userId=1
+2026-03-04 10:43:10 [main] INFO  com.example.demo.service.impl.UserServiceImpl - UserServiceImpl initialized
+2026-03-04 10:43:10 [main] INFO  com.example.demo.service.impl.UserServiceImpl - Uploading user profile image
+2026-03-04 10:43:10 [main] DEBUG com.example.demo.service.impl.UserServiceImpl - Current user email=user@example.com
+2026-03-04 10:43:10 [main] INFO  com.example.demo.service.impl.UserServiceImpl - Profile image uploaded userId=1
+2026-03-04 10:43:10 [main] DEBUG com.example.demo.service.impl.UserServiceImpl - Mapping User to UserProfileDTO userId=1
+2026-03-04 10:43:10 [main] INFO  com.example.demo.service.impl.UserServiceImpl - UserServiceImpl initialized
+2026-03-04 10:43:10 [main] INFO  com.example.demo.service.impl.UserServiceImpl - Deactivate account request received
+2026-03-04 10:43:10 [main] DEBUG com.example.demo.service.impl.UserServiceImpl - Current user email=missing@example.com
+2026-03-04 10:43:10 [main] INFO  com.example.demo.service.impl.UserServiceImpl - UserServiceImpl initialized
+2026-03-04 10:43:10 [main] INFO  com.example.demo.service.impl.UserServiceImpl - Deactivate account request received
+2026-03-04 10:43:10 [main] DEBUG com.example.demo.service.impl.UserServiceImpl - Current user email=user@example.com
+2026-03-04 10:43:10 [main] INFO  com.example.demo.service.impl.UserServiceImpl - User account deactivated userId=1
+2026-03-04 10:43:10 [main] INFO  com.example.demo.service.impl.UserServiceImpl - UserServiceImpl initialized
+2026-03-04 10:43:10 [main] INFO  com.example.demo.service.impl.UserServiceImpl - Fetching dashboard stats for user
+2026-03-04 10:43:10 [main] DEBUG com.example.demo.service.impl.UserServiceImpl - Current user email=user@example.com
+2026-03-04 10:43:10 [main] DEBUG com.example.demo.service.impl.UserServiceImpl - Dashboard stats favorites=2 playlists=3 recent=5 listeningTime=1 hr 1 min
+2026-03-04 10:43:28 [main] INFO  com.example.demo.service.impl.AlbumServiceImpl - AlbumServiceImpl initialized
+2026-03-04 10:43:28 [main] INFO  com.example.demo.service.impl.AnalyticsServiceImpl - AnalyticsServiceImpl initialized
+2026-03-04 10:43:28 [main] INFO  com.example.demo.service.impl.ArtistServiceImpl - ArtistServiceImpl initialized
+2026-03-04 10:43:28 [main] INFO  com.example.demo.service.impl.SongServiceImpl - SongServiceImpl initialized
+2026-03-04 10:43:28 [main] INFO  com.example.demo.service.impl.AuthServiceImpl - AuthServiceImpl initialized
+2026-03-04 10:43:28 [main] INFO  com.example.demo.service.impl.FavoriteServiceImpl - FavoriteServiceImpl initialized
+2026-03-04 10:43:28 [main] INFO  com.example.demo.service.impl.HistoryServiceImpl - HistoryServiceImpl initialized
+2026-03-04 10:43:28 [main] INFO  com.example.demo.service.impl.PlayerServiceImpl - PlayerServiceImpl initialized
+2026-03-04 10:43:28 [main] INFO  com.example.demo.service.impl.PlaylistServiceImpl - PlaylistServiceImpl initialized
+2026-03-04 10:43:28 [main] INFO  com.example.demo.service.impl.SearchServiceImpl - SearchServiceImpl initialized
+2026-03-04 10:43:28 [main] INFO  com.example.demo.service.impl.UserServiceImpl - UserServiceImpl initialized
+2026-03-04 10:43:30 [main] INFO  com.example.demo.service.impl.AuthServiceImpl - AuthServiceImpl initialized
+2026-03-04 10:43:30 [main] INFO  com.example.demo.service.impl.AuthServiceImpl - Register request received for email=test@example.com
+2026-03-04 10:43:30 [main] WARN  com.example.demo.service.impl.AuthServiceImpl - Weak password attempt during registration for email=test@example.com
+2026-03-04 10:43:30 [main] INFO  com.example.demo.service.impl.AuthServiceImpl - AuthServiceImpl initialized
+2026-03-04 10:43:30 [main] INFO  com.example.demo.service.impl.AuthServiceImpl - Register request received for email=test@example.com
+2026-03-04 10:43:30 [main] WARN  com.example.demo.service.impl.AuthServiceImpl - Underage registration attempt for email=test@example.com
+2026-03-04 10:43:30 [main] INFO  com.example.demo.service.impl.AuthServiceImpl - AuthServiceImpl initialized
+2026-03-04 10:43:30 [main] INFO  com.example.demo.service.impl.AuthServiceImpl - Login attempt for email=test@example.com
+2026-03-04 10:43:30 [main] WARN  com.example.demo.service.impl.AuthServiceImpl - Login attempt for disabled account email=test@example.com
+2026-03-04 10:43:30 [main] INFO  com.example.demo.service.impl.AuthServiceImpl - AuthServiceImpl initialized
+2026-03-04 10:43:30 [main] INFO  com.example.demo.service.impl.AuthServiceImpl - Password reset requested for email=test@example.com
+2026-03-04 10:43:30 [main] INFO  com.example.demo.service.impl.AuthServiceImpl - Password reset successful and account activated email=test@example.com
+2026-03-04 10:43:30 [main] INFO  com.example.demo.service.impl.AuthServiceImpl - AuthServiceImpl initialized
+2026-03-04 10:43:30 [main] INFO  com.example.demo.service.impl.AuthServiceImpl - Password reset requested for email=test@example.com
+2026-03-04 10:43:30 [main] WARN  com.example.demo.service.impl.AuthServiceImpl - Password reset failed - user not found email=test@example.com
+2026-03-04 10:43:30 [main] INFO  com.example.demo.service.impl.AuthServiceImpl - AuthServiceImpl initialized
+2026-03-04 10:43:30 [main] INFO  com.example.demo.service.impl.AuthServiceImpl - Register request received for email=test@example.com
+2026-03-04 10:43:30 [main] WARN  com.example.demo.service.impl.AuthServiceImpl - Registration attempt with existing email=test@example.com
+2026-03-04 10:43:30 [main] INFO  com.example.demo.service.impl.AuthServiceImpl - AuthServiceImpl initialized
+2026-03-04 10:43:30 [main] INFO  com.example.demo.service.impl.AuthServiceImpl - Register request received for email=test@example.com
+2026-03-04 10:43:30 [main] WARN  com.example.demo.service.impl.AuthServiceImpl - Password mismatch during registration for email=test@example.com
+2026-03-04 10:43:30 [main] INFO  com.example.demo.service.impl.AuthServiceImpl - AuthServiceImpl initialized
+2026-03-04 10:43:30 [main] INFO  com.example.demo.service.impl.AuthServiceImpl - Login attempt for email=test@example.com
+2026-03-04 10:43:30 [main] INFO  com.example.demo.service.impl.AuthServiceImpl - Login successful email=test@example.com role=USER
+2026-03-04 10:43:30 [main] INFO  com.example.demo.service.impl.AuthServiceImpl - AuthServiceImpl initialized
+2026-03-04 10:43:30 [main] INFO  com.example.demo.service.impl.AuthServiceImpl - Login attempt for email=test@example.com
+2026-03-04 10:43:30 [main] WARN  com.example.demo.service.impl.AuthServiceImpl - Login failed - user not found email=test@example.com
+2026-03-04 10:43:30 [main] INFO  com.example.demo.service.impl.AuthServiceImpl - AuthServiceImpl initialized
+2026-03-04 10:43:30 [main] INFO  com.example.demo.service.impl.AuthServiceImpl - Login attempt for email=test@example.com
+2026-03-04 10:43:30 [main] WARN  com.example.demo.service.impl.AuthServiceImpl - Invalid password attempt for email=test@example.com
+2026-03-04 10:43:30 [main] INFO  com.example.demo.service.impl.AuthServiceImpl - AuthServiceImpl initialized
+2026-03-04 10:43:30 [main] INFO  com.example.demo.service.impl.AuthServiceImpl - Password reset requested for email=test@example.com
+2026-03-04 10:43:30 [main] WARN  com.example.demo.service.impl.AuthServiceImpl - Password reset failed due to DOB mismatch email=test@example.com
+2026-03-04 10:43:30 [main] INFO  com.example.demo.service.impl.AuthServiceImpl - AuthServiceImpl initialized
+2026-03-04 10:43:30 [main] INFO  com.example.demo.service.impl.AuthServiceImpl - Register request received for email=test@example.com
+2026-03-04 10:43:30 [main] DEBUG com.example.demo.service.impl.AuthServiceImpl - Role found for registration role=USER
+2026-03-04 10:43:30 [main] INFO  com.example.demo.service.impl.AuthServiceImpl - User registered successfully email=test@example.com
+2026-03-04 10:43:31 [main] INFO  com.example.demo.service.impl.AnalyticsServiceImpl - AnalyticsServiceImpl initialized
+2026-03-04 10:43:31 [main] INFO  com.example.demo.service.impl.AnalyticsServiceImpl - Fetching listener insights
+2026-03-04 10:43:31 [main] INFO  com.example.demo.service.impl.AnalyticsServiceImpl - Total unique listeners=25
+2026-03-04 10:43:31 [main] INFO  com.example.demo.service.impl.AnalyticsServiceImpl - AnalyticsServiceImpl initialized
+2026-03-04 10:43:31 [main] INFO  com.example.demo.service.impl.AnalyticsServiceImpl - Fetching play chart for artist
+2026-03-04 10:43:31 [main] INFO  com.example.demo.service.impl.AnalyticsServiceImpl - Play chart generated with 1 songs
+2026-03-04 10:43:31 [main] INFO  com.example.demo.service.impl.AnalyticsServiceImpl - AnalyticsServiceImpl initialized
+2026-03-04 10:43:31 [main] INFO  com.example.demo.service.impl.AnalyticsServiceImpl - Fetching artist analytics
+2026-03-04 10:43:31 [main] DEBUG com.example.demo.service.impl.AnalyticsServiceImpl - Current artist email=unknown@test.com
+2026-03-04 10:43:31 [main] INFO  com.example.demo.service.impl.AnalyticsServiceImpl - AnalyticsServiceImpl initialized
+2026-03-04 10:43:31 [main] INFO  com.example.demo.service.impl.AnalyticsServiceImpl - Fetching daily play trends
+2026-03-04 10:43:31 [main] INFO  com.example.demo.service.impl.AnalyticsServiceImpl - AnalyticsServiceImpl initialized
+2026-03-04 10:43:31 [main] INFO  com.example.demo.service.impl.AnalyticsServiceImpl - Fetching artist analytics
+2026-03-04 10:43:31 [main] DEBUG com.example.demo.service.impl.AnalyticsServiceImpl - Current artist email=artist@test.com
+2026-03-04 10:43:31 [main] DEBUG com.example.demo.service.impl.AnalyticsServiceImpl - Artist stats calculated songs=5, albums=2, plays=100, favorites=20
+2026-03-04 10:43:31 [main] INFO  com.example.demo.service.impl.AnalyticsServiceImpl - Artist analytics generated successfully
+2026-03-04 10:43:31 [main] INFO  com.example.demo.service.impl.AnalyticsServiceImpl - AnalyticsServiceImpl initialized
+2026-03-04 10:43:31 [main] INFO  com.example.demo.service.impl.AnalyticsServiceImpl - Fetching daily play trends
+2026-03-04 10:43:31 [main] INFO  com.example.demo.service.impl.AnalyticsServiceImpl - Daily trends generated count=2
+2026-03-04 10:43:31 [main] INFO  com.example.demo.service.impl.AnalyticsServiceImpl - AnalyticsServiceImpl initialized
+2026-03-04 10:43:31 [main] INFO  com.example.demo.service.impl.AnalyticsServiceImpl - Fetching play chart for artist
+2026-03-04 10:43:31 [main] INFO  com.example.demo.service.impl.UserServiceImpl - UserServiceImpl initialized
+2026-03-04 10:43:31 [main] INFO  com.example.demo.service.impl.UserServiceImpl - Fetching user profile
+2026-03-04 10:43:31 [main] DEBUG com.example.demo.service.impl.UserServiceImpl - Current user email=user@example.com
+2026-03-04 10:43:31 [main] DEBUG com.example.demo.service.impl.UserServiceImpl - Mapping User to UserProfileDTO userId=1
+2026-03-04 10:43:31 [main] INFO  com.example.demo.service.impl.UserServiceImpl - UserServiceImpl initialized
+2026-03-04 10:43:31 [main] INFO  com.example.demo.service.impl.UserServiceImpl - Updating user profile
+2026-03-04 10:43:31 [main] DEBUG com.example.demo.service.impl.UserServiceImpl - Current user email=user@example.com
+2026-03-04 10:43:31 [main] INFO  com.example.demo.service.impl.UserServiceImpl - User profile updated userId=1
+2026-03-04 10:43:31 [main] DEBUG com.example.demo.service.impl.UserServiceImpl - Mapping User to UserProfileDTO userId=1
+2026-03-04 10:43:31 [main] INFO  com.example.demo.service.impl.UserServiceImpl - UserServiceImpl initialized
+2026-03-04 10:43:31 [main] INFO  com.example.demo.service.impl.UserServiceImpl - Uploading user profile image
+2026-03-04 10:43:31 [main] DEBUG com.example.demo.service.impl.UserServiceImpl - Current user email=user@example.com
+2026-03-04 10:43:31 [main] INFO  com.example.demo.service.impl.UserServiceImpl - Profile image uploaded userId=1
+2026-03-04 10:43:31 [main] DEBUG com.example.demo.service.impl.UserServiceImpl - Mapping User to UserProfileDTO userId=1
+2026-03-04 10:43:31 [main] INFO  com.example.demo.service.impl.UserServiceImpl - UserServiceImpl initialized
+2026-03-04 10:43:31 [main] INFO  com.example.demo.service.impl.UserServiceImpl - Deactivate account request received
+2026-03-04 10:43:31 [main] DEBUG com.example.demo.service.impl.UserServiceImpl - Current user email=missing@example.com
+2026-03-04 10:43:31 [main] INFO  com.example.demo.service.impl.UserServiceImpl - UserServiceImpl initialized
+2026-03-04 10:43:31 [main] INFO  com.example.demo.service.impl.UserServiceImpl - Deactivate account request received
+2026-03-04 10:43:31 [main] DEBUG com.example.demo.service.impl.UserServiceImpl - Current user email=user@example.com
+2026-03-04 10:43:31 [main] INFO  com.example.demo.service.impl.UserServiceImpl - User account deactivated userId=1
+2026-03-04 10:43:31 [main] INFO  com.example.demo.service.impl.UserServiceImpl - UserServiceImpl initialized
+2026-03-04 10:43:31 [main] INFO  com.example.demo.service.impl.UserServiceImpl - Fetching dashboard stats for user
+2026-03-04 10:43:31 [main] DEBUG com.example.demo.service.impl.UserServiceImpl - Current user email=user@example.com
+2026-03-04 10:43:31 [main] DEBUG com.example.demo.service.impl.UserServiceImpl - Dashboard stats favorites=2 playlists=3 recent=5 listeningTime=1 hr 1 min
+2026-03-04 10:43:31 [main] INFO  com.example.demo.service.impl.AlbumServiceImpl - AlbumServiceImpl initialized
+2026-03-04 10:43:31 [main] INFO  com.example.demo.service.impl.AlbumServiceImpl - Fetching album details for albumId=10
+2026-03-04 10:43:31 [main] INFO  com.example.demo.service.impl.AlbumServiceImpl - AlbumServiceImpl initialized
+2026-03-04 10:43:31 [main] INFO  com.example.demo.service.impl.AlbumServiceImpl - Fetching all albums
+2026-03-04 10:43:31 [main] DEBUG com.example.demo.service.impl.AlbumServiceImpl - Mapping Album to DTO. AlbumId=10
+2026-03-04 10:43:31 [main] INFO  com.example.demo.service.impl.AlbumServiceImpl - Total albums found=1
+2026-03-04 10:43:31 [main] INFO  com.example.demo.service.impl.AlbumServiceImpl - AlbumServiceImpl initialized
+2026-03-04 10:43:31 [main] INFO  com.example.demo.service.impl.AlbumServiceImpl - Creating album with name=Test
+2026-03-04 10:43:31 [main] DEBUG com.example.demo.service.impl.AlbumServiceImpl - Current user email=unknown@test.com
+2026-03-04 10:43:31 [main] INFO  com.example.demo.service.impl.AlbumServiceImpl - AlbumServiceImpl initialized
+2026-03-04 10:43:31 [main] INFO  com.example.demo.service.impl.AlbumServiceImpl - Deleting album with albumId=10
+2026-03-04 10:43:31 [main] WARN  com.example.demo.service.impl.AlbumServiceImpl - Unauthorized delete attempt by userId=55 for albumId=10
+2026-03-04 10:43:31 [main] INFO  com.example.demo.service.impl.AlbumServiceImpl - AlbumServiceImpl initialized
+2026-03-04 10:43:31 [main] INFO  com.example.demo.service.impl.AlbumServiceImpl - Fetching albums for current user
+2026-03-04 10:43:31 [main] DEBUG com.example.demo.service.impl.AlbumServiceImpl - Mapping Album to DTO. AlbumId=10
+2026-03-04 10:43:31 [main] INFO  com.example.demo.service.impl.AlbumServiceImpl - Found 1 albums for artistId=1
+2026-03-04 10:43:31 [main] INFO  com.example.demo.service.impl.AlbumServiceImpl - AlbumServiceImpl initialized
+2026-03-04 10:43:31 [main] INFO  com.example.demo.service.impl.AlbumServiceImpl - Creating album with name=Test Album
+2026-03-04 10:43:31 [main] DEBUG com.example.demo.service.impl.AlbumServiceImpl - Current user email=artist@test.com
+2026-03-04 10:43:31 [main] INFO  com.example.demo.service.impl.AlbumServiceImpl - Album created successfully for artistId=1
+2026-03-04 10:43:31 [main] DEBUG com.example.demo.service.impl.AlbumServiceImpl - Mapping Album to DTO. AlbumId=10
+2026-03-04 10:43:31 [main] INFO  com.example.demo.service.impl.AlbumServiceImpl - AlbumServiceImpl initialized
+2026-03-04 10:43:31 [main] INFO  com.example.demo.service.impl.AlbumServiceImpl - Uploading cover image for albumId=10
+2026-03-04 10:43:31 [main] DEBUG com.example.demo.service.impl.AlbumServiceImpl - Image stored at path=image/path.jpg
+2026-03-04 10:43:31 [main] INFO  com.example.demo.service.impl.AlbumServiceImpl - Cover image uploaded successfully for albumId=10
+2026-03-04 10:43:31 [main] DEBUG com.example.demo.service.impl.AlbumServiceImpl - Mapping Album to DTO. AlbumId=10
+2026-03-04 10:43:31 [main] INFO  com.example.demo.service.impl.AlbumServiceImpl - AlbumServiceImpl initialized
+2026-03-04 10:43:31 [main] INFO  com.example.demo.service.impl.AlbumServiceImpl - Uploading cover image for albumId=10
+2026-03-04 10:43:31 [main] WARN  com.example.demo.service.impl.AlbumServiceImpl - Unauthorized cover upload attempt by userId=99 for albumId=10
+2026-03-04 10:43:31 [main] INFO  com.example.demo.service.impl.AlbumServiceImpl - AlbumServiceImpl initialized
+2026-03-04 10:43:31 [main] INFO  com.example.demo.service.impl.AlbumServiceImpl - Fetching album details for albumId=10
+2026-03-04 10:43:31 [main] DEBUG com.example.demo.service.impl.AlbumServiceImpl - Mapping Album to DTO. AlbumId=10
+2026-03-04 10:43:31 [main] INFO  com.example.demo.service.impl.AlbumServiceImpl - AlbumServiceImpl initialized
+2026-03-04 10:43:31 [main] INFO  com.example.demo.service.impl.AlbumServiceImpl - Uploading cover image for albumId=10
+2026-03-04 10:43:31 [main] INFO  com.example.demo.service.impl.AlbumServiceImpl - AlbumServiceImpl initialized
+2026-03-04 10:43:31 [main] INFO  com.example.demo.service.impl.AlbumServiceImpl - Deleting album with albumId=10
+2026-03-04 10:43:31 [main] DEBUG com.example.demo.service.impl.AlbumServiceImpl - Detaching 0 songs from albumId=10
+2026-03-04 10:43:31 [main] INFO  com.example.demo.service.impl.AlbumServiceImpl - Album deleted successfully. albumId=10
+2026-03-04 10:43:31 [main] INFO  com.example.demo.service.impl.AlbumServiceImpl - AlbumServiceImpl initialized
+2026-03-04 10:43:31 [main] INFO  com.example.demo.service.impl.AlbumServiceImpl - Creating album with name=Test
+2026-03-04 10:43:31 [main] DEBUG com.example.demo.service.impl.AlbumServiceImpl - Current user email=artist@test.com
+2026-03-04 10:43:31 [main] WARN  com.example.demo.service.impl.AlbumServiceImpl - Duplicate album attempt detected for artistId=1 albumName=Test
+2026-03-04 10:43:31 [main] INFO  com.example.demo.service.impl.AlbumServiceImpl - AlbumServiceImpl initialized
+2026-03-04 10:43:31 [main] INFO  com.example.demo.service.impl.AlbumServiceImpl - Updating album with albumId=10
+2026-03-04 10:43:31 [main] INFO  com.example.demo.service.impl.AlbumServiceImpl - Album updated successfully. albumId=10
+2026-03-04 10:43:31 [main] DEBUG com.example.demo.service.impl.AlbumServiceImpl - Mapping Album to DTO. AlbumId=10
+2026-03-04 10:43:31 [main] INFO  com.example.demo.service.impl.FavoriteServiceImpl - FavoriteServiceImpl initialized
+2026-03-04 10:43:31 [main] INFO  com.example.demo.service.impl.FavoriteServiceImpl - Adding favorite songId=1
+2026-03-04 10:43:31 [main] DEBUG com.example.demo.service.impl.FavoriteServiceImpl - Current user email=john@example.com
+2026-03-04 10:43:31 [main] WARN  com.example.demo.service.impl.FavoriteServiceImpl - Song already exists in favorites userId=null songId=1
+2026-03-04 10:43:31 [main] INFO  com.example.demo.service.impl.FavoriteServiceImpl - FavoriteServiceImpl initialized
+2026-03-04 10:43:31 [main] INFO  com.example.demo.service.impl.FavoriteServiceImpl - Fetching favorite songs for current user
+2026-03-04 10:43:31 [main] DEBUG com.example.demo.service.impl.FavoriteServiceImpl - Current user email=john@example.com
+2026-03-04 10:43:31 [main] INFO  com.example.demo.service.impl.FavoriteServiceImpl - FavoriteServiceImpl initialized
+2026-03-04 10:43:31 [main] INFO  com.example.demo.service.impl.FavoriteServiceImpl - Adding favorite songId=1
+2026-03-04 10:43:31 [main] DEBUG com.example.demo.service.impl.FavoriteServiceImpl - Current user email=john@example.com
+2026-03-04 10:43:31 [main] INFO  com.example.demo.service.impl.FavoriteServiceImpl - Song added to favorites successfully userId=null songId=1
+2026-03-04 10:43:31 [main] INFO  com.example.demo.service.impl.FavoriteServiceImpl - FavoriteServiceImpl initialized
+2026-03-04 10:43:31 [main] INFO  com.example.demo.service.impl.FavoriteServiceImpl - Fetching favorite songs for current user
+2026-03-04 10:43:31 [main] DEBUG com.example.demo.service.impl.FavoriteServiceImpl - Current user email=john@example.com
+2026-03-04 10:43:31 [main] DEBUG com.example.demo.service.impl.FavoriteServiceImpl - Mapping Song to DTO songId=null
+2026-03-04 10:43:31 [main] INFO  com.example.demo.service.impl.FavoriteServiceImpl - Total favorites found=1 for userId=null
+2026-03-04 10:43:31 [main] INFO  com.example.demo.service.impl.FavoriteServiceImpl - FavoriteServiceImpl initialized
+2026-03-04 10:43:31 [main] INFO  com.example.demo.service.impl.FavoriteServiceImpl - Adding favorite songId=1
+2026-03-04 10:43:31 [main] DEBUG com.example.demo.service.impl.FavoriteServiceImpl - Current user email=john@example.com
+2026-03-04 10:43:31 [main] INFO  com.example.demo.service.impl.FavoriteServiceImpl - FavoriteServiceImpl initialized
+2026-03-04 10:43:31 [main] INFO  com.example.demo.service.impl.FavoriteServiceImpl - Removing favorite songId=1
+2026-03-04 10:43:31 [main] DEBUG com.example.demo.service.impl.FavoriteServiceImpl - Current user email=john@example.com
+2026-03-04 10:43:31 [main] INFO  com.example.demo.service.impl.FavoriteServiceImpl - Favorite removed successfully userId=null songId=1
+2026-03-04 10:43:31 [main] INFO  com.example.demo.service.impl.FavoriteServiceImpl - FavoriteServiceImpl initialized
+2026-03-04 10:43:31 [main] INFO  com.example.demo.service.impl.FavoriteServiceImpl - Adding favorite songId=1
+2026-03-04 10:43:31 [main] DEBUG com.example.demo.service.impl.FavoriteServiceImpl - Current user email=john@example.com
+2026-03-04 10:43:31 [main] INFO  com.example.demo.service.impl.FavoriteServiceImpl - FavoriteServiceImpl initialized
+2026-03-04 10:43:31 [main] INFO  com.example.demo.service.impl.FavoriteServiceImpl - Removing favorite songId=1
+2026-03-04 10:43:31 [main] DEBUG com.example.demo.service.impl.FavoriteServiceImpl - Current user email=john@example.com
+2026-03-04 10:43:31 [main] INFO  com.example.demo.service.impl.PlaylistServiceImpl - PlaylistServiceImpl initialized
+2026-03-04 10:43:31 [main] INFO  com.example.demo.service.impl.PlaylistServiceImpl - Follow playlist request playlistId=10
+2026-03-04 10:43:31 [main] INFO  com.example.demo.service.impl.PlaylistServiceImpl - Playlist followed userId=1 playlistId=10
+2026-03-04 10:43:31 [main] INFO  com.example.demo.service.impl.PlaylistServiceImpl - PlaylistServiceImpl initialized
+2026-03-04 10:43:31 [main] INFO  com.example.demo.service.impl.PlaylistServiceImpl - Follow playlist request playlistId=10
+2026-03-04 10:43:31 [main] WARN  com.example.demo.service.impl.PlaylistServiceImpl - User attempted to follow own playlist userId=1 playlistId=10
+2026-03-04 10:43:31 [main] INFO  com.example.demo.service.impl.SongServiceImpl - SongServiceImpl initialized
+2026-03-04 10:43:31 [main] INFO  com.example.demo.service.impl.SongServiceImpl - Fetching song details songId=10
+2026-03-04 10:43:31 [main] DEBUG com.example.demo.service.impl.SongServiceImpl - Mapping song to DTO songId=10
+2026-03-04 10:43:31 [main] INFO  com.example.demo.service.impl.SongServiceImpl - SongServiceImpl initialized
+2026-03-04 10:43:31 [main] INFO  com.example.demo.service.impl.SongServiceImpl - Deleting song songId=10
+2026-03-04 10:43:31 [main] INFO  com.example.demo.service.impl.SongServiceImpl - Song deleted successfully songId=10
+2026-03-04 10:43:31 [main] INFO  com.example.demo.service.impl.SongServiceImpl - SongServiceImpl initialized
+2026-03-04 10:43:31 [main] INFO  com.example.demo.service.impl.SongServiceImpl - Fetching songs for current artist
+2026-03-04 10:43:31 [main] DEBUG com.example.demo.service.impl.SongServiceImpl - Mapping song to DTO songId=10
+2026-03-04 10:43:31 [main] INFO  com.example.demo.service.impl.SongServiceImpl - Songs fetched count=1
+2026-03-04 10:43:31 [main] INFO  com.example.demo.service.impl.SongServiceImpl - SongServiceImpl initialized
+2026-03-04 10:43:31 [main] INFO  com.example.demo.service.impl.SongServiceImpl - Fetching favorite stats for artist songs
+2026-03-04 10:43:31 [main] INFO  com.example.demo.service.impl.SongServiceImpl - Favorite stats generated count=1
+2026-03-04 10:43:32 [main] INFO  com.example.demo.service.impl.SongServiceImpl - SongServiceImpl initialized
+2026-03-04 10:43:32 [main] INFO  com.example.demo.service.impl.SongServiceImpl - Uploading new song title=Test Song
+2026-03-04 10:43:32 [main] DEBUG com.example.demo.service.impl.SongServiceImpl - Current artist email=artist@example.com
+2026-03-04 10:43:32 [main] INFO  com.example.demo.service.impl.SongServiceImpl - Song uploaded successfully songId=10
+2026-03-04 10:43:32 [main] DEBUG com.example.demo.service.impl.SongServiceImpl - Mapping song to DTO songId=10
+2026-03-04 10:43:32 [main] INFO  com.example.demo.service.impl.SongServiceImpl - SongServiceImpl initialized
+2026-03-04 10:43:32 [main] INFO  com.example.demo.service.impl.SongServiceImpl - Fetching songs for albumId=100
+2026-03-04 10:43:32 [main] DEBUG com.example.demo.service.impl.SongServiceImpl - Mapping song to DTO songId=10
+2026-03-04 10:43:32 [main] INFO  com.example.demo.service.impl.SongServiceImpl - Album songs fetched count=1
+2026-03-04 10:43:32 [main] INFO  com.example.demo.service.impl.SongServiceImpl - SongServiceImpl initialized
+2026-03-04 10:43:32 [main] INFO  com.example.demo.service.impl.SongServiceImpl - Fetching all songs
+2026-03-04 10:43:32 [main] DEBUG com.example.demo.service.impl.SongServiceImpl - Mapping song to DTO songId=10
+2026-03-04 10:43:32 [main] INFO  com.example.demo.service.impl.SongServiceImpl - Total songs fetched count=1
+2026-03-04 10:43:32 [main] INFO  com.example.demo.service.impl.SongServiceImpl - SongServiceImpl initialized
+2026-03-04 10:43:32 [main] INFO  com.example.demo.service.impl.SongServiceImpl - Uploading cover image for songId=10
+2026-03-04 10:43:32 [main] INFO  com.example.demo.service.impl.SongServiceImpl - Cover image uploaded songId=10
+2026-03-04 10:43:32 [main] DEBUG com.example.demo.service.impl.SongServiceImpl - Mapping song to DTO songId=10
+2026-03-04 10:43:32 [main] INFO  com.example.demo.service.impl.SongServiceImpl - SongServiceImpl initialized
+2026-03-04 10:43:32 [main] INFO  com.example.demo.service.impl.SongServiceImpl - Fetching public songs
+2026-03-04 10:43:32 [main] DEBUG com.example.demo.service.impl.SongServiceImpl - Mapping song to DTO songId=10
+2026-03-04 10:43:32 [main] INFO  com.example.demo.service.impl.SongServiceImpl - Public songs fetched count=1
+2026-03-04 10:43:32 [main] INFO  com.example.demo.service.impl.PlayerServiceImpl - PlayerServiceImpl initialized
+2026-03-04 10:43:32 [main] INFO  com.example.demo.service.impl.PlayerServiceImpl - Play song request received songId=1
+2026-03-04 10:43:32 [main] DEBUG com.example.demo.service.impl.PlayerServiceImpl - Current user email=test@mail.com
+2026-03-04 10:43:32 [main] INFO  com.example.demo.service.impl.PlayerServiceImpl - PlayerServiceImpl initialized
+2026-03-04 10:43:32 [main] INFO  com.example.demo.service.impl.PlayerServiceImpl - Play song request received songId=1
+2026-03-04 10:43:32 [main] DEBUG com.example.demo.service.impl.PlayerServiceImpl - Current user email=test@mail.com
+2026-03-04 10:43:32 [main] DEBUG com.example.demo.service.impl.PlayerServiceImpl - Play count incremented songId=null newCount=1
+2026-03-04 10:43:32 [main] INFO  com.example.demo.service.impl.PlayerServiceImpl - Play history saved userId=null songId=null secondsPlayed=120
+2026-03-04 10:43:32 [main] INFO  com.example.demo.service.impl.PlayerServiceImpl - PlayerServiceImpl initialized
+2026-03-04 10:43:32 [main] INFO  com.example.demo.service.impl.PlayerServiceImpl - Play song request received songId=1
+2026-03-04 10:43:32 [main] DEBUG com.example.demo.service.impl.PlayerServiceImpl - Current user email=test@mail.com
+2026-03-04 10:43:32 [main] INFO  com.example.demo.service.impl.PlayerServiceImpl - Play history saved userId=null songId=null secondsPlayed=120
+2026-03-04 10:43:32 [main] INFO  com.example.demo.service.impl.PlayerServiceImpl - PlayerServiceImpl initialized
+2026-03-04 10:43:32 [main] INFO  com.example.demo.service.impl.PlayerServiceImpl - Fetching trending songs limit=1
+2026-03-04 10:43:32 [main] DEBUG com.example.demo.service.impl.PlayerServiceImpl - Mapping Song to DTO songId=null
+2026-03-04 10:43:32 [main] INFO  com.example.demo.service.impl.PlayerServiceImpl - Trending songs fetched count=1
+2026-03-04 10:43:32 [main] INFO  com.example.demo.service.impl.PlayerServiceImpl - PlayerServiceImpl initialized
+2026-03-04 10:43:32 [main] INFO  com.example.demo.service.impl.PlayerServiceImpl - Play song request received songId=1
+2026-03-04 10:43:32 [main] DEBUG com.example.demo.service.impl.PlayerServiceImpl - Current user email=test@mail.com
+2026-03-04 10:43:32 [main] INFO  com.example.demo.service.impl.HistoryServiceImpl - HistoryServiceImpl initialized
+2026-03-04 10:43:32 [main] INFO  com.example.demo.service.impl.HistoryServiceImpl - Fetching recent listening history
+2026-03-04 10:43:32 [main] DEBUG com.example.demo.service.impl.HistoryServiceImpl - Current user email=test@mail.com
+2026-03-04 10:43:32 [main] INFO  com.example.demo.service.impl.HistoryServiceImpl - HistoryServiceImpl initialized
+2026-03-04 10:43:32 [main] INFO  com.example.demo.service.impl.HistoryServiceImpl - Fetching full listening history
+2026-03-04 10:43:32 [main] DEBUG com.example.demo.service.impl.HistoryServiceImpl - Current user email=test@mail.com
+2026-03-04 10:43:32 [main] DEBUG com.example.demo.service.impl.HistoryServiceImpl - Mapping PlayHistory to DTO songId=null
+2026-03-04 10:43:32 [main] INFO  com.example.demo.service.impl.HistoryServiceImpl - Total history records returned=1
+2026-03-04 10:43:32 [main] INFO  com.example.demo.service.impl.HistoryServiceImpl - HistoryServiceImpl initialized
+2026-03-04 10:43:32 [main] INFO  com.example.demo.service.impl.HistoryServiceImpl - Calculating total listening time
+2026-03-04 10:43:32 [main] DEBUG com.example.demo.service.impl.HistoryServiceImpl - Current user email=test@mail.com
+2026-03-04 10:43:32 [main] INFO  com.example.demo.service.impl.HistoryServiceImpl - Total listening time calculated seconds=120
+2026-03-04 10:43:32 [main] INFO  com.example.demo.service.impl.HistoryServiceImpl - HistoryServiceImpl initialized
+2026-03-04 10:43:32 [main] INFO  com.example.demo.service.impl.HistoryServiceImpl - Fetching most played songs
+2026-03-04 10:43:32 [main] DEBUG com.example.demo.service.impl.HistoryServiceImpl - Current user email=test@mail.com
+2026-03-04 10:43:32 [main] INFO  com.example.demo.service.impl.HistoryServiceImpl - Most played songs count=1
+2026-03-04 10:43:32 [main] INFO  com.example.demo.service.impl.HistoryServiceImpl - HistoryServiceImpl initialized
+2026-03-04 10:43:32 [main] INFO  com.example.demo.service.impl.HistoryServiceImpl - Clearing user listening history
+2026-03-04 10:43:32 [main] DEBUG com.example.demo.service.impl.HistoryServiceImpl - Current user email=test@mail.com
+2026-03-04 10:43:32 [main] INFO  com.example.demo.service.impl.HistoryServiceImpl - History cleared successfully for userId=null
+2026-03-04 10:43:32 [main] INFO  com.example.demo.service.impl.HistoryServiceImpl - HistoryServiceImpl initialized
+2026-03-04 10:43:32 [main] INFO  com.example.demo.service.impl.HistoryServiceImpl - Fetching recent listening history
+2026-03-04 10:43:32 [main] DEBUG com.example.demo.service.impl.HistoryServiceImpl - Current user email=test@mail.com
+2026-03-04 10:43:32 [main] DEBUG com.example.demo.service.impl.HistoryServiceImpl - Fetched 1 play history records
+2026-03-04 10:43:32 [main] DEBUG com.example.demo.service.impl.HistoryServiceImpl - Unique songs after filtering=1
+2026-03-04 10:43:32 [main] DEBUG com.example.demo.service.impl.HistoryServiceImpl - Mapping PlayHistory to DTO songId=null
+2026-03-04 10:43:32 [main] INFO  com.example.demo.service.impl.ArtistServiceImpl - ArtistServiceImpl initialized
+2026-03-04 10:43:32 [main] INFO  com.example.demo.service.impl.ArtistServiceImpl - Fetching artist profile for artistId=10
+2026-03-04 10:43:32 [main] DEBUG com.example.demo.service.impl.ArtistServiceImpl - Mapping ArtistProfile to DTO profileId=10
+2026-03-04 10:43:32 [main] INFO  com.example.demo.service.impl.ArtistServiceImpl - ArtistServiceImpl initialized
+2026-03-04 10:43:32 [main] INFO  com.example.demo.service.impl.ArtistServiceImpl - Fetching current user's artist profile
+2026-03-04 10:43:32 [main] DEBUG com.example.demo.service.impl.ArtistServiceImpl - Mapping ArtistProfile to DTO profileId=10
+2026-03-04 10:43:32 [main] INFO  com.example.demo.service.impl.ArtistServiceImpl - ArtistServiceImpl initialized
+2026-03-04 10:43:32 [main] INFO  com.example.demo.service.impl.ArtistServiceImpl - Creating artist profile
+2026-03-04 10:43:32 [main] DEBUG com.example.demo.service.impl.ArtistServiceImpl - Current user email=artist@test.com
+2026-03-04 10:43:32 [main] INFO  com.example.demo.service.impl.ArtistServiceImpl - ArtistServiceImpl initialized
+2026-03-04 10:43:32 [main] INFO  com.example.demo.service.impl.ArtistServiceImpl - Updating artist profile
+2026-03-04 10:43:32 [main] DEBUG com.example.demo.service.impl.ArtistServiceImpl - Current user email=artist@test.com
+2026-03-04 10:43:32 [main] INFO  com.example.demo.service.impl.ArtistServiceImpl - Artist profile updated successfully for profileId=10
+2026-03-04 10:43:32 [main] INFO  com.example.demo.service.impl.ArtistServiceImpl - ArtistServiceImpl initialized
+2026-03-04 10:43:32 [main] INFO  com.example.demo.service.impl.ArtistServiceImpl - Uploading profile image for profileId=10
+2026-03-04 10:43:32 [main] DEBUG com.example.demo.service.impl.ArtistServiceImpl - Profile image stored at path=image/path.jpg
+2026-03-04 10:43:32 [main] INFO  com.example.demo.service.impl.ArtistServiceImpl - Profile image uploaded successfully for profileId=10
+2026-03-04 10:43:32 [main] DEBUG com.example.demo.service.impl.ArtistServiceImpl - Mapping ArtistProfile to DTO profileId=10
+2026-03-04 10:43:32 [main] INFO  com.example.demo.service.impl.ArtistServiceImpl - ArtistServiceImpl initialized
+2026-03-04 10:43:32 [main] INFO  com.example.demo.service.impl.ArtistServiceImpl - Creating artist profile
+2026-03-04 10:43:32 [main] DEBUG com.example.demo.service.impl.ArtistServiceImpl - Current user email=artist@test.com
+2026-03-04 10:43:32 [main] WARN  com.example.demo.service.impl.ArtistServiceImpl - Artist profile already exists for userId=1
+2026-03-04 10:43:32 [main] INFO  com.example.demo.service.impl.ArtistServiceImpl - ArtistServiceImpl initialized
+2026-03-04 10:43:32 [main] INFO  com.example.demo.service.impl.ArtistServiceImpl - Uploading profile image for profileId=10
+2026-03-04 10:43:32 [main] WARN  com.example.demo.service.impl.ArtistServiceImpl - Unauthorized profile image upload attempt by userId=99 for profileId=10
+2026-03-04 10:43:32 [main] INFO  com.example.demo.service.impl.ArtistServiceImpl - ArtistServiceImpl initialized
+2026-03-04 10:43:32 [main] INFO  com.example.demo.service.impl.ArtistServiceImpl - Fetching artist profile for artistId=10
+2026-03-04 10:43:32 [main] INFO  com.example.demo.service.impl.ArtistServiceImpl - ArtistServiceImpl initialized
+2026-03-04 10:43:32 [main] INFO  com.example.demo.service.impl.ArtistServiceImpl - Updating artist profile
+2026-03-04 10:43:32 [main] DEBUG com.example.demo.service.impl.ArtistServiceImpl - Current user email=artist@test.com
+2026-03-04 10:43:32 [main] INFO  com.example.demo.service.impl.ArtistServiceImpl - ArtistServiceImpl initialized
+2026-03-04 10:43:32 [main] INFO  com.example.demo.service.impl.ArtistServiceImpl - Creating artist profile
+2026-03-04 10:43:32 [main] DEBUG com.example.demo.service.impl.ArtistServiceImpl - Current user email=artist@test.com
+2026-03-04 10:43:32 [main] INFO  com.example.demo.service.impl.ArtistServiceImpl - Artist profile created successfully for userId=1
+2026-03-04 10:45:57 [restartedMain] INFO  com.example.demo.service.impl.AlbumServiceImpl - AlbumServiceImpl initialized
+2026-03-04 10:45:58 [restartedMain] INFO  com.example.demo.service.impl.AnalyticsServiceImpl - AnalyticsServiceImpl initialized
+2026-03-04 10:45:58 [restartedMain] INFO  com.example.demo.service.impl.ArtistServiceImpl - ArtistServiceImpl initialized
+2026-03-04 10:45:58 [restartedMain] INFO  com.example.demo.service.impl.SongServiceImpl - SongServiceImpl initialized
+2026-03-04 10:45:58 [restartedMain] INFO  com.example.demo.service.impl.AuthServiceImpl - AuthServiceImpl initialized
+2026-03-04 10:45:58 [restartedMain] INFO  com.example.demo.service.impl.FavoriteServiceImpl - FavoriteServiceImpl initialized
+2026-03-04 10:45:58 [restartedMain] INFO  com.example.demo.service.impl.HistoryServiceImpl - HistoryServiceImpl initialized
+2026-03-04 10:45:58 [restartedMain] INFO  com.example.demo.service.impl.PlayerServiceImpl - PlayerServiceImpl initialized
+2026-03-04 10:45:58 [restartedMain] INFO  com.example.demo.service.impl.PlaylistServiceImpl - PlaylistServiceImpl initialized
+2026-03-04 10:45:58 [restartedMain] INFO  com.example.demo.service.impl.SearchServiceImpl - SearchServiceImpl initialized
+2026-03-04 10:45:58 [restartedMain] INFO  com.example.demo.service.impl.UserServiceImpl - UserServiceImpl initialized
